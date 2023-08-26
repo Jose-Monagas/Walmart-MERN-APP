@@ -1,0 +1,55 @@
+@import "core/neat";
+
+$cna-mq-default-breakpoint: '(max-width: 374.9999999999px)';
+$cna-mq-mobile-breakpoint: '(min-width: 375px)';
+$cna-mq-tablet-breakpoint: '(min-width: 768px)';
+$cna-mq-desktop-breakpoint: '(min-width: 1280px)';
+$cna-mq-large-display-breakpoint: '(min-width: 1920px)';
+
+$cna-mq-types: (
+  default: 'screen and #{$cna-mq-default-breakpoint}',
+  mobile: 'screen and #{$cna-mq-mobile-breakpoint}',
+  tablet: 'screen and #{$cna-mq-tablet-breakpoint}',
+  desktop: 'screen and #{$cna-mq-desktop-breakpoint}',
+  large-display: 'screen and #{$cna-mq-large-display-breakpoint}'
+);
+
+$cna-grid-default-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($cna-mq-types, default)
+  }
+);
+
+$cna-grid-mobile-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($cna-mq-types, mobile)
+  }
+);
+
+$cna-grid-tablet-configuration: (
+  columns: 8,
+  gutter: 1.5rem,
+  media: #{
+    map-get($cna-mq-types, tablet)
+  }
+);
+
+$cna-grid-desktop-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($cna-mq-types, desktop)
+  }
+);
+
+$cna-grid-large-display-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($cna-mq-types, large-display)
+  }
+);
