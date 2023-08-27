@@ -78,12 +78,24 @@ orderSchema.methods.setItemQty = function(itemId, newQty) {
   if (cartItem && newQty <= 0) {
     // Calling remove, removes itself from the cart.lineItems array
     cartItem.deleteOne();
-  } else if (cartItem) {
+  }   
+  else if (cartItem) {
     // Set the new qty - positive value is assured thanks to prev if
     cartItem.qty = newQty;
   }
   // return the save() method's promise
   return cart.save();
 };
+
+orderSchema.methods.removeEntireItem = function (itemId, newQty) {
+  // this keyword is bound to the cart (order doc)
+  const cart = this;
+  // Find the line item in the cart for the menu item
+  const cartItem = cart.cartItems.find(cartItem => cartItem.item._id.equals(itemId));
+    // Calling remove, removes itself from the cart.lineItems array
+  cartItem.deleteOne();
+  
+  return cart.save();
+}
 
 module.exports = mongoose.model('Order', orderSchema);
