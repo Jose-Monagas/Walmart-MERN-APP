@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+// const mongoose = require('mongoose');
+// const Schema = mongoose.Schema;
 
-const membershipSchema = new Schema({
-name:{type:String,required:true}
-})
+// const membershipSchema = new Schema({
+// name:{type:String,required:true}
+// })
 
 
-module.exports = mongoose.model("membership",membershipSchema)
+// module.exports = mongoose.model("membership",membershipSchema)

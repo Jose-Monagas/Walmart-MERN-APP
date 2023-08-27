@@ -18,7 +18,8 @@ const userSchema = new Schema({
     trim: true,
     minlength: 6,
     required: true
-  },memberShipType:{type:Schema.Types.ObjectId, ref:'Membership'}
+  },membershipType:{type:String, default: "regular"},
+  membershipCode: {type:Schema.Types.ObjectId}
 }, {
   timestamps: true,
   toJSON: {
