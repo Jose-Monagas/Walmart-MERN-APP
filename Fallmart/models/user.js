@@ -19,7 +19,7 @@ const userSchema = new Schema({
     minlength: 6,
     required: true
   },membershipType:{type:String, default: "regular"},
-  membershipCode: {type:Schema.Types.ObjectId}
+  membershipCode: {type:String}
 }, {
   timestamps: true,
   toJSON: {

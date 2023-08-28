@@ -43,21 +43,19 @@ const dataController = {
    async update (req, res, next) {
     try {
       // Check if user is not logged in
-      if (!res.locals.data.user) {
-        return res.status(400).json({ message: "Please log in" });
-      }
+  
       const authUserEmail = res.locals.data.user.email;
+      const newEmail = req.body.email;
 
-      if(req.body.email!==authUserEmail){
-        return res.status(403).json({message:"You are not authorized to update user's data"})
+      if(newEmail!==authUserEmail){
+        const emailTaken = await User.exists({email:newEmail})
+        if(emailTaken){
+          return res.status(400).json({message:'Email already in use'})
+        }
       }
-      // User is logged in, proceed with updates
+
       const updates = Object.keys(req.body);
       const user = await User.findOne({ email: req.body.email });
-      
-      if (!user) {
-        return res.status(404).json({ message: "User not found" });
-      }
       
       updates.forEach((update) => (user[update] = req.body[update]));
       await user.save();
