@@ -8,7 +8,7 @@ module.exports = {
 async function index(req, res) {
     try{
         const depts = await Dept.find({}).sort('name').populate('categories').exec();
-        depts.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
+        depts.sort((a, b) => a.categories[0].sortOrder - b.categories[0].sortOrder);
         res.status(200).json(depts);
     }catch(e){ 
         res.status(400).json({ msg: e.message});
