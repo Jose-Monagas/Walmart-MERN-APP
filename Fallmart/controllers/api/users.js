@@ -42,8 +42,6 @@ const dataController = {
    //UPDATE USER
    async update (req, res, next) {
     try {
-      // Check if user is not logged in
-  
       const authUserEmail = res.locals.data.user.email;
       const newEmail = req.body.email;
 
