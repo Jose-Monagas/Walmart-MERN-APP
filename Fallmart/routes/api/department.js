@@ -3,9 +3,9 @@ const router = express.Router();
 const deptCtrl = require('../../controllers/api/department');
 
 // GET /api/department/showAlldepts
-router.get('/showAlldepts', deptCtrl.index);
+router.get('/showdepts', deptCtrl.index);
 // GET /api/department/showAdept
-router.get('/showAdept', deptCtrl.show);
+router.get('/showdept', deptCtrl.show);
 
 
 module.exports = router;
