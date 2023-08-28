@@ -7,7 +7,7 @@ module.exports = {
 //shows list of all depts
 async function index(req, res) {
     try{
-        const depts = await dept.find({}).sort('name').populate('category').exec();
+        const depts = await Dept.find({}).sort('name').populate('categories').exec();
         depts.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
         res.status(200).json(depts);
     }catch(e){ 
