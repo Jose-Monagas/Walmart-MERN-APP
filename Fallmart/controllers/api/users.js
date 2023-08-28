@@ -1,7 +1,6 @@
 const User = require('../../models/user')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-const user = require('../../models/user')
 
 const checkToken = (req, res) => {
   console.log('req.user', req.user)
@@ -47,7 +46,11 @@ const dataController = {
       if (!res.locals.data.user) {
         return res.status(400).json({ message: "Please log in" });
       }
-      
+      const authUserEmail = res.locals.data.user.email;
+
+      if(req.body.email!==authUserEmail){
+        return res.status(403).json({message:"You are not authorized to update user's data"})
+      }
       // User is logged in, proceed with updates
       const updates = Object.keys(req.body);
       const user = await User.findOne({ email: req.body.email });
