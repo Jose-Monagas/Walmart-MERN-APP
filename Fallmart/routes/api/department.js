@@ -7,5 +7,4 @@ router.get('/showdepts', deptCtrl.index);
 // GET /api/department/showAdept
 router.get('/showdept', deptCtrl.show);
 
-
 module.exports = router;
