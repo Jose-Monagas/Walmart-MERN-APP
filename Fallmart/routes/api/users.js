@@ -12,7 +12,7 @@ router.post('/', dataController.create, apiController.auth);
 // POST /api/users/login
 router.post('/login', dataController.login, apiController.auth);
 // PUT /api/users/update
-router.put('/update', ensureLoggedIn, dataController.update);
+router.put('/update', ensureLoggedIn, dataController.updateUser);
 // GET /api/users/check-token
 router.get('/check-token', ensureLoggedIn, checkToken);
 

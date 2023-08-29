@@ -15,12 +15,9 @@ const userSchema = new Schema(
 			required: true
 		},
 		password: {
-			type: {
-				String,
-				required: true,
-				match:
-					/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()-_=+[\]{};:'",.<>/?]+$/
-			},
+			type: String,
+			required: true,
+			match: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()-_=+[\]{};:'",.<>/?]+$/,
 			trim: true,
 			minlength: 6,
 			required: true

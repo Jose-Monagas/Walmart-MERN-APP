@@ -1,7 +1,11 @@
 const User = require('../../models/user');
 const Mongoose = require('mongoose');
+module.exports = {
+	signUp
+};
 
-const signUp = async (req, res, next) => {
+// A cart is the unpaid order for a user
+async function signUp(req, res, next) {
 	try {
 		if (!res.locals.data.user) {
 			return res.status(400).json({ message: 'Please log in' });
@@ -19,4 +23,4 @@ const signUp = async (req, res, next) => {
 	} catch (error) {
 		res.status(400).json({ message: error.message });
 	}
-};
+}

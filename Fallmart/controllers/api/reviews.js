@@ -48,7 +48,7 @@ async function deleteReview(req, res) {
 async function getReviewsByProduct(req, res) {
 	try {
 		const productId = req.params.productId;
-		const reviews = await Review.find({ product: productId }).exe();
+		const reviews = await Review.find({ product: productId }).exec();
 		res.status(200).json(reviews);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
