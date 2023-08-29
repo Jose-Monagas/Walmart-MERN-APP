@@ -40,11 +40,10 @@ const dataController = {
 		}
 	},
 	//UPDATE USER
-	async update(req, res, next) {
+	async updateUser(req, res, next) {
 		try {
-			const authUserEmail = res.locals.data.user.email;
+			const authUserEmail = req.user.email;
 			const newEmail = req.body.email;
-
 			if (newEmail !== authUserEmail) {
 				const emailTaken = await User.exists({ email: newEmail });
 				if (emailTaken) {

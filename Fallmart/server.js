@@ -43,6 +43,8 @@ app.use('/api/subcategories', require('./routes/api/subcategories'));
 
 app.use('/api/wishlists', require('./routes/api/wishlists'));
 
+app.use('/api/departments', require('./routes/api/department'));
+
 app.get('*', (req, res) => {
 	res.sendFile(path.resolve(path.join(__dirname, 'public', 'index.html')));
 });

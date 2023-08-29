@@ -7,7 +7,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 router.put(
 	'/:wishlistId/add/:productId',
 	ensureLoggedIn,
-	wishlistCtrl.addProductToWishlist
+	wishlistCtrl.addItemToWishlist
 );
 
 //Delete /api/wishlists/:wishlistId/remove/:productId
