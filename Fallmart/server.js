@@ -39,6 +39,8 @@ app.use('/api/reviews',require('./routes/api/reviews'))
 
 app.use('/api/membership',require('./routes/api/memberships'))
 
+app.use('/api/subcategories',require('./routes/api/subcategories'))
+
 
 app.get('*',(req,res)=>{
 	res.sendFile(path.resolve(path.join(__dirname,'public','index.html')))
