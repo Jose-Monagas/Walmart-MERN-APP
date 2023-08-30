@@ -1,9 +1,9 @@
-require('dotenv').config()
+require('dotenv').config();
 require('./database');
 
 const Department = require('../models/department');
 const subCategory = require('../models/subCategory')
-const Product = require('../../product')
+const Product = require('../models/product')
 
 (async function() {
 

@@ -12,9 +12,10 @@
     "dev:webpack": "webpack --mode development --define-process-env-node-env dev",
     "build:webpack": "webpack --mode production --define-process-env-node-env production",
     "dev": "gulp",
+    "seed": "node ./config/seed.js",
     "styles": "gulp styles",
-    "start": "node server.js",
-    "seed": "node config/seed.js"
+    "start": "node server.js"
+    
   },
   "author": "",
   "license": "ISC",
