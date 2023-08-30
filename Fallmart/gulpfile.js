@@ -17,7 +17,7 @@ const autoprefixer = require('gulp-autoprefixer');
 // Explanation for Students ---- This is the mastermind that will open up our code in a browser window
 const browserSync = require('browser-sync').create();
 
-// Explanation for Students ---- This is a browserSync method that reloads the page we wangt whenever we make a change to have the page reload
+// Explanation for Students ---- This is a browserSync method that reloads the page we want whenever we make a change to have the page reload
 const reload = browserSync.reload;
 
 // Explanation for Students ---- This is a NODEJS standard method that lets us call scripts in our package.json or node_modules from our code
@@ -52,7 +52,7 @@ gulp.task('default', (cb) => {
 	 },
 	 serveStatic: ['./public']
 	});
-	// SET UP WATCJERS TO LISTEN TO CHANGES IN FILES
+	// SET UP WATCHERS TO LISTEN TO CHANGES IN FILES
 	gulp.watch('./src/scss/**/*',  gulp.task('styles'));
 	gulp.watch('./src/components/**/*', gulp.task('webpack'));
 	gulp.watch('./src/**/*.js', gulp.task('webpack'));
