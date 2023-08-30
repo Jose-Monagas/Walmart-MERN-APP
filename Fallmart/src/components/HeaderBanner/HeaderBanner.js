@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./HeaderBanner.css";
+import styles from "./HeaderBanner.module.scss";
 
 function HeaderBanner() {
   return (

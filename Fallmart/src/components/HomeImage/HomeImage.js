@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./HomeImage.css";
+import styles from "./HomeImage.module.scss";
 
 function HomeImage() {
   return (
