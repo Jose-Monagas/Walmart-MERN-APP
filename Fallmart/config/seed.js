@@ -12,7 +12,7 @@ const Product = require('../../product')
       {name: 'Groceries', sortOrder: 10}, //0
       {name: 'Personal Care', sortOrder: 20}, //1
       {name: 'Electronics', sortOrder: 30}, //2
-      {name: 'Home, Furniture', sortOrder: 40}, //3
+      {name: 'Home & Furniture', sortOrder: 40}, //3
       {name: 'Pets', sortOrder: 50}, //4
       {name: 'Baby', sortOrder: 60}, //5
       {name: 'Clothing', sortOrder: 70}, //6
@@ -24,7 +24,7 @@ const Products = await Product.create([
     {
         name: "Apples",
         price: 2.99,
-        image: "",
+        image: "https://i.imgur.com/jaWvFz4.jpg",
         manufacturer: "Farm Fresh",
         department: "Groceries",
         description: "Fresh and delicious apples.",
@@ -34,7 +34,7 @@ const Products = await Product.create([
       {
         name: "Shampoo",
         price: 5.49,
-        image: "",
+        image: "https://i.imgur.com/J6r4mEn.jpg",
         manufacturer: "CareClean",
         department: "Personal Care",
         description: "Gentle and nourishing shampoo.",
@@ -44,7 +44,7 @@ const Products = await Product.create([
       {
         name: "Smartphone",
         price: 399.99,
-        image: "",
+        image: "https://i.imgur.com/K3aI2Pe.jpg",
         manufacturer: "Techtronics",
         department: "Electronics",
         description: "High-end smartphone with advanced features.",
@@ -54,7 +54,7 @@ const Products = await Product.create([
       {
         name: "Sofa",
         price: 299.00,
-        image: "",
+        image: "https://i.imgur.com/OgkFHnb.jpg",
         manufacturer: "ComfyLiving",
         department: "Home Furniture",
         description: "Comfortable and stylish sofa for your living room.",
@@ -64,7 +64,7 @@ const Products = await Product.create([
       {
         name: "Dog Food",
         price: 12.99,
-        image: "",
+        image: "https://i.imgur.com/1CXWFkT.jpg",
         manufacturer: "PetPal",
         department: "Pets",
         description: "Nutritious dog food for your furry friend.",
@@ -74,7 +74,7 @@ const Products = await Product.create([
       {
         name: "Baby Diapers",
         price: 19.95,
-        image: "",
+        image: "https://i.imgur.com/Y3fORfd.jpg",
         manufacturer: "TinyTots",
         department: "Baby",
         description: "Soft and absorbent diapers for babies.",
@@ -84,7 +84,7 @@ const Products = await Product.create([
       {
         name: "T-Shirt",
         price: 9.99,
-        image: "",
+        image: "https://i.imgur.com/b3M4Qt6.jpg",
         manufacturer: "FashionFab",
         department: "Clothing",
         description: "Casual and comfortable cotton T-shirt.",
@@ -94,7 +94,7 @@ const Products = await Product.create([
       {
         name: "Orange Juice",
         price: 3.49,
-        image: "",
+        image: "https://i.imgur.com/q73irfP.jpg",
         manufacturer: "JuicyCo",
         department: "Groceries",
         description: "Freshly squeezed orange juice.",
@@ -104,7 +104,7 @@ const Products = await Product.create([
       {
         name: "Toothpaste",
         price: 2.29,
-        image: "",
+        image: "https://i.imgur.com/mNcvPIM.jpg",
         manufacturer: "DentalCare",
         department: "Personal Care",
         description: "Fluoride toothpaste for strong teeth.",
@@ -114,7 +114,7 @@ const Products = await Product.create([
       {
         name: "Laptop",
         price: 799.00,
-        image: "",
+        image: "https://i.imgur.com/XLmFnc6.jpg",
         manufacturer: "TechGenius",
         department: "Electronics",
         description: "Powerful laptop for work and entertainment.",
@@ -124,7 +124,7 @@ const Products = await Product.create([
       {
         name: "Coffee Table",
         price: 149.99,
-        image: "",
+        image: "https://i.imgur.com/A28sBzC.jpg",
         manufacturer: "FurnishHome",
         department: "Home Furniture",
         description: "Elegant coffee table for your living room.",
@@ -144,7 +144,7 @@ const Products = await Product.create([
       {
         name: "Baby Wipes",
         price: 6.99,
-        image: "",
+        image: "https://i.imgur.com/LaogAUX.jpg",
         manufacturer: "TinyTots",
         department: "Baby",
         description: "Gentle baby wipes for easy cleaning.",
@@ -154,7 +154,7 @@ const Products = await Product.create([
       {
         name: "Dress Shirt",
         price: 24.95,
-        image: "",
+        image: "https://i.imgur.com/zaCOfM8.jpg",
         manufacturer: "ElegantAttire",
         department: "Clothing",
         description: "Formal dress shirt for special occasions.",
@@ -165,7 +165,7 @@ const Products = await Product.create([
       {
         name: "Bananas",
         price: 1.49,
-        image: "",
+        image: "https://i.imgur.com/mDlQQAz.jpg",
         manufacturer: "TropicalHarvest",
         department: "Groceries",
         description: "Sweet and nutritious bananas.",
@@ -175,7 +175,7 @@ const Products = await Product.create([
       {
         name: "Conditioner",
         price: 4.99,
-        image: "",
+        image: "https://i.imgur.com/pLbDZpt.jpg",
         manufacturer: "SilkyStrands",
         department: "Personal Care",
         description: "Smooth and hydrating hair conditioner.",
@@ -185,7 +185,7 @@ const Products = await Product.create([
       {
         name: "Tablet",
         price: 199.00,
-        image: "",
+        image: "https://i.imgur.com/VmwOdk4.jpg",
         manufacturer: "TechWonder",
         department: "Electronics",
         description: "Versatile tablet for work and entertainment.",
@@ -195,7 +195,7 @@ const Products = await Product.create([
       {
         name: "Desk",
         price: 149.50,
-        image: "",
+        image: "https://i.imgur.com/UUryCVh.jpg",
         manufacturer: "StudySolutions",
         department: "Home Furniture",
         description: "Functional desk for your home office.",
@@ -205,7 +205,7 @@ const Products = await Product.create([
       {
         name: "Cat Litter",
         price: 9.25,
-        image: "",
+        image: "https://i.imgur.com/Zt9TPAK.jpg",
         manufacturer: "KittyCuisine",
         department: "Pets",
         description: "Odor-absorbing cat litter for easy cleanup.",
@@ -215,7 +215,7 @@ const Products = await Product.create([
       {
         name: "Baby Formula",
         price: 17.99,
-        image: "",
+        image: "https://i.imgur.com/iiwHWYp.jpg",
         manufacturer: "TinyTots",
         department: "Baby",
         description: "Nutrient-rich baby formula for infants.",
@@ -225,7 +225,7 @@ const Products = await Product.create([
       {
         name: "Jeans",
         price: 29.95,
-        image: "",
+        image: "https://i.imgur.com/qJrW28A.jpg",
         manufacturer: "DenimDeluxe",
         department: "Clothing",
         description: "Classic denim jeans for everyday wear.",
@@ -235,7 +235,7 @@ const Products = await Product.create([
       {
         name: "Peaches",
         price: 3.29,
-        image: "",
+        image: "https://i.imgur.com/2vvDInW.jpg",
         manufacturer: "OrchardFresh",
         department: "Groceries",
         description: "Juicy and flavorful peaches.",
@@ -245,17 +245,17 @@ const Products = await Product.create([
       {
         name: "Deodorant",
         price: 3.75,
-        image: "",
+        image: "https://i.imgur.com/1Mj9Dvf.jpg",
         manufacturer: "FreshGlow",
         department: "Personal Care",
-        description: "Long-lasting deodorant with a pleasant scent.",
+        description: "Long-lasting deodorant wbluetith a pleasant scent.",
         review: "",
         subcategory: "Personal Care"
       },
       {
         name: "Bluetooth Speaker",
         price: 59.99,
-        image: "",
+        image: "https://i.imgur.com/MnTUHX8.jpg",
         manufacturer: "SonicSound",
         department: "Electronics",
         description: "Compact Bluetooth speaker for wireless audio.",
