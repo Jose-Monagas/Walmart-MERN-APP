@@ -3,27 +3,26 @@
   background-color: #222;
   display: flex;
   margin: 0;
-  padding: 15px 200px 15px 200px;
+  padding: 15px 20px; /* Adjusted padding values */
   flex-direction: row;
   border: 0;
-  width: 0 auto;
+  width: auto;
   white-space: normal;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   justify-content: space-around;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
+.primary_list li {
+  margin: 0 10px;
+}
 
-  .primary_list li {
-    margin: 0 10px;
-  }
-
-  .sale {
-    color: red;
-  }
+.sale {
+  color: red;
 }
