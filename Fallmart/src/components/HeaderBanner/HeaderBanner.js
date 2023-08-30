@@ -10,7 +10,7 @@ function HeaderBanner() {
 				<li className={styles.cb}>CB2</li>
 				<div className={styles.flag}>
 					<img
-						src="//images.crateandbarrel.com/is/image/Crate/flag_US"
+						src="https://i.imgur.com/M207hlJ.jpg"
 						alt="Ship To: United States"
 						title="Ship To: United States"
 						height="14"

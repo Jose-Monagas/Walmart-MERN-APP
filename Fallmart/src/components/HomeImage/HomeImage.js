@@ -6,15 +6,15 @@ function HomeImage() {
 		<div className={styles.allimage}>
 			<img
 				className={styles.first_fullImg}
-				src="//cb.scene7.com/is/image/Crate/cb_dHP_08242023_CBCC_Hero?wid=1440&amp;qlt=80&amp;op_sharpen=1"
+				src="https://i.imgur.com/eflVxXr.jpg"
 				alt=""
-				width="100%"
+				// width="100%"
 			/>
 			<img
 				className={styles.second_fullImg}
-				src="//cb.scene7.com/is/image/Crate/cb_dHP_08242023_FurniturePromo?wid=1440&amp;qlt=80&amp;op_sharpen=1"
+				src="https://i.imgur.com/frxnxYF.jpg"
 				alt=""
-				width="100%"
+				// width="100%"
 			/>
 		</div>
 	);

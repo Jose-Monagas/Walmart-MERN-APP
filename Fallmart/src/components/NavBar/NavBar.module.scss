@@ -21,7 +21,7 @@
     font-style: normal;
     font-weight: 400;
     height: 48px;
-    padding: 5px 6.4285714286em 5px 16px;
+    padding: 5px 10px 5px 16px;
     font-size: 14px;
     border: 1px solid #666;
     border-radius: 0;
@@ -37,7 +37,15 @@
   .left_core {
     display: flex;
     flex: 1;
+    align-items: center;
   }
+
+  .search_icon {
+    color: #666;
+    font-size: 23px;
+    margin-right: 55px;
+  }
+  
   
   .logomiddle_core {
     width: 300px;
@@ -100,4 +108,3 @@
     padding: 1px;
     cursor: pointer;
   }
-  
