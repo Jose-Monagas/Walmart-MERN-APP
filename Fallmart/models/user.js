@@ -22,6 +22,7 @@ const userSchema = new Schema(
 			minlength: 6,
 			required: true
 		},
+		phone: { type: String, required: true, match: /^\d{10}$/ },
 		membershipType: { type: String, default: 'regular' },
 		membershipCode: { type: String }
 	},
