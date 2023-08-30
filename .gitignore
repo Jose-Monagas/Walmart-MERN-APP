@@ -1,7 +1,3 @@
-Fallmart/node_modules/
-Fallmart/.env
 
-# bundled code
-# Fallmart/public/js/dist/
-# Fallmart/public/css/styles.css
-# Fallmart/public/index.html
+node_modules/
+.env

@@ -3,7 +3,7 @@ import styles from './SecondNav.module.scss';
 
 function SecondNav() {
 	return (
-		<ul className="second_nav">
+		<ul className={styles.second_nav}>
 			<li>What's new</li>
 			<li>wedding registry</li>
 			<li>free design services</li>
