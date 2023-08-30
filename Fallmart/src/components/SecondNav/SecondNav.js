@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SecondNav.css";
+import styles from "./SecondNav.module.scss";
 
 function SecondNav() {
   return (

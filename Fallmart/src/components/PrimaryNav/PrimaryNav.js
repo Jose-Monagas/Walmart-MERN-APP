@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PrimaryNav.css";
+import styles from "./PrimaryNav.module.scss";
 
 function PrimaryNav() {
   return (
