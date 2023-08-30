@@ -5,15 +5,6 @@ const PORT = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const path = require('path');
 
-/* Add MongoDB here after connecting database in .env
-const MONGODB_URI = process.env.MONGODB_URI
-const db = mongoose.connection;
-
-mongoose.connect(MONGODB_URI);
-db.on('open', () => {
-    console.log('Mongo is Connected');
-});
-*/
 require('./config/database');
 
 app.use(require('./config/checkToken'));
