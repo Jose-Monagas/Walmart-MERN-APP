@@ -1,6 +1,7 @@
 const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const { use } = require('browser-sync');
 
 const checkToken = (req, res) => {
 	console.log('req.user', req.user);
@@ -42,9 +43,19 @@ const dataController = {
 	//UPDATE USER
 	async updateUser(req, res, next) {
 		try {
-			const authUserEmail = req.user.email;
+			const authUser = req.user._id;
 			const newEmail = req.body.email;
-			if (newEmail !== authUserEmail) {
+			console.log('authUserEmail:', req.user);
+			console.log('new', newEmail);
+			//authUser.email = newEmail;
+
+			const user = await User.findOne({ _id: authUser });
+			console.log(user);
+			if (!user) {
+				return res.status(404).json({ message: 'User not found' });
+			}
+
+			if (newEmail !== authUser.email) {
 				const emailTaken = await User.exists({ email: newEmail });
 				if (emailTaken) {
 					return res.status(400).json({ message: 'Email already in use' });
@@ -52,10 +63,12 @@ const dataController = {
 			}
 
 			const updates = Object.keys(req.body);
-			const user = await User.findOne({ email: req.body.email });
-
+			//console.log(updates);
 			updates.forEach((update) => (user[update] = req.body[update]));
+
+			// Save the updated user
 			await user.save();
+			// const token = createJWT(user);
 			res.json(user);
 			next();
 		} catch (error) {
