@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const path = require('path');
+// const favicon = require('serve-favicon')
 
 /* Add MongoDB here after connecting database in .env
 const MONGODB_URI = process.env.MONGODB_URI
@@ -17,6 +18,7 @@ db.on('open', () => {
 require('./config/database');
 
 app.use(require('./config/checkToken'));
+
 
 /* Middleware */
 app.use(express.json());

@@ -20,7 +20,7 @@ function PrimaryNav() {
 			<li>Window</li>
 			<li>Holidays</li>
 			<li>Gifts</li>
-			<li className="sale">SALE</li>
+			<li className={styles.sale}>SALE</li>
 			<li>&kids</li>
 		</ul>
 	);
