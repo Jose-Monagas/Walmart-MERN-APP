@@ -3,12 +3,12 @@ import styles from './HeaderBanner.module.scss';
 
 function HeaderBanner() {
 	return (
-		<div className={styles.header_banner}>
+		<div>
 			<ul className={styles.header_banner_container}>
-				<li className={styles.cratebarrel}>fallmart</li>
-				<li className={styles.cratekids}>fallmart&kids</li>
+				<li >fallmart</li>
+				<li >fallmart&kids</li>
 				<li className={styles.cb}>CB2</li>
-				<div className={styles.flag}>
+				<div> 
 					<img
 						src="https://i.imgur.com/M207hlJ.jpg"
 						alt="Ship To: United States"

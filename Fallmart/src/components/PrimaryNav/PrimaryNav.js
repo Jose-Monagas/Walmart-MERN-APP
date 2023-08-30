@@ -2,56 +2,53 @@ import styles from './PrimaryNav.module.scss';
 import { Link } from 'react-router-dom';
 
 function PrimaryNav() {
-	// TODO: get styles working and pass in styles.primary_list for className
-	console.log(styles);
 	return (
 		<ul className={styles.primary_list}>
-			<Link to="/furniture">
-				<li>Furniture</li>
-			</Link>
-			<Link to="/outdoor">
-			<li>Outdoor</li>
-			</Link>
-			<Link to="/tabletopbar">
-			<li>Tabletop & Bar</li>
-			</Link>
-			<Link to="/kitchen">
-			<li>Kitchen</li>
-			</Link>
-			<Link to="/bedding">
-			<li>Bedding</li>
-			</Link>
-			<Link to="/bath">
-			<li>Bath</li>
-			</Link>
-			<Link to="/decorpillows">
-			<li>Decor & Pillows</li>
-			</Link>
-			<Link to="/rugs">
-			<li>Rugs</li>
-			</Link>
-			<Link to="/lighting">
-			<li>Lighting</li>
-			</Link>
-			<Link to="/window">
-			<li>Window</li>
-			</Link>
-			<Link to="/holidays">
-			<li>Holidays</li>
-			</Link>
-			<Link to="/gifts">
-			<li>Gifts</li>
-			</Link>
-			<Link to="/sale">
-			<li className={styles.sale}>SALE</li>
-			</Link>
-			<Link to="/kids">
-			<li>&kids</li>
-			</Link>
+			<li>
+				<Link to="/furniture">Furniture</Link>
+			</li>
+			<li>
+				<Link to="/outdoor">Outdoor</Link>
+			</li>
+			<li>
+				<Link to="/tabletopbar">Tabletop &amp; Bar</Link>
+			</li>
+			<li>
+				<Link to="/kitchen">Kitchen</Link>
+			</li>
+			<li>
+				<Link to="/bedding">Bedding</Link>
+			</li>
+			<li>
+				<Link to="/bath">Bath</Link>
+			</li>
+			<li>
+				<Link to="/decorpillows">Decor &amp; Pillows</Link>
+			</li>
+			<li>
+				<Link to="/rugs">Rugs</Link>
+			</li>
+			<li>
+				<Link to="/lighting">Lighting</Link>
+			</li>
+			<li>
+				<Link to="/window">Window</Link>
+			</li>
+			<li>
+				<Link to="/holidays">Holidays</Link>
+			</li>
+			<li>
+				<Link to="/gifts">Gifts</Link>
+			</li>
+			<li>
+				<Link to="/sale" className={styles.sale}>
+					SALE
+				</Link>
+			</li>
+			<li>
+				<Link to="/kids">&amp;kids</Link>
+			</li>
 		</ul>
 	);
 }
-
 export default PrimaryNav;
-
-
