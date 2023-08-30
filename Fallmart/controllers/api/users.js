@@ -41,26 +41,19 @@ const dataController = {
 	},
 	//UPDATE USER
 	async updateUser(req, res, next) {
-		try {
-			const authUserEmail = req.user.email;
-			const newEmail = req.body.email;
-			if (newEmail !== authUserEmail) {
-				const emailTaken = await User.exists({ email: newEmail });
-				if (emailTaken) {
-					return res.status(400).json({ message: 'Email already in use' });
-				}
+		try {			
+
+			if (!await User.findOne({ email: req.body.email, _id: { $ne: req.user.id } })) {
+				const user = await User.findOne({ email: req.body.email });
+					const updates = Object.keys(req.body)
+					updates.forEach(update => user[update] = req.body[update])
+					await user.save()
+					res.json(user)
+			  } else throw Error ("A user with that email already exists!")
 			}
-
-			const updates = Object.keys(req.body);
-			const user = await User.findOne({ email: req.body.email });
-
-			updates.forEach((update) => (user[update] = req.body[update]));
-			await user.save();
-			res.json(user);
-			next();
-		} catch (error) {
-			res.status(400).json({ message: error.message });
-		}
+			  catch (error) {
+				res.status(400).json({ message: error.message })
+		  } 
 	}
 };
 
