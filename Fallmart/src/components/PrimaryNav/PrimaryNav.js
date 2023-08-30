@@ -1,10 +1,13 @@
-import React from 'react';
 import styles from './PrimaryNav.module.scss';
+import { Link } from 'react-router-dom';
 
 function PrimaryNav() {
+	// TODO: get styles working and pass in styles.primary_list for className
 	return (
-		<ul className="primary_list">
-			<li>Furniture</li>
+		<ul className={'primary_list'}>
+			<Link to="/furniture">
+				<li>Furniture</li>
+			</Link>
 			<li>Outdoor</li>
 			<li>Tabletop & Bar</li>
 			<li>Kitchen</li>

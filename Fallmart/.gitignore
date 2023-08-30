@@ -4,3 +4,4 @@ node_modules/
 # bundled code
 public/js/dist/
 pubic/css/*
+public/index.html
