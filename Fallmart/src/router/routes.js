@@ -1,22 +1,16 @@
-import About from '../pages/About';
-import Home from '../pages/Home';
-import Contact from '../pages/Contact';
+import Fallmart from '../pages/Fallmart/Fallmart';
+import Furniture from '../pages/Furniture/Furniture';
 
 const routes = [
 	{
-		Component: Contact,
-		key: 'Contact',
-		path: '/contact'
-	},
-	{
-		Component: Home,
-		key: 'Home',
+		Component: Fallmart,
+		key: 'Fallmart',
 		path: '/'
 	},
 	{
-		Component: About,
-		key: 'About',
-		path: '/about'
+		Component: Furniture,
+		key: 'Furniture',
+		path: '/furniture'
 	}
 ];
 

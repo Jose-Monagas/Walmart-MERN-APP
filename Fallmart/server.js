@@ -14,39 +14,41 @@ db.on('open', () => {
     console.log('Mongo is Connected');
 });
 */
-require('./config/database')
+require('./config/database');
 
 app.use(require('./config/checkToken'));
 
 /* Middleware */
 app.use(express.json());
-if (process.env.NODE_ENV !== 'development'){
-  app.use(express.static('public'))
+if (process.env.NODE_ENV !== 'development') {
+	app.use(express.static('public'));
 }
 
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
 	res.locals.data = {};
-	next()
-})
+	next();
+});
 
-app.use('/api/users',require('./routes/api/users'));
+app.use('/api/users', require('./routes/api/users'));
 
-app.use('/api/products',require('./routes/api/products'))
+app.use('/api/products', require('./routes/api/products'));
 
-app.use('/api/orders',require('./routes/api/orders'))
+app.use('/api/orders', require('./routes/api/orders'));
 
-app.use('/api/reviews',require('./routes/api/reviews'))
+app.use('/api/reviews', require('./routes/api/reviews'));
 
-app.use('/api/membership',require('./routes/api/memberships'))
+app.use('/api/membership', require('./routes/api/memberships'));
 
-app.use('/api/subcategories',require('./routes/api/subcategories'))
+app.use('/api/subcategories', require('./routes/api/subcategories'));
 
+app.use('/api/wishlists', require('./routes/api/wishlists'));
 
-app.get('*',(req,res)=>{
-	res.sendFile(path.resolve(path.join(__dirname,'public','index.html')))
-})
+app.use('/api/departments', require('./routes/api/department'));
 
-app.listen(PORT,()=>{
-	console.log(`API Listening on port ${PORT}`)
-})
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve(path.join(__dirname, 'public', 'index.html')));
+});
 
+app.listen(PORT, () => {
+	console.log(`API Listening on port ${PORT}`);
+});

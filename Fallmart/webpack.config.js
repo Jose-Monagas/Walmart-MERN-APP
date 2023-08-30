@@ -1,11 +1,10 @@
 const path = require('path');
-const webpack = require('webpack')
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
-module.exports = env => {
+module.exports = (env) => {
 	return {
 		entry: {
 			App: './src/index.js',
@@ -14,15 +13,19 @@ module.exports = env => {
 		output: {
 			path: path.resolve(__dirname, 'public/js/dist'),
 			filename: '[name].[contenthash].js', // '[name].[contenthash].js' put this if you want to get hashed files to cache bust
-			sourceMapFilename: "[name].[contenthash].js.map"
+			sourceMapFilename:
+				process.env.NODE_ENV === 'dev'
+					? '[name].js.map'
+					: '[name].[contenthash].js.map',
+			publicPath: '/js/dist'
 		},
-		devtool:"source-map",
+		devtool: 'source-map',
 		module: {
 			rules: [
 				{
 					test: /\.m?js$/,
 					enforce: 'pre',
-					use: ['source-map-loader'],
+					use: ['source-map-loader']
 				},
 				{
 					test: /\.js$/,
@@ -33,8 +36,12 @@ module.exports = env => {
 					test: /\.scss$/,
 					use: [
 						'style-loader',
-						MiniCssExtractPlugin.loader,
-						'css-loader',
+						{
+							loader: 'css-loader',
+							options: {
+								modules: true
+							}
+						},
 						'sass-loader',
 						'postcss-loader'
 					]
@@ -42,9 +49,7 @@ module.exports = env => {
 			]
 		},
 		resolve: {
-			modules: [
-				'node_modules'
-			]
+			modules: ['node_modules']
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
@@ -59,7 +64,7 @@ module.exports = env => {
 			}),
 			new CleanWebpackPlugin(),
 			new webpack.ProvidePlugin({
-				'React': 'react'
+				React: 'react'
 			})
 		],
 		optimization: {
