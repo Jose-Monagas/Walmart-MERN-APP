@@ -1,5 +1,9 @@
-.fullImg {
-    width: 100%;
-    display: block;
-  }
-  
+.allimage {
+  width: 100%;
+  display: block; /* Change 'flex' to 'block' to stack images vertically */
+}
+
+.allimage img {
+  width: 100%; /* Make the images span the full width of their container */
+  height: auto; /* Maintain the aspect ratio of the images */
+}
