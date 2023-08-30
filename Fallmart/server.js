@@ -4,10 +4,12 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const path = require('path');
+// const favicon = require('serve-favicon')
 
 require('./config/database');
 
 app.use(require('./config/checkToken'));
+
 
 /* Middleware */
 app.use(express.json());

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './NavBar.module.scss';
+import {FaSearch} from "react-icons/fa"
 
 function NavBar() {
 	console.log(styles);
@@ -7,10 +8,11 @@ function NavBar() {
 		<nav className={styles.header_core}>
 			<div className={styles.left_core}>
 				<input
-					className="header_searchInput"
+					className={styles.header_searchInput}
 					type="text"
 					placeholder="What can we help you find?"
 				/>
+				<FaSearch className={styles.search_icon} />
 			</div>
 			<img
 				className={styles.logomiddle_core}
