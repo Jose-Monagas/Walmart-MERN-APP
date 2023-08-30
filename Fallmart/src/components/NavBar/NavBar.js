@@ -2,9 +2,10 @@ import React from 'react';
 import styles from './NavBar.module.scss';
 
 function NavBar() {
+	console.log(styles);
 	return (
-		<nav className="header_core">
-			<div className="left_core">
+		<nav className={styles.header_core}>
+			<div className={styles.left_core}>
 				<input
 					className="header_searchInput"
 					type="text"
@@ -12,17 +13,17 @@ function NavBar() {
 				/>
 			</div>
 			<img
-				className="logomiddle_core"
+				className={styles.logomiddle_core}
 				src="https://i.imgur.com/xgA0d20.png"
 				alt=""
 			/>
-			<div className="right_core">
-				<div className="account">
+			<div className={styles.right_core}>
+				<div className={styles.account}>
 					<a href="/account/order-tracking">Orders</a>
 					<span> & </span>
-					<button className="signbutton">Sign In</button>
+					<button className={styles.signbutton}>Sign In</button>
 				</div>
-				<div className="location">
+				<div className={styles.location}>
 					<img
 						src="https://i.imgur.com/gXCgwJG.jpg"
 						alt=""
@@ -30,7 +31,7 @@ function NavBar() {
 						height="40"
 					/>
 				</div>
-				<div className="favorites">
+				<div className={styles.favorites}>
 					<img
 						src="https://i.imgur.com/UpoCDeP.png"
 						alt=""
@@ -38,7 +39,7 @@ function NavBar() {
 						height="30"
 					/>
 				</div>
-				<div className="cart">
+				<div className={styles.cart}>
 					<img
 						src="https://i.imgur.com/TWI8Zuk.png"
 						alt=""

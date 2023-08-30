@@ -1,7 +1,0 @@
-node_modules/
-.env
-
-# bundled code
-public/js/dist/
-pubic/css/*
-public/index.html

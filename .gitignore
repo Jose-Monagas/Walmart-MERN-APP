@@ -1,0 +1,8 @@
+Fallmart/node_modules/
+Fallmart/.env
+
+# bundled code
+Fallmart/public/js/dist/
+Fallmart/pubic/css/*
+Fallmart/public/index.html
+Fallmart/public/index.html

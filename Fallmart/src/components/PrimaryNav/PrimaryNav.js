@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 function PrimaryNav() {
 	// TODO: get styles working and pass in styles.primary_list for className
+	console.log(styles);
 	return (
-		<ul className={'primary_list'}>
+		<ul className={styles.primary_list}>
 			<Link to="/furniture">
 				<li>Furniture</li>
 			</Link>
