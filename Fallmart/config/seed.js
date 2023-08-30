@@ -1,4 +1,4 @@
-// require('dotenv').config();
+// require('dotenv').config();;
 require('./database');
 
 const Department = require('../models/department');
