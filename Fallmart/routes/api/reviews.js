@@ -7,7 +7,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 router.post('/products/:productId', ensureLoggedIn, reviewsCtrl.createReview);
 
 //DELETE /api/reviews/:reviewId
-router.delete('/:reviewId', ensureLoggedIn, reviewsCtrl.deleteReview);
+router.delete('/remove/:reviewId', ensureLoggedIn, reviewsCtrl.deleteReview);
 
 //GET /api/reviews/products:productId
 router.get('/products/:productId', reviewsCtrl.getReviewsByProduct);

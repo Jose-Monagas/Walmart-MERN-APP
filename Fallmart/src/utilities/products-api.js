@@ -8,5 +8,5 @@ export function getProducts() {
 }
 
 export function getProductById(productId) {
-	return sendRequest(`${BASE_URL}${productId}`);
+	return sendRequest(`${BASE_URL}/${productId}`);
 }

@@ -4,15 +4,11 @@ const wishlistCtrl = require('../../controllers/api/wishlists');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 //PUT /api/wishlists/:wishlistId/add/:productId
-router.put(
-	'/:wishlistId/add/:productId',
-	ensureLoggedIn,
-	wishlistCtrl.addItemToWishlist
-);
+router.put('/add/:productId', ensureLoggedIn, wishlistCtrl.addItemToWishlist);
 
 //Delete /api/wishlists/:wishlistId/remove/:productId
 router.delete(
-	'/:wishlistId/remove/:productId',
+	'/remove/:productId',
 	ensureLoggedIn,
 	wishlistCtrl.removeProductFromWishlist
 );
