@@ -9,4 +9,6 @@ router.get('/', productController.index);
 
 router.get('/:id', productController.show);
 
+//Get
+router.get('/:id', productController.productRating);
 module.exports = router;
