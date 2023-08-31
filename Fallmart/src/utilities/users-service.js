@@ -39,3 +39,16 @@ export function getUser() {
 export function logOut() {
 	localStorage.removeItem('token');
 }
+
+export async function update(userData) {
+	try {
+		const token = getToken();
+		if (!token) {
+			throw new Error('User not authenticated');
+		}
+		await usersAPI.update(userData);
+		return getUser();
+	} catch (error) {
+		throw new Error('Error updating user data');
+	}
+}
