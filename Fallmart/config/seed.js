@@ -4,7 +4,7 @@ require('./database');
 const Department = require('../models/department');
 const SubCategory = require('../models/subCategory');
 const Product = require('../models/product');
-(async function () {
+(async function (){
     await Department.deleteMany({});
 	await SubCategory.deleteMany({})
 	await Product.deleteMany({})
