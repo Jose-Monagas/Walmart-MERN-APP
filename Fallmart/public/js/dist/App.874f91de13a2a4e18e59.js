@@ -61,8 +61,8 @@ function HeaderBanner() {
     src: "https://i.imgur.com/M207hlJ.jpg",
     alt: "Ship To: United States",
     title: "Ship To: United States",
-    height: "14",
-    width: "21"
+    height: "20",
+    width: "25"
   }))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeaderBanner);
@@ -118,29 +118,46 @@ function HomeImage() {
 
 
 function NavBar() {
+  const [searchValue, setSearchValue] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  const handleSearch = () => {
+    console.log('Performing search:', searchValue);
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].header_core
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].left_core
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].search_container
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].header_searchInput,
     type: "text",
-    placeholder: "What can we help you find?"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSearch, {
-    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].search_icon
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logomiddle_core,
+    placeholder: "What can we help you find?",
+    value: searchValue,
+    onChange: e => setSearchValue(e.target.value)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].search_button,
+    onClick: handleSearch
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSearch, null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logomiddle_core
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: "https://i.imgur.com/xgA0d20.png",
     alt: ""
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].right_core
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].account
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "/account/order-tracking"
-  }, "Orders"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, " & "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+  }, " Orders "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, " & "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].signbutton
-  }, "Sign In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, " Sign In")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].humanicon
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://i.imgur.com/l3cX5Ev.png",
+    alt: "",
+    width: "30",
+    height: "30"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].location
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: "https://i.imgur.com/gXCgwJG.jpg",
@@ -298,7 +315,7 @@ root.render( /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_0__
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.YXXR5YqufX0bpbK07pLh {
-  color: #666;
+  color: black;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
@@ -315,14 +332,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.YXXR5YqufX0bpbK07pLh {
   min-height: 24px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 100px;
   font-weight: bold;
   font-size: 14px;
+  font-family: "Arimo", sans-serif;
 }
 
 .hKwD9gdIMuARuubsykKg {
   border: 1px solid #666;
   padding: 3px 3px 3px 3px;
-}`, "",{"version":3,"sources":["webpack://./src/components/HeaderBanner/HeaderBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,aAAA;EACA,mBAAA;EACA,6BAAA;EACA,sBAAA;EACA,cAAA;EACA,2BAAA;EACA,eAAA;EACA,WAAA;EACA,qBAAA;EACA,sBAAA;EACA,qBAAA;EACK,gBAAA;EACL,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,oBAAA;EACA,iBAAA;EACA,eAAA;AACF;;AACA;EACE,sBAAA;EACA,wBAAA;AAEF","sourcesContent":[".header_banner_container {\r\n  color: #666;\r\n  display: flex;\r\n  align-items: center;\r\n  border-bottom: 1px solid #ccc;\r\n  box-sizing: border-box;\r\n  margin: 0 auto;\r\n  justify-content: flex-start;\r\n  padding: 0 32px;\r\n  width: 100%;\r\n  list-style-type: none;\r\n  grid-auto-flow: column;\r\n  -moz-column-gap: 32px;\r\n       column-gap: 32px;\r\n  margin-right: 16px;\r\n  min-height: 24px;\r\n  padding-top: 10px;\r\n  padding-bottom: 10px;\r\n  font-weight: bold;\r\n  font-size: 14px;\r\n}\r\n.cb {\r\n  border: 1px solid #666;\r\n  padding: 3px 3px 3px 3px;\r\n}\r\n\r\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/HeaderBanner/HeaderBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,6BAAA;EACA,sBAAA;EACA,cAAA;EACA,2BAAA;EACA,eAAA;EACA,WAAA;EACA,qBAAA;EACA,sBAAA;EACA,qBAAA;EACK,gBAAA;EACL,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,oBAAA;EACA,mBAAA;EACA,iBAAA;EACA,eAAA;EACA,gCAAA;AACF;;AACA;EACE,sBAAA;EACA,wBAAA;AAEF","sourcesContent":[".header_banner_container {\r\n  color: black;\r\n  display: flex;\r\n  align-items: center;\r\n  border-bottom: 1px solid #ccc;\r\n  box-sizing: border-box;\r\n  margin: 0 auto;\r\n  justify-content: flex-start;\r\n  padding: 0 32px;\r\n  width: 100%;\r\n  list-style-type: none;\r\n  grid-auto-flow: column;\r\n  -moz-column-gap: 32px;\r\n       column-gap: 32px;\r\n  margin-right: 16px;\r\n  min-height: 24px;\r\n  padding-top: 10px;\r\n  padding-bottom: 10px;\r\n  padding-left: 100px;\r\n  font-weight: bold;\r\n  font-size: 14px;\r\n  font-family: 'Arimo', sans-serif;\r\n}\r\n.cb {\r\n  border: 1px solid #666;\r\n  padding: 3px 3px 3px 3px;\r\n}\r\n\r\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"header_banner_container": `YXXR5YqufX0bpbK07pLh`,
@@ -389,12 +408,12 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.ZFkQ9ONSjUU0ZoTLCAcW {
   display: flex;
-  justify-content: space-between; /* Adjusted this property */
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   min-height: auto;
-  padding: 25px 32px 0;
   border-bottom: none;
+  font-family: "Arimo", sans-serif;
 }
 
 .EtCOHT_kcUDjvG1jkNAl {
@@ -404,17 +423,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.ZFkQ9ONSjUU0ZoTLCAcW {
   margin-right: 18px;
 }
 
-.ZWWPbhkPcUOgr4qAVpQf {
-  background: #fff;
-  color: #222;
-  font-style: normal;
-  font-weight: 400;
-  height: 48px;
-  padding: 5px 10px 5px 16px;
-  font-size: 14px;
-  border: 1px solid #666;
-  border-radius: 0;
-  min-width: 24.0625em;
+.DMXmO7AFXeMDV826mrsF {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust as needed */
+  padding-left: 100px;
 }
 
 .ZWWPbhkPcUOgr4qAVpQf:focus {
@@ -423,44 +436,65 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.ZFkQ9ONSjUU0ZoTLCAcW {
   outline-offset: -3px;
 }
 
-.DMXmO7AFXeMDV826mrsF {
+.txpz7dLZZPxJOEjqOfEq {
   display: flex;
-  flex: 1;
   align-items: center;
+  position: relative;
 }
 
 .iLf5JzT7HukY4GmQ5Sd4 {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
   color: #666;
   font-size: 23px;
-  margin-right: 55px;
+}
+
+.ZWWPbhkPcUOgr4qAVpQf {
+  background: #fff;
+  color: #222;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  padding: 5px 40px 5px 16px; /* Adjust the right padding for the icon */
+  font-size: 14px;
+  border: 1px solid #666;
+  border-radius: 0;
+  min-width: 24.0625em;
+  flex: 1;
+}
+
+.IDc1B80diwDtQcXJb2Zy {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #666;
+  font-size: 23px;
 }
 
 .wLc_aL5WvbfRIstMIAxw {
-  width: 300px;
-  height: 120px;
+  display: flex;
+  align-items: center; /* Center vertically within the container */
+}
+
+.wLc_aL5WvbfRIstMIAxw img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  height: 15vmin; /* Maintain the aspect ratio */
 }
 
 .pWZZsuNPc60OhSskJBD7 {
   display: flex;
-  flex: 1;
-  position: relative;
-  font-size: 14px;
   align-items: center;
-  justify-content: flex-end;
+  padding-right: 100px;
 }
 
-.pWZZsuNPc60OhSskJBD7 > div {
-  margin-left: 15vmin; /* Adjust this spacing as needed */
-}
-
-.eGGz8oqINibBoD5ryMIp {
-  display: flex;
-  cursor: pointer;
-  text-decoration: none;
-  background: 0 0;
-  border: 0;
-  padding: 0;
-  color: #222;
+.eGGz8oqINibBoD5ryMIp a {
+  text-decoration: none; /* Remove default underline */
+  color: black; /* Initial text color */
 }
 
 .pNnp0qDDqtcVgDJY0WfQ {
@@ -472,41 +506,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.ZFkQ9ONSjUU0ZoTLCAcW {
   text-decoration: none;
 }
 
+.UD5b8_IW3HAhQPbbn98t {
+  margin-left: 20px;
+}
+
 .h0630xVhQpc1HCRyf7oF {
-  width: 0.1em;
-  height: 0.1em;
-  padding: 1px;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
+  margin-left: 20px;
 }
 
 .fwibm5olmySnuRsVlpbv {
-  width: 0.1em;
-  height: 0.1em;
-  padding: 1px;
-  cursor: pointer;
-  text-decoration: none;
+  margin-left: 20px;
 }
 
 .VhhJDtbTFuoVbmqiRyKL {
-  width: 0.1em;
-  height: 0.1em;
-  padding: 1px;
-  cursor: pointer;
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,8BAAA,EAAA,2BAAA;EACA,mBAAA;EACA,sBAAA;EACA,gBAAA;EACA,oBAAA;EACA,mBAAA;AACJ;;AAEE;EACE,YAAA;EACA,eAAA;EACA,iBAAA;EACA,kBAAA;AACJ;;AAEE;EACE,gBAAA;EACA,WAAA;EACA,kBAAA;EACA,gBAAA;EACA,YAAA;EACA,0BAAA;EACA,eAAA;EACA,sBAAA;EACA,gBAAA;EACA,oBAAA;AACJ;;AAEE;EACE,gBAAA;EACA,kBAAA;EACA,oBAAA;AACJ;;AAEE;EACE,aAAA;EACA,OAAA;EACA,mBAAA;AACJ;;AAEE;EACE,WAAA;EACA,eAAA;EACA,kBAAA;AACJ;;AAGE;EACE,YAAA;EACA,aAAA;AAAJ;;AAGE;EACE,aAAA;EACA,OAAA;EACA,kBAAA;EACA,eAAA;EACA,mBAAA;EACA,yBAAA;AAAJ;;AAGE;EACE,mBAAA,EAAA,kCAAA;AAAJ;;AAGE;EACE,aAAA;EACA,eAAA;EACA,qBAAA;EACA,eAAA;EACA,SAAA;EACA,UAAA;EACA,WAAA;AAAJ;;AAGE;EACE,eAAA;EACA,SAAA;EACA,UAAA;EACA,WAAA;EACA,eAAA;EACA,qBAAA;AAAJ;;AAGE;EACE,YAAA;EACA,aAAA;EACA,YAAA;EACA,eAAA;EACA,qBAAA;EACA,aAAA;EACA,cAAA;AAAJ;;AAGE;EACE,YAAA;EACA,aAAA;EACA,YAAA;EACA,eAAA;EACA,qBAAA;AAAJ;;AAGE;EACE,YAAA;EACA,aAAA;EACA,YAAA;EACA,eAAA;AAAJ","sourcesContent":[".header_core {\r\n    display: flex;\r\n    justify-content: space-between; /* Adjusted this property */\r\n    align-items: center;\r\n    box-sizing: border-box;\r\n    min-height: auto;\r\n    padding: 25px 32px 0;\r\n    border-bottom: none;\r\n  }\r\n  \r\n  .header_logo {\r\n    width: 270px;\r\n    margin-top: 4px;\r\n    margin-left: 20px;\r\n    margin-right: 18px;\r\n  }\r\n  \r\n  .header_searchInput {\r\n    background: #fff;\r\n    color: #222;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    height: 48px;\r\n    padding: 5px 10px 5px 16px;\r\n    font-size: 14px;\r\n    border: 1px solid #666;\r\n    border-radius: 0;\r\n    min-width: 24.0625em;\r\n  }\r\n  \r\n  .header_searchInput:focus {\r\n    box-shadow: none;\r\n    outline: solid 1px;\r\n    outline-offset: -3px;\r\n  }\r\n  \r\n  .left_core {\r\n    display: flex;\r\n    flex: 1;\r\n    align-items: center;\r\n  }\r\n\r\n  .search_icon {\r\n    color: #666;\r\n    font-size: 23px;\r\n    margin-right: 55px;\r\n  }\r\n  \r\n  \r\n  .logomiddle_core {\r\n    width: 300px;\r\n    height: 120px;\r\n  }\r\n  \r\n  .right_core {\r\n    display: flex;\r\n    flex: 1;\r\n    position: relative;\r\n    font-size: 14px;\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n  }\r\n  \r\n  .right_core > div {\r\n    margin-left: 15vmin; /* Adjust this spacing as needed */\r\n  }\r\n  \r\n  .account {\r\n    display: flex;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n    background: 0 0;\r\n    border: 0;\r\n    padding: 0;\r\n    color: #222;\r\n  }\r\n  \r\n  .signbutton {\r\n    background: 0 0;\r\n    border: 0;\r\n    padding: 0;\r\n    color: #222;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n  }\r\n  \r\n  .location {\r\n    width: 0.1em;\r\n    height: 0.1em;\r\n    padding: 1px;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n    padding: 10px;\r\n    display: block;\r\n  }\r\n  \r\n  .favorites {\r\n    width: 0.1em;\r\n    height: 0.1em;\r\n    padding: 1px;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n  }\r\n  \r\n  .cart {\r\n    width: 0.1em;\r\n    height: 0.1em;\r\n    padding: 1px;\r\n    cursor: pointer;\r\n  }\r\n"],"sourceRoot":""}]);
+  margin-left: 20px;
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,sBAAA;EACA,gBAAA;EACA,mBAAA;EACA,gCAAA;AACF;;AAEE;EACE,YAAA;EACA,eAAA;EACA,iBAAA;EACA,kBAAA;AACJ;;AAIE;EACE,aAAA;EACA,mBAAA;EACA,kBAAA,EAAA,qBAAA;EACA,mBAAA;AADJ;;AAIC;EACG,gBAAA;EACA,kBAAA;EACA,oBAAA;AADJ;;AAIE;EACE,aAAA;EACA,mBAAA;EACA,kBAAA;AADJ;;AAIE;EACE,kBAAA;EACA,WAAA,EAAA,qBAAA;EACA,WAAA;EACA,eAAA;AADJ;;AAIE;EACE,gBAAA;EACA,WAAA;EACA,kBAAA;EACA,gBAAA;EACA,YAAA;EACA,0BAAA,EAAA,0CAAA;EACA,eAAA;EACA,sBAAA;EACA,gBAAA;EACA,oBAAA;EACA,OAAA;AADJ;;AAIE;EACE,kBAAA;EACA,WAAA,EAAA,qBAAA;EACA,QAAA;EACA,2BAAA;EACA,gBAAA;EACA,YAAA;EACA,UAAA;EACA,eAAA;EACA,WAAA;EACA,eAAA;AADJ;;AAIE;EACE,aAAA;EACA,mBAAA,EAAA,2CAAA;AADJ;;AAIE;EACE,eAAA,EAAA,+CAAA;EACA,cAAA,EAAA,8BAAA;AADJ;;AAIE;EACE,aAAA;EACA,mBAAA;EACA,oBAAA;AADJ;;AAIE;EACE,qBAAA,EAAA,6BAAA;EACA,YAAA,EAAA,uBAAA;AADJ;;AAIE;EACE,eAAA;EACA,SAAA;EACA,UAAA;EACA,WAAA;EACA,eAAA;EACA,qBAAA;AADJ;;AAIE;EACE,iBAAA;AADJ;;AAIE;EACE,iBAAA;AADJ;;AAIE;EACE,iBAAA;AADJ;;AAIE;EACE,iBAAA;AADJ","sourcesContent":[".header_core {\r\n  display: flex;\r\n  justify-content: space-between; \r\n  align-items: center;\r\n  box-sizing: border-box;\r\n  min-height: auto;\r\n  border-bottom: none;\r\n  font-family: 'Arimo', sans-serif;\r\n}\r\n  \r\n  .header_logo {\r\n    width: 270px;\r\n    margin-top: 4px;\r\n    margin-left: 20px;\r\n    margin-right: 18px;\r\n  }\r\n  \r\n \r\n  \r\n  .left_core {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-right: 20px; /* Adjust as needed */\r\n    padding-left: 100px;\r\n  }\r\n\r\n .header_searchInput:focus {\r\n    box-shadow: none;\r\n    outline: solid 1px;\r\n    outline-offset: -3px;\r\n  }\r\n\r\n  .search_container {\r\n    display: flex;\r\n    align-items: center;\r\n    position: relative;\r\n  }\r\n\r\n  .search_icon {\r\n    position: absolute;\r\n    right: 10px; /* Adjust as needed */\r\n    color: #666;\r\n    font-size: 23px;\r\n  }\r\n  \r\n  .header_searchInput {\r\n    background: #fff;\r\n    color: #222;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    height: 48px;\r\n    padding: 5px 40px 5px 16px; /* Adjust the right padding for the icon */\r\n    font-size: 14px;\r\n    border: 1px solid #666;\r\n    border-radius: 0;\r\n    min-width: 24.0625em;\r\n    flex: 1;\r\n  }\r\n\r\n  .search_button {\r\n    position: absolute;\r\n    right: 10px; /* Adjust as needed */\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n    background: none;\r\n    border: none;\r\n    padding: 0;\r\n    cursor: pointer;\r\n    color: #666;\r\n    font-size: 23px;\r\n  }\r\n\r\n  .logomiddle_core {\r\n    display: flex;\r\n    align-items: center; /* Center vertically within the container */\r\n  }\r\n  \r\n  .logomiddle_core img {\r\n    max-width: 100%; /* Ensure the image fits within the container */\r\n    height: 15vmin; /* Maintain the aspect ratio */\r\n  }\r\n  \r\n  .right_core {\r\n    display: flex;\r\n    align-items: center;\r\n    padding-right: 100px;\r\n  }\r\n  \r\n  .account a {\r\n    text-decoration: none; /* Remove default underline */\r\n    color: black; /* Initial text color */\r\n  }\r\n  \r\n  .signbutton {\r\n    background: 0 0;\r\n    border: 0;\r\n    padding: 0;\r\n    color: #222;\r\n    cursor: pointer;\r\n    text-decoration: none;\r\n  }\r\n\r\n  .humanicon {\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .location {\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .favorites {\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .cart {\r\n    margin-left: 20px;\r\n  }\r\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"header_core": `ZFkQ9ONSjUU0ZoTLCAcW`,
 	"header_logo": `EtCOHT_kcUDjvG1jkNAl`,
-	"header_searchInput": `ZWWPbhkPcUOgr4qAVpQf`,
 	"left_core": `DMXmO7AFXeMDV826mrsF`,
+	"header_searchInput": `ZWWPbhkPcUOgr4qAVpQf`,
+	"search_container": `txpz7dLZZPxJOEjqOfEq`,
 	"search_icon": `iLf5JzT7HukY4GmQ5Sd4`,
+	"search_button": `IDc1B80diwDtQcXJb2Zy`,
 	"logomiddle_core": `wLc_aL5WvbfRIstMIAxw`,
 	"right_core": `pWZZsuNPc60OhSskJBD7`,
 	"account": `eGGz8oqINibBoD5ryMIp`,
 	"signbutton": `pNnp0qDDqtcVgDJY0WfQ`,
+	"humanicon": `UD5b8_IW3HAhQPbbn98t`,
 	"location": `h0630xVhQpc1HCRyf7oF`,
 	"favorites": `fwibm5olmySnuRsVlpbv`,
 	"cart": `VhhJDtbTFuoVbmqiRyKL`
@@ -549,6 +577,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.WG9ZP30eWDhoZP1hI7Lr {
   font-weight: 600;
   text-decoration: none;
   justify-content: space-around;
+  font-family: "Arimo", sans-serif;
 }
 
 a {
@@ -562,7 +591,7 @@ a {
 
 .ae0oWw8XJI2hTVlpYow9 {
   color: red;
-}`, "",{"version":3,"sources":["webpack://./src/components/PrimaryNav/PrimaryNav.module.scss"],"names":[],"mappings":"AAAA;EACE,qBAAA;EACA,sBAAA;EACA,aAAA;EACA,SAAA;EACA,kBAAA,EAAA,4BAAA;EACA,mBAAA;EACA,SAAA;EACA,WAAA;EACA,mBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;EACA,qBAAA;EACA,6BAAA;AACF;;AACA;EACE,WAAA;EACA,qBAAA;AAEF;;AACA;EACE,cAAA;AAEF;;AACA;EACE,UAAA;AAEF","sourcesContent":[".primary_list {\r\n  list-style-type: none;\r\n  background-color: #222;\r\n  display: flex;\r\n  margin: 0;\r\n  padding: 15px 20px; /* Adjusted padding values */\r\n  flex-direction: row;\r\n  border: 0;\r\n  width: auto;\r\n  white-space: normal;\r\n  color: #fff;\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  text-decoration: none;\r\n  justify-content: space-around;\r\n}\r\na {\r\n  color: #fff;\r\n  text-decoration: none;\r\n}\r\n\r\n.primary_list li {\r\n  margin: 0 10px;\r\n}\r\n\r\n.sale {\r\n  color: red;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/PrimaryNav/PrimaryNav.module.scss"],"names":[],"mappings":"AAAA;EACE,qBAAA;EACA,sBAAA;EACA,aAAA;EACA,SAAA;EACA,kBAAA,EAAA,4BAAA;EACA,mBAAA;EACA,SAAA;EACA,WAAA;EACA,mBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;EACA,qBAAA;EACA,6BAAA;EACA,gCAAA;AACF;;AACA;EACE,WAAA;EACA,qBAAA;AAEF;;AACA;EACE,cAAA;AAEF;;AACA;EACE,UAAA;AAEF","sourcesContent":[".primary_list {\r\n  list-style-type: none;\r\n  background-color: #222;\r\n  display: flex;\r\n  margin: 0;\r\n  padding: 15px 20px; /* Adjusted padding values */\r\n  flex-direction: row;\r\n  border: 0;\r\n  width: auto;\r\n  white-space: normal;\r\n  color: #fff;\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  text-decoration: none;\r\n  justify-content: space-around;\r\n  font-family: 'Arimo', sans-serif;\r\n}\r\na {\r\n  color: #fff;\r\n  text-decoration: none;\r\n}\r\n\r\n.primary_list li {\r\n  margin: 0 10px;\r\n}\r\n\r\n.sale {\r\n  color: red;\r\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"primary_list": `WG9ZP30eWDhoZP1hI7Lr`,
@@ -609,7 +638,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Uhq4SwODqQyQJbF3pWgI {
   justify-content: space-around;
   letter-spacing: 2px;
   line-height: 16px;
-}`, "",{"version":3,"sources":["webpack://./src/components/SecondNav/SecondNav.module.scss"],"names":[],"mappings":"AAAA;EACI,yBAAA;EACA,qBAAA;EACA,uBAAA;EACA,aAAA;EACA,kBAAA;EACA,iBAAA;EACA,2BAAA;EACA,YAAA;EACA,iBAAA;EACA,mBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;EACA,qBAAA;EACA,6BAAA;EACA,mBAAA;EACA,iBAAA;AACJ","sourcesContent":[".second_nav {\r\n    text-transform: uppercase;\r\n    list-style-type: none;\r\n    background-color: white;\r\n    display: flex;\r\n    position: relative;\r\n    margin-left: 20px;\r\n    padding: 0 270px 20px 270px;\r\n    height: auto;\r\n    overflow: visible;\r\n    white-space: normal;\r\n    color: #222;\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    text-decoration: none;\r\n    justify-content: space-around;\r\n    letter-spacing: 2px;\r\n    line-height: 16px;\r\n  }\r\n  "],"sourceRoot":""}]);
+  font-family: "Arimo", sans-serif;
+}`, "",{"version":3,"sources":["webpack://./src/components/SecondNav/SecondNav.module.scss"],"names":[],"mappings":"AAAA;EACI,yBAAA;EACA,qBAAA;EACA,uBAAA;EACA,aAAA;EACA,kBAAA;EACA,iBAAA;EACA,2BAAA;EACA,YAAA;EACA,iBAAA;EACA,mBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;EACA,qBAAA;EACA,6BAAA;EACA,mBAAA;EACA,iBAAA;EACA,gCAAA;AACJ","sourcesContent":[".second_nav {\r\n    text-transform: uppercase;\r\n    list-style-type: none;\r\n    background-color: white;\r\n    display: flex;\r\n    position: relative;\r\n    margin-left: 20px;\r\n    padding: 0 270px 20px 270px;\r\n    height: auto;\r\n    overflow: visible;\r\n    white-space: normal;\r\n    color: #222;\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    text-decoration: none;\r\n    justify-content: space-around;\r\n    letter-spacing: 2px;\r\n    line-height: 16px;\r\n    font-family: 'Arimo', sans-serif;\r\n  }\r\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"second_nav": `Uhq4SwODqQyQJbF3pWgI`

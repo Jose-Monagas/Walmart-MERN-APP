@@ -13,8 +13,8 @@ function HeaderBanner() {
 						src="https://i.imgur.com/M207hlJ.jpg"
 						alt="Ship To: United States"
 						title="Ship To: United States"
-						height="14"
-						width="21"
+						height="20"
+						width="25"
 					/>
 				</div>
 			</ul>
