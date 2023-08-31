@@ -8,7 +8,7 @@ module.exports = {
 };
 async function viewFavoriteProducts(req, res) {
 	try {
-		const userId = res.locals.data.user._id;
+		const userId = req.user._id;
 		const wishlist = await Wishlist.findOne({ userId }).populate(
 			'favoriteProducts'
 		);
@@ -21,7 +21,7 @@ async function viewFavoriteProducts(req, res) {
 
 async function addItemToWishlist(req, res) {
 	try {
-		const userId = res.locals.data.user._id;
+		const userId = req.user._id;
 		const productId = req.params.productId;
 
 		let wishlist = await Wishlist.findOne({ userId });
@@ -39,7 +39,7 @@ async function addItemToWishlist(req, res) {
 
 async function removeProductFromWishlist(req, res) {
 	try {
-		const userId = res.locals.data.user._id;
+		const userId = req.user._id;
 		const productId = req.params.productId;
 
 		const wishlist = await Wishlist.findOneAndUpdate(
