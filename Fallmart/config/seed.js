@@ -26,6 +26,16 @@ const Product = require('../models/product');
 		{ name: 'Pet Food', department: departments[4]._id },
 		{ name: 'Diapers', department: departments[5]._id },
 		{ name: 'Casual Wear', department: departments[6]._id },
+    { name: 'Beverages', department: departments[0]._id },
+    { name: 'Oral Care', department: departments[1]._id },
+    { name: 'Computers', department: departments[2]._id },
+    { name: 'Tablets', department: departments[2]._id },
+    { name: 'Wipes', department: departments[5]._id },
+    { name: 'Formal Wear', department: departments[6]._id },
+    { name: 'Office Furniture', department: departments[3]._id },
+    { name: 'Antiperspirants', department: departments[1]._id },
+    { name: 'Speakers', department: departments[2]._id },
+
 	  ]);
 
 	  const Products = await Product.create([
@@ -105,7 +115,7 @@ const Product = require('../models/product');
       department: departments[0]._id,
       description: "Freshly squeezed orange juice.",
       
-      subcategory: "Beverages"
+      subcategory: subcategories[0]._id
     },
     {
       name: "Toothpaste",
@@ -115,7 +125,7 @@ const Product = require('../models/product');
       department: departments[1]._id,
       description: "Fluoride toothpaste for strong teeth.",
       
-      subcategory: "Oral Care"
+      subcategory: subcategories[1]._id
     },
     {
       name: "Laptop",
@@ -125,7 +135,7 @@ const Product = require('../models/product');
       department: departments[2]._id,
       description: "Powerful laptop for work and entertainment.",
       
-      subcategory: "Computers"
+      subcategory: subcategories[2]._id
       },
       {
       name: "Coffee Table",
@@ -155,7 +165,7 @@ const Product = require('../models/product');
       department: departments[5]._id,
       description: "Gentle baby wipes for easy cleaning.",
       
-      subcategory: "Diapering"
+      subcategory: subcategories[2]._id
       },
       {
       name: "Dress Shirt",
@@ -165,7 +175,7 @@ const Product = require('../models/product');
       department: departments[6]._id,
       description: "Formal dress shirt for special occasions.",
       
-      subcategory: "Formal Wear"
+      subcategory: subcategories[6]._id
       },
       
       {
@@ -196,7 +206,7 @@ const Product = require('../models/product');
       department: departments[2]._id,
       description: "Versatile tablet for work and entertainment.",
       
-      subcategory: "Tablets"
+      subcategory: subcategories[2]._id
       },
       {
       name: "Desk",
@@ -206,7 +216,7 @@ const Product = require('../models/product');
       department: departments[3]._id,
       description: "Functional desk for your home office.",
       
-      subcategory: "Office Furniture"
+      subcategory: subcategories[3]._id
       },
       {
       name: "Cat Litter",
@@ -256,7 +266,7 @@ const Product = require('../models/product');
       department: departments[1]._id,
       description: "Long-lasting deodorant wbluetith a pleasant scent.",
  
-      subcategory: "Personal Care"
+      subcategory: subcategories[1]._id
       },
       {
       name: "Bluetooth Speaker",
@@ -266,7 +276,7 @@ const Product = require('../models/product');
       department: departments[2]._id,
       description: "Compact Bluetooth speaker for wireless audio.",
   
-      subcategory: "Speakers"
+      subcategory: subcategories[1]._id
       }
 
 
