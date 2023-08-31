@@ -12,7 +12,7 @@ const productSchema = new Schema({
 		required: true
 	},
 	description: { type: String, required: true },
-	// reviews: [{ type: Schema.Types.ObjectId, ref: 'review' }],
+	reviews: [{ type: Schema.Types.ObjectId, ref: 'review' }],
 	subcategory: {
 		type: Schema.Types.ObjectId,
 		ref: 'subcategory',
