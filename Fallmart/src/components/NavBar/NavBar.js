@@ -3,7 +3,6 @@ import styles from './NavBar.module.scss';
 import {FaSearch} from "react-icons/fa"
 
 function NavBar() {
-	console.log(styles);
 	return (
 		<nav className={styles.header_core}>
 			<div className={styles.left_core}>
