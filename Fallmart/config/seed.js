@@ -150,7 +150,7 @@ const Product = require('../models/product');
       {
       name: "Cat Food",
       price: 8.75,
-      image,
+      image: "https://i.imgur.com/0p5fAym.jpg",
       manufacturer: "KittyCuisine",
       department: departments[4]._id,
       description: "Delicious cat food for your feline companion.",
