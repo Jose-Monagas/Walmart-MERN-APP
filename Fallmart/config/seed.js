@@ -26,7 +26,6 @@ const Product = require('../models/product');
 		{ name: 'Pet Food', department: departments[4]._id },
 		{ name: 'Diapers', department: departments[5]._id },
 		{ name: 'Casual Wear', department: departments[6]._id },
-<<<<<<< HEAD
     { name: 'Beverages', department: departments[0]._id },
     { name: 'Oral Care', department: departments[1]._id },
     { name: 'Computers', department: departments[2]._id },
@@ -285,21 +284,4 @@ const Product = require('../models/product');
 
         process.exit();
     })();
-=======
-	  ]);
-
-	  const Products = await Product.create([
-		{
-			name: "Apples",
-			price: 2.99,
-			image: "https://i.imgur.com/jaWvFz4.jpg",
-			manufacturer: "Farm Fresh",
-			department: departments[0]._id,
-			description: "Fresh and delicious apples.",
-			subcategory: subcategories[0]._id
-}])
-
-    process.exit();
-})();
->>>>>>> ef7f58dab13242bbd305963168a7cde6aca526ad
 
