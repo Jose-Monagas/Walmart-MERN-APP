@@ -1,32 +1,40 @@
 const SubCategory = require('../../models/subCategory');
 const Product = require('../../models/product');
+const Department = require('../../models/department');
 module.exports = {
-	getSubCategoriesByDepartment,
-	getProductsInSubCategory
+	getSubCategoriesByDepartment
+	//getProductsInSubCategory
 };
-
+//find department and send back array of subcatergories that
+//a department hold.
 async function getSubCategoriesByDepartment(req, res) {
 	try {
 		const departmentId = req.params.departmentId;
-		const subCategories = await SubCategory.find({
-			department: departmentId
-		}).exec();
+		const department = await Department.findById(departmentId)
+			.populate('subcategories', 'name')
+			.exec();
+		if (!department) {
+			return res.status(404).json({ message: 'Department not found' });
+		}
+		const subCategories = department.subcategories.map(
+			(subcategory) => subcategory.name
+		);
 		res.status(200).json(subCategories);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
 	}
 }
 
-async function getProductsInSubCategory(req, res) {
-	try {
-		const subCategoryId = req.params.subCategoryId;
-		const subCategory = await SubCategory.findById(subCategoryId);
-		if (!subCategory) {
-			return res.status(404).json({ message: 'SubCategory not found' });
-		}
-		const products = await Product.find({ subCategory: subCategoryId });
-		res.status(200).json(products);
-	} catch (error) {
-		res.status(400).json({ message: error.message });
-	}
-}
+// async function getProductsInSubCategory(req, res) {
+// 	try {
+// 		const subCategoryId = req.params.subCategoryId;
+// 		const subCategory = await SubCategory.findById(subCategoryId);
+// 		if (!subCategory) {
+// 			return res.status(404).json({ message: 'SubCategory not found' });
+// 		}
+// 		const products = await Product.find({ subCategory: subCategoryId });
+// 		res.status(200).json(products);
+// 	} catch (error) {
+// 		res.status(400).json({ message: error.message });
+// 	}
+// }
