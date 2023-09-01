@@ -31,7 +31,6 @@ app.use('/api/orders', require('./routes/api/orders'));
 app.use('/api/reviews', require('./routes/api/reviews'));
 
 app.use('/api/membership', require('./routes/api/memberships'));
-
 app.use('/api/wishlists', require('./routes/api/wishlists'));
 
 app.get('*', (req, res) => {

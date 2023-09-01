@@ -3,6 +3,9 @@ const router = express.Router();
 const wishlistCtrl = require('../../controllers/api/wishlists');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
+//GET /api/wishlists/favorites/
+router.get('/favorites', ensureLoggedIn, wishlistCtrl.viewFavoriteProducts);
+
 //PUT /api/wishlists/:wishlistId/add/:productId
 router.put('/add/:productId', ensureLoggedIn, wishlistCtrl.addItemToWishlist);
 
@@ -12,8 +15,5 @@ router.delete(
 	ensureLoggedIn,
 	wishlistCtrl.removeProductFromWishlist
 );
-
-//GET /api/wishlists/favorites/
-router.get('/favorites', ensureLoggedIn, wishlistCtrl.viewFavoriteProducts);
 
 module.exports = router;
