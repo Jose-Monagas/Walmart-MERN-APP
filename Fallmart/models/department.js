@@ -6,4 +6,4 @@ const departmentSchema = new Schema({
 	subcategories: [{ type: Schema.Types.ObjectId, ref: 'SubCategory' }]
 });
 
-module.exports = mongoose.model('department', departmentSchema);
+module.exports = mongoose.model('Department', departmentSchema);
