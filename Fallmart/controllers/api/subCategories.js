@@ -16,10 +16,11 @@ async function getSubCategoriesByDepartment(req, res) {
 		if (!department) {
 			return res.status(404).json({ message: 'Department not found' });
 		}
-		const subCategories = department.subcategories.map(
-			(subcategory) => subcategory.name
-		);
-		res.status(200).json(subCategories);
+		const subCategoriesData = department.subcategories.map((subcategory) => ({
+			_id: subcategory._id,
+			name: subcategory.name
+		}));
+		res.status(200).json(subCategoriesData);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
 	}

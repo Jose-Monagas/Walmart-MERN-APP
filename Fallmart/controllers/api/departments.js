@@ -8,8 +8,11 @@ module.exports = {
 async function index(req, res) {
 	try {
 		const departments = await Dept.find({}).sort('name').exec();
-		const departmentNames = departments.map((department) => department.name);
-		res.status(200).json(departmentNames);
+		const departmentData = departments.map((department) => ({
+			_id: department._id,
+			name: department.name
+		}));
+		res.status(200).json(departmentData);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
 	}
