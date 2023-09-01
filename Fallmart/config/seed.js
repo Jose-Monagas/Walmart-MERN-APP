@@ -9,37 +9,35 @@ const Product = require('../models/product');
 	await SubCategory.deleteMany({})
 	await Product.deleteMany({})
     const departments = await Department.create([
-        { name: 'Groceries' },
-        { name: 'Personal Care' },
-        { name: 'Electronics' },
-        { name: 'Home Furniture' },
-        { name: 'Pets' },
-        { name: 'Baby' },
-        { name: 'Clothing' }
+        { name: 'Groceries', subcategories:['Fruits', 'Baverages']},
+        { name: 'Personal Care', subcategories:['Hair Care', 'Oral Care', 'Antiperspirants']},
+        { name: 'Electronics', subcategories:['Mobile Phones', 'Computers', 'Tablets']},
+        { name: 'Home Furniture', subcategories:['Living Room Furniture', 'Office Furniture'] },
+        { name: 'Pets', subcategories:['Pet Food'] }, 
+        { name: 'Baby', subcategories:['Diapers', 'Wipes'] },
+        { name: 'Clothing', subcategories:['Casual Wear', 'Formal Wear'] }
     ]);
 	
 	const subcategories = await SubCategory.create([
-		{ name: 'Fruits', department: departments[0]._id },
-		{ name: 'Hair Care', department: departments[1]._id },
-		{ name: 'Mobile Phones', department: departments[2]._id },
-		{ name: 'Living Room Furniture', department: departments[3]._id },
-		{ name: 'Pet Food', department: departments[4]._id },
-		{ name: 'Diapers', department: departments[5]._id },
-		{ name: 'Casual Wear', department: departments[6]._id },
-<<<<<<< HEAD
-    { name: 'Beverages', department: departments[0]._id },
-    { name: 'Oral Care', department: departments[1]._id },
-    { name: 'Computers', department: departments[2]._id },
-    { name: 'Tablets', department: departments[2]._id },
-    { name: 'Wipes', department: departments[5]._id },
-    { name: 'Formal Wear', department: departments[6]._id },
-    { name: 'Office Furniture', department: departments[3]._id },
-    { name: 'Antiperspirants', department: departments[1]._id },
-    { name: 'Speakers', department: departments[2]._id },
-
+		{ name: 'Fruits', products: ['Apples', 'Bananas', 'Peaches'], department: departments[0]._id},
+		{ name: 'Hair Care', products: ['Shampoo', 'Conditioner']},
+		{ name: 'Mobile Phones', products: ['Smartphone'] },
+		{ name: 'Living Room Furniture', products: ['Sofa', 'Coffee Table'] },
+		{ name: 'Pet Supplies', products: ['Dog Food', 'Cat Food'] },
+		{ name: 'Diapers', products: ['Baby Diapers', 'Baby Wipes'] },
+		{ name: 'Casual Wear', products: ['T-Shirt'] },
+    	{ name: 'Beverages', products: ['Orange Juice'] },
+    	{ name: 'Oral Care', products: ['Toothpaste'] },
+    	{ name: 'Computers', products: ['Laptop'] },
+    	{ name: 'Tablets', products: ['Tablet'] },
+    	{ name: 'Wipes', products: [] },
+    	{ name: 'Formal Wear', products: ['Dress Shirt'] },
+    	{ name: 'Office Furniture', products: ['Desk'] },
+    	{ name: 'Antiperspirants', products: [] },
+    	{ name: 'Speakers', products: [] },
 	  ]);
 
-	  const Products = await Product.create([
+	  const products = await Product.create([
 		{
 			name: "Apples",
 			price: 2.99,
@@ -285,21 +283,4 @@ const Product = require('../models/product');
 
         process.exit();
     })();
-=======
-	  ]);
-
-	  const Products = await Product.create([
-		{
-			name: "Apples",
-			price: 2.99,
-			image: "https://i.imgur.com/jaWvFz4.jpg",
-			manufacturer: "Farm Fresh",
-			department: departments[0]._id,
-			description: "Fresh and delicious apples.",
-			subcategory: subcategories[0]._id
-}])
-
-    process.exit();
-})();
->>>>>>> ef7f58dab13242bbd305963168a7cde6aca526ad
 
