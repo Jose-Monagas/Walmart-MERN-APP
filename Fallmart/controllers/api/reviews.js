@@ -1,5 +1,5 @@
 const Review = require('../../models/review');
-
+const Product = require('../../models/product');
 module.exports = {
 	createReview,
 	deleteReview,
@@ -8,16 +8,20 @@ module.exports = {
 
 async function createReview(req, res) {
 	try {
-		const { name, rating } = req.body;
+		const { name, rating, comment } = req.body;
 		const productId = req.params.productId;
-		const userId = res.locals.data.user._id;
+		const userId = req.user._id;
 		const review = new Review({
 			name: name || 'Anonymous',
 			rating: rating,
 			product: productId,
-			user: userId
+			user: userId,
+			comment: comment
 		});
 		await review.save();
+		const product = await Product.findOne({ _id: productId });
+		product.reviews.push(review._id);
+		await product.save();
 		res.status(201).json(review);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
@@ -27,19 +31,28 @@ async function createReview(req, res) {
 async function deleteReview(req, res) {
 	try {
 		const reviewId = req.params.reviewId;
-		const userId = res.locals.data.user._id;
+		const userId = req.user._id;
 
 		const review = await Review.findOne({ _id: reviewId, user: userId });
 		if (!review) {
-			return res
-				.status(404)
-				.json({
-					message:
-						'Review not found or you are not authorized to delete this review'
-				});
+			return res.status(404).json({
+				message:
+					'Review not found or you are not authorized to delete this review'
+			});
 		}
-		await review.remove();
-		res.status(204).json({ message: 'deleted review' });
+
+		const product = await Product.findOneAndUpdate(
+			{ reviews: review._id },
+			{ $pull: { reviews: review._id } }
+		);
+		if (product) {
+			await review.remove();
+			res
+				.status(204)
+				.json({ message: 'Deleted review and removed from product' });
+		} else {
+			res.status(404).json({ message: 'Product with review not found' });
+		}
 	} catch (error) {
 		res.status(400).json({ message: error.message });
 	}
