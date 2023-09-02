@@ -6,35 +6,35 @@ const SubCategory = require('../models/subCategory');
 const Product = require('../models/product');
 (async function (){
     await Department.deleteMany({});
-	await SubCategory.deleteMany({})
-	await Product.deleteMany({})
+	  await SubCategory.deleteMany({})
+	  await Product.deleteMany({})
     const departments = await Department.create([
         { name: 'Groceries', subcategories:['Fruits', 'Baverages']},
         { name: 'Personal Care', subcategories:['Hair Care', 'Oral Care', 'Antiperspirants']},
         { name: 'Electronics', subcategories:['Mobile Phones', 'Computers', 'Tablets']},
-        { name: 'Furniture', subcategories:['Living Room Furniture', 'Office Furniture'] },
-        { name: 'Pet Supplies', subcategories:['Pet Food'] }, 
-        { name: 'Baby Supplies', subcategories:['Diapers', 'Wipes'] },
-        { name: 'Clothing', subcategories:['Casual Wear', 'Formal Wear'] }
+        { name: 'Furniture', subcategories:['Living Room Furniture', 'Office Furniture']},
+        { name: 'Pet Supplies', subcategories:['Pet Food']}, 
+        { name: 'Baby Supplies', subcategories:['Diapers', 'Wipes']},
+        { name: 'Clothing', subcategories:['Casual Wear', 'Formal Wear']}
     ]);
 	
 	const subcategories = await SubCategory.create([
-		{ name: 'Fruits', products: ['Apples', 'Bananas', 'Peaches'], department: departments[0]},
-		{ name: 'Hair Care', products: ['Shampoo', 'Conditioner'], department: departments[1]},
-		{ name: 'Mobile Phones', products: ['Smartphone'], department: departments[2]._id},
-		{ name: 'Living Room Furniture', products: ['Sofa', 'Coffee Table'], department: departments[3]},
-		{ name: 'Pet Food', products: ['Dog Food', 'Cat Food'], department: departments[4]},
-		{ name: 'Diapers', products: ['Baby Diapers', 'Baby Wipes'], department: departments[5]},
-		{ name: 'Casual Wear', products: ['T-Shirt'], department: departments[6]},
-    { name: 'Beverages', products: ['Orange Juice'], department: departments[0]},
-    { name: 'Oral Care', products: ['Toothpaste'], department: departments[1]},
-    { name: 'Computers', products: ['Laptop'], department: departments[2]},
-    { name: 'Tablets', products: ['Tablet'], department: departments[2]},
-    { name: 'Wipes', products: [], department: departments[5]},
-    { name: 'Formal Wear', products: ['Dress Shirt'], department: departments[6]},
-    { name: 'Office Furniture', products: ['Desk'], department: departments[3]},
-    { name: 'Antiperspirants', products: [], department: departments[1]},
-    { name: 'Speakers', products: [], department: departments[2]},
+		{ name: 'Fruits', products: ['Apples', 'Bananas', 'Peaches'], department: ['']},
+		{ name: 'Hair Care', products: ['Shampoo', 'Conditioner'], department: ['']},
+		{ name: 'Mobile Phones', products: ['Smartphone'], department: ['']},
+		{ name: 'Living Room Furniture', products: ['Sofa', 'Coffee Table'], department: ['']},
+		{ name: 'Pet Food', products: ['Dog Food', 'Cat Food'], department: ['']},
+		{ name: 'Diapers', products: ['Baby Diapers', 'Baby Wipes'], department: ['']},
+		{ name: 'Casual Wear', products: ['T-Shirt'], department: ['']},
+    { name: 'Beverages', products: ['Orange Juice'], department: ['']},
+    { name: 'Oral Care', products: ['Toothpaste'], department: ['']},
+    { name: 'Computers', products: ['Laptop'], department: ['']},
+    { name: 'Tablets', products: ['Tablet'], department: ['']},
+    { name: 'Wipes', products: [], department: ['']},
+    { name: 'Formal Wear', products: ['Dress Shirt'], department: ['']},
+    { name: 'Office Furniture', products: ['Desk'], department: ['']},
+    { name: 'Antiperspirants', products: [], department: ['']},
+    { name: 'Speakers', products: [], department: ['']},
 	  ]);
 
 	  const products = await Product.create([
@@ -43,138 +43,139 @@ const Product = require('../models/product');
 			price: 2.99,
 			image: "https://i.imgur.com/jaWvFz4.jpg",
 			manufacturer: "Farm Fresh",
-			department: departments[0]._id,
+			department: '',
 			description: "Fresh and delicious apples.",
-			subcategory: subcategories[0]._id
+      review: '',
+			subcategory: ''
     },
     { name: "Shampoo",
       price: 5.49,
       image: "https://i.imgur.com/J6r4mEn.jpg",
       manufacturer: "CareClean",
-      department: departments[1]._id,
+      department: '',
       description: "Gentle and nourishing shampoo.",
-      
-      subcategory: subcategories[1]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "Smartphone",
       price: 399.99,
       image: "https://i.imgur.com/K3aI2Pe.jpg",
       manufacturer: "Techtronics",
-      department: departments[2]._id,
+      department: '',
       description: "High-end smartphone with advanced features.",
-      
-      subcategory: subcategories[2]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "Sofa",
       price: 299.00,
       image: "https://i.imgur.com/OgkFHnb.jpg",
       manufacturer: "ComfyLiving",
-      department: departments[3]._id,
+      department: '',
       description: "Comfortable and stylish sofa for your living room.",
-      
-      subcategory: subcategories[3]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "Dog Food",
       price: 12.99,
       image: "https://i.imgur.com/1CXWFkT.jpg",
       manufacturer: "PetPal",
-      department: departments[4]._id,
+      department: '',
       description: "Nutritious dog food for your furry friend.",
-      
-      subcategory: subcategories[4]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "Baby Diapers",
       price: 19.95,
       image: "https://i.imgur.com/Y3fORfd.jpg",
       manufacturer: "TinyTots",
-      department: departments[5]._id,
+      department: '',
       description: "Soft and absorbent diapers for babies.",
-      
-      subcategory: subcategories[5]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "T-Shirt",
       price: 9.99,
       image: "https://i.imgur.com/b3M4Qt6.jpg",
       manufacturer: "FashionFab",
-      department: departments[6]._id,
+      department: '',
       description: "Casual and comfortable cotton T-shirt.",
-      
-      subcategory: subcategories[5]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "Orange Juice",
       price: 3.49,
       image: "https://i.imgur.com/q73irfP.jpg",
       manufacturer: "JuicyCo",
-      department: departments[0]._id,
+      department: '',
       description: "Freshly squeezed orange juice.",
-      
-      subcategory: subcategories[0]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "Toothpaste",
       price: 2.29,
       image: "https://i.imgur.com/mNcvPIM.jpg",
       manufacturer: "DentalCare",
-      department: departments[1]._id,
+      department: '',
       description: "Fluoride toothpaste for strong teeth.",
-      
-      subcategory: subcategories[1]._id
+      review: '',
+      subcategory: ''
     },
     {
       name: "Laptop",
       price: 799.00,
       image: "https://i.imgur.com/XLmFnc6.jpg",
       manufacturer: "TechGenius",
-      department: departments[2]._id,
+      department: '',
       description: "Powerful laptop for work and entertainment.",
-      
-      subcategory: subcategories[2]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Coffee Table",
       price: 149.99,
       image: "https://i.imgur.com/A28sBzC.jpg",
       manufacturer: "FurnishHome",
-      department: departments[3]._id,
+      department: '',
       description: "Elegant coffee table for your living room.",
-      
-      subcategory: subcategories[3]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Cat Food",
       price: 8.75,
       image: "https://i.imgur.com/0p5fAym.jpg",
       manufacturer: "KittyCuisine",
-      department: departments[4]._id,
+      department: '',
       description: "Delicious cat food for your feline companion.",
-      
-      subcategory: subcategories[4]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Baby Wipes",
       price: 6.99,
       image: "https://i.imgur.com/LaogAUX.jpg",
       manufacturer: "TinyTots",
-      department: departments[5]._id,
+      department: '',
       description: "Gentle baby wipes for easy cleaning.",
-      
-      subcategory: subcategories[2]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Dress Shirt",
       price: 24.95,
       image: "https://i.imgur.com/zaCOfM8.jpg",
       manufacturer: "ElegantAttire",
-      department: departments[6]._id,
+      department: '',
       description: "Formal dress shirt for special occasions.",
-      
-      subcategory: subcategories[6]._id
+      review: '',
+      subcategory: ''
       },
       
       {
@@ -182,49 +183,49 @@ const Product = require('../models/product');
       price: 1.49,
       image: "https://i.imgur.com/mDlQQAz.jpg",
       manufacturer: "TropicalHarvest",
-      department: departments[0]._id,
+      department: '',
       description: "Sweet and nutritious bananas.",
-      
-      subcategory: subcategories[0]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Conditioner",
       price: 4.99,
       image: "https://i.imgur.com/pLbDZpt.jpg",
       manufacturer: "SilkyStrands",
-      department: departments[1]._id,
+      department: '',
       description: "Smooth and hydrating hair conditioner.",
-      
-      subcategory: subcategories[1]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Tablet",
       price: 199.00,
       image: "https://i.imgur.com/VmwOdk4.jpg",
       manufacturer: "TechWonder",
-      department: departments[2]._id,
+      department: '',
       description: "Versatile tablet for work and entertainment.",
-      
-      subcategory: subcategories[2]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Desk",
       price: 149.50,
       image: "https://i.imgur.com/UUryCVh.jpg",
       manufacturer: "StudySolutions",
-      department: departments[3]._id,
+      department: '',
       description: "Functional desk for your home office.",
-      
-      subcategory: subcategories[3]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Cat Litter",
       price: 9.25,
       image: "https://i.imgur.com/Zt9TPAK.jpg",
       manufacturer: "KittyCuisine",
-      department: departments[4]._id,
+      department: '',
       description: "Odor-absorbing cat litter for easy cleanup.",
-      
+      review: '',
       subcategory: "Pet Supplies"
       },
       {
@@ -232,9 +233,9 @@ const Product = require('../models/product');
       price: 17.99,
       image: "https://i.imgur.com/iiwHWYp.jpg",
       manufacturer: "TinyTots",
-      department: departments[5]._id,
+      department: '',
       description: "Nutrient-rich baby formula for infants.",
-      
+      review: '',
       subcategory: "Feeding"
       },
       {
@@ -242,9 +243,9 @@ const Product = require('../models/product');
       price: 29.95,
       image: "https://i.imgur.com/qJrW28A.jpg",
       manufacturer: "DenimDeluxe",
-      department: departments[6]._id,
+      department: '',
       description: "Classic denim jeans for everyday wear.",
-  
+      review: '',
       subcategory: "Jeans"
       },
       {
@@ -252,30 +253,30 @@ const Product = require('../models/product');
       price: 3.29,
       image: "https://i.imgur.com/2vvDInW.jpg",
       manufacturer: "OrchardFresh",
-      department: departments[0]._id,
+      department: '',
       description: "Juicy and flavorful peaches.",
-  
-      subcategory: subcategories[0]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Deodorant",
       price: 3.75,
       image: "https://i.imgur.com/1Mj9Dvf.jpg",
       manufacturer: "FreshGlow",
-      department: departments[1]._id,
+      department: '',
       description: "Long-lasting deodorant wbluetith a pleasant scent.",
- 
-      subcategory: subcategories[1]._id
+      review: '',
+      subcategory: ''
       },
       {
       name: "Bluetooth Speaker",
       price: 59.99,
       image: "https://i.imgur.com/MnTUHX8.jpg",
       manufacturer: "SonicSound",
-      department: departments[2]._id,
+      department: '',
       description: "Compact Bluetooth speaker for wireless audio.",
-  
-      subcategory: subcategories[1]._id
+      review: '',
+      subcategory: ''
       }
 
 
