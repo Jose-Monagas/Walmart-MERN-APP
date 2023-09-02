@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 
@@ -10,26 +10,22 @@ import SecondNav from './components/SecondNav/SecondNav';
 import './styles.scss';
 import HomeImage from './components/HomeImage/HomeImage';
 import Furniture from './pages/Furniture/Furniture';
-import DepartmentList from './components/DepartmentList/DepartmentList';
-
-
-
+import * as deptApi from './utilities/dept-api';
 export default function App() {
-    // const [departments, setDepartments] = useState([]);
+	const [departments, setDepartments] = useState([]);
 
-	// const fetchDepts = async () => {
-	// 	try {
-	// 	  const response = await fetch('/api/department/showdepts'); 
-	// 	  const data = await response.json();
-	// 	  setDepartments(data);
-	// 	} catch (error) {
-	// 	  console.error(error);
-	// 	}
-	//   };
-	  
-    // useEffect(() => {
-	// 	fetchDepts();
-	//   }, []);
+	useEffect(() => {
+		const fetchDepartments = async () => {
+			try {
+				const response = await deptApi.listDept();
+				console.log(response);
+				setDepartments(response);
+			} catch (error) {
+				console.log(error);
+			}
+		};
+		fetchDepartments();
+	}, []);
 
 	return (
 		<div className="App">
