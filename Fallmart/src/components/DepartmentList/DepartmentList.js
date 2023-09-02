@@ -19,15 +19,17 @@ export default function DepartmentList({ departments, subcategories }) {
           key={dept._id}
           onMouseEnter={handleMouseEnter(dept)}
           onMouseLeave={handleMouseLeave}
-          className={hoveredDept === dept ? styles.active : ''}
+          className={hoveredDept === dept ? styles.active : styles.unactive}
         >
           {dept.name}
           {hoveredDept === dept ? 
+            <div className={styles.Modal}>
             <ul className={styles.SubcategoryList}>
             {dept.subcategories.map((subcategory) => (
               <li key={subcategory._id}>{subcategory.name}</li>
             ))}
-          </ul> : null }
+          </ul> 
+          </div> : null }
         </li>
       ))}
     </ul>

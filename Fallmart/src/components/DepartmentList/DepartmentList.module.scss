@@ -1,1 +1,29 @@
-// 123
+.primary_list {
+    list-style-type: none;
+    background-color: #222;
+    display: flex;
+    margin: 0;
+    padding: 15px 20px; 
+    flex-direction: row;
+    border: 0;
+    width: auto;
+    white-space: normal;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: space-around;
+    font-family: 'Arimo', sans-serif;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .unactive {
+    margin: 0 10px;
+  }
+  
+  .active {
+    margin: 0 10px;
+    color: red;
+  }
+  
