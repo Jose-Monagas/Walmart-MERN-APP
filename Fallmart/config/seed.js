@@ -284,4 +284,3 @@ const Product = require('../models/product');
 
         process.exit();
     })();
-
