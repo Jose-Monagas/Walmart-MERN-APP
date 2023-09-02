@@ -1,5 +1,5 @@
 .header_banner_container {
-  color: #666;
+  color: black;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
@@ -15,8 +15,10 @@
   min-height: 24px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 100px;
   font-weight: bold;
   font-size: 14px;
+  font-family: 'Arimo', sans-serif;
 }
 .cb {
   border: 1px solid #666;
