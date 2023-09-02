@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 // import styles from './App.module.scss';
@@ -9,8 +9,22 @@ import SecondNav from './components/SecondNav/SecondNav';
 import './styles.scss';
 import HomeImage from './components/HomeImage/HomeImage';
 import Furniture from './pages/Furniture/Furniture';
-
+import * as deptApi from './utilities/dept-api';
 export default function App() {
+	const [departments, setDepartments] = useState([]);
+
+	useEffect(() => {
+		const fetchDepartments = async () => {
+			try {
+				const response = await deptApi.listDept();
+				console.log(response);
+				setDepartments(response);
+			} catch (error) {
+				console.log(error);
+			}
+		};
+		fetchDepartments();
+	}, []);
 	return (
 		<div className="App">
 			<HeaderBanner />
