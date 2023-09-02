@@ -87,8 +87,9 @@
   }
   
   .account a {
-    text-decoration: none; /* Remove default underline */
-    color: black; /* Initial text color */
+    text-decoration: none; 
+    color: black;
+    font-size: 14px;
   }
   
   .signbutton {
@@ -98,6 +99,7 @@
     color: #222;
     cursor: pointer;
     text-decoration: none;
+    font-size: 14px;
   }
 
   .humanicon {

@@ -38,32 +38,32 @@ function NavBar() {
 					<img
 						src="https://i.imgur.com/l3cX5Ev.png"
 						alt=""
-						width="30"
-						height="30"
+						width="22"
+						height="22"
 					/>
 				</div>
 				<div className={styles.location}>
 					<img
 						src="https://i.imgur.com/gXCgwJG.jpg"
 						alt=""
-						width="40"
-						height="40"
+						width="30"
+						height="30"
 					/>
 				</div>
 				<div className={styles.favorites}>
 					<img
 						src="https://i.imgur.com/UpoCDeP.png"
 						alt=""
-						width="30"
-						height="30"
+						width="22"
+						height="22"
 					/>
 				</div>
 				<div className={styles.cart}>
 					<img
 						src="https://i.imgur.com/TWI8Zuk.png"
 						alt=""
-						width="30"
-						height="30"
+						width="22"
+						height="22"
 					/>
 				</div>
 			</div>
