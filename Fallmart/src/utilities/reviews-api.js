@@ -12,5 +12,5 @@ export function deleteReview(reviewId) {
 }
 
 export function getReviewsByProduct(productId) {
-	return sendRequest(`${BASE_URL}/products/${productId}`);
+	return sendRequest(`${BASE_URL}/products/${productId}`, 'GET');
 }
