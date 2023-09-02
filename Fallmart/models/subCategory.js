@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const subcategorySchema = new Schema({
 	name: { type: String, required: true },
-	products: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
+	products: [{ type: String, required: true, ref: 'Product' }],
 	department: type.Schema.Types.ObjectId
 });
 

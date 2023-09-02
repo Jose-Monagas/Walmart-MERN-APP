@@ -19,22 +19,22 @@ const Product = require('../models/product');
     ]);
 	
 	const subcategories = await SubCategory.create([
-		{ name: 'Fruits', products: ['Apples', 'Bananas', 'Peaches'], department: departments[0]._id},
-		{ name: 'Hair Care', products: ['Shampoo', 'Conditioner'], department: departments[1]._id},
-		{ name: 'Mobile Phones', products: ['Smartphone'], department: departments[2]._id, department: departments[0]._id },
-		{ name: 'Living Room Furniture', products: ['Sofa', 'Coffee Table'], department: departments[3]._id },
-		{ name: 'Pet Food', products: ['Dog Food', 'Cat Food'], department: departments[4]._id },
-		{ name: 'Diapers', products: ['Baby Diapers', 'Baby Wipes'], department: departments[5]._id },
-		{ name: 'Casual Wear', products: ['T-Shirt'], department: departments[6]._id },
-    	{ name: 'Beverages', products: ['Orange Juice'], department: departments[0]._id },
-    	{ name: 'Oral Care', products: ['Toothpaste'], department: departments[1]._id },
-    	{ name: 'Computers', products: ['Laptop'], department: departments[2]._id },
-    	{ name: 'Tablets', products: ['Tablet'], department: departments[2]._id },
-    	{ name: 'Wipes', products: [], department: departments[5]._id },
-    	{ name: 'Formal Wear', products: ['Dress Shirt'], department: departments[6]._id },
-    	{ name: 'Office Furniture', products: ['Desk'], department: departments[3]._id },
-    	{ name: 'Antiperspirants', products: [], department: departments[1]._id },
-    	{ name: 'Speakers', products: [], department: departments[2]._id },
+		{ name: 'Fruits', products: ['Apples', 'Bananas', 'Peaches'], department: departments[0]},
+		{ name: 'Hair Care', products: ['Shampoo', 'Conditioner'], department: departments[1]},
+		{ name: 'Mobile Phones', products: ['Smartphone'], department: departments[2]._id},
+		{ name: 'Living Room Furniture', products: ['Sofa', 'Coffee Table'], department: departments[3]},
+		{ name: 'Pet Food', products: ['Dog Food', 'Cat Food'], department: departments[4]},
+		{ name: 'Diapers', products: ['Baby Diapers', 'Baby Wipes'], department: departments[5]},
+		{ name: 'Casual Wear', products: ['T-Shirt'], department: departments[6]},
+    { name: 'Beverages', products: ['Orange Juice'], department: departments[0]},
+    { name: 'Oral Care', products: ['Toothpaste'], department: departments[1]},
+    { name: 'Computers', products: ['Laptop'], department: departments[2]},
+    { name: 'Tablets', products: ['Tablet'], department: departments[2]},
+    { name: 'Wipes', products: [], department: departments[5]},
+    { name: 'Formal Wear', products: ['Dress Shirt'], department: departments[6]},
+    { name: 'Office Furniture', products: ['Desk'], department: departments[3]},
+    { name: 'Antiperspirants', products: [], department: departments[1]},
+    { name: 'Speakers', products: [], department: departments[2]},
 	  ]);
 
 	  const products = await Product.create([
