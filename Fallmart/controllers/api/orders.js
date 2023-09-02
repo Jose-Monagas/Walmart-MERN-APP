@@ -1,6 +1,6 @@
 const Order = require('../../models/order');
-import coupons from '../../src/utilities/coupons';
-import User from '../../models/user';
+const User = require('../../models/user');
+const coupons = require('../../src/utilities/coupons');
 module.exports = {
 	cart,
 	addToCart,
