@@ -32,8 +32,8 @@ export function getOrderHistory() {
 }
 
 //
-export function applyCoupon(couponPercentage) {
-	return sendRequest(`${BASE_URL}/cart/coupon`, 'PUT', { couponPercentage });
+export function applyCoupon() {
+	return sendRequest(`${BASE_URL}/cart/coupon`, 'PUT');
 }
 
 export function removeFromCart(itemId) {
