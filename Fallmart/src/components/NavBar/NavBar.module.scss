@@ -1,110 +1,143 @@
 .header_core {
-    display: flex;
-    justify-content: space-between; /* Adjusted this property */
-    align-items: center;
-    box-sizing: border-box;
-    min-height: auto;
-    padding: 25px 32px 0;
-    border-bottom: none;
-  }
-  
-  .header_logo {
-    width: 270px;
-    margin-top: 4px;
-    margin-left: 20px;
-    margin-right: 18px;
-  }
-  
-  .header_searchInput {
-    background: #fff;
-    color: #222;
-    font-style: normal;
-    font-weight: 400;
-    height: 48px;
-    padding: 5px 10px 5px 16px;
-    font-size: 14px;
-    border: 1px solid #666;
-    border-radius: 0;
-    min-width: 24.0625em;
-  }
-  
-  .header_searchInput:focus {
-    box-shadow: none;
-    outline: solid 1px;
-    outline-offset: -3px;
-  }
-  
-  .left_core {
-    display: flex;
-    flex: 1;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  /* Adjusted this property */
+  align-items: center;
+  box-sizing: border-box;
+  min-height: auto;
+  border-bottom: none;
+  font-family: 'Arimo', sans-serif;
+}
 
-  .search_icon {
-    color: #666;
-    font-size: 23px;
-    margin-right: 55px;
-  }
-  
-  
-  .logomiddle_core {
-    width: 300px;
-    height: 120px;
-  }
-  
-  .right_core {
-    display: flex;
-    flex: 1;
-    position: relative;
-    font-size: 14px;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  
-  .right_core > div {
-    margin-left: 15vmin; /* Adjust this spacing as needed */
-  }
-  
-  .account {
-    display: flex;
-    cursor: pointer;
-    text-decoration: none;
-    background: 0 0;
-    border: 0;
-    padding: 0;
-    color: #222;
-  }
-  
-  .signbutton {
-    background: 0 0;
-    border: 0;
-    padding: 0;
-    color: #222;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .location {
-    width: 0.1em;
-    height: 0.1em;
-    padding: 1px;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-  }
-  
-  .favorites {
-    width: 0.1em;
-    height: 0.1em;
-    padding: 1px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .cart {
-    width: 0.1em;
-    height: 0.1em;
-    padding: 1px;
-    cursor: pointer;
-  }
+.header_logo {
+  width: 270px;
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 18px;
+}
+
+.header_searchInput {
+  background: #fff;
+  color: #222;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  padding: 5px 40px 5px 16px;
+  /* Adjust the right padding for the icon */
+  font-size: 14px;
+  border: 1px solid #666;
+  border-radius: 0;
+  min-width: 24.0625em;
+}
+
+.header_searchInput:focus {
+  box-shadow: none;
+  outline: solid 1px;
+  outline-offset: -3px;
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.left_core {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  /* Adjust as needed */
+  padding-left: 100px;
+}
+
+.search_button {
+  position: absolute;
+  right: 10px;
+  /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #666;
+  font-size: 23px;
+}
+
+.logomiddle_core {
+  display: flex;
+  align-items: center;
+  /* Center vertically within the container */
+}
+
+.logomiddle_core img {
+  max-width: 100%;
+  /* Ensure the image fits within the container */
+  height: 15vmin;
+  /* Maintain the aspect ratio */
+}
+
+.right_core {
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+}
+
+.account a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.signbutton {
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  color: #222;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.humanicon {
+  margin-left: 20px;
+}
+
+.location {
+  margin-left: 20px;
+}
+
+.favorites {
+  margin-left: 20px;
+}
+
+.cart {
+  margin-left: 20px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.modalContent {
+  max-width: 1400px;
+}
+
+.close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 28px;
+  cursor: pointer;
+}
