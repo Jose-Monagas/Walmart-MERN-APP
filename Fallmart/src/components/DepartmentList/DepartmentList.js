@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import styles from './DepartmentList.module.scss';
 
-export default function DepartmentList({ departments, subcategories }) {
+export default function DepartmentList({ departments }) {
   const [hoveredDept, setHoveredDept] = useState(null);
+  const [isModalActive, setIsModalActive] = useState(false);
 
   const handleMouseEnter = (dept) => {
     setHoveredDept(dept);
+    setIsModalActive(true); 
   };
 
   const handleMouseLeave = () => {
@@ -13,25 +15,25 @@ export default function DepartmentList({ departments, subcategories }) {
   };
 
   return (
-    <ul className={styles.DepartmentList}>
-      {departments.map((dept) => (
-        <li
-          key={dept._id}
-          onMouseEnter={handleMouseEnter(dept)}
-          onMouseLeave={handleMouseLeave}
-          className={hoveredDept === dept ? styles.active : styles.unactive}
-        >
-          {dept.name}
-          {hoveredDept === dept ? 
-            <div className={styles.Modal}>
-            <ul className={styles.SubcategoryList}>
-            {dept.subcategories.map((subcategory) => (
+      <ul className={styles.DepartmentList} onMouseLeave={handleMouseLeave}>
+        {departments.map((dept) => (
+          <li
+            key={dept._id}
+            onMouseEnter={() => handleMouseEnter(dept)}
+            className={styles.listItem}
+          >
+            {dept.name}
+            {isModalActive && hoveredDept=== dept ? (
+        <div className={`${styles.modal} ${styles.active}`} onMouseLeave={handleMouseLeave}>
+          <ul className={styles.SubcategoryList}>
+            {hoveredDept.subcategories.map((subcategory) => (
               <li key={subcategory._id}>{subcategory.name}</li>
             ))}
-          </ul> 
-          </div> : null }
-        </li>
-      ))}
-    </ul>
+          </ul>
+        </div>
+      ) : null}
+          </li>
+        ))}
+      </ul>
   );
 }

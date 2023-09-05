@@ -10,7 +10,8 @@ async function index(req, res) {
 		const departments = await Dept.find({}).sort('name').exec();
 		const departmentData = departments.map((department) => ({
 			_id: department._id,
-			name: department.name
+			name: department.name,
+			subcategories: department.subcategories
 		}));
 		res.status(200).json(departmentData);
 	} catch (error) {
