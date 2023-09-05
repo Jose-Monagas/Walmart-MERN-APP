@@ -40,13 +40,14 @@ async function deleteReview(req, res) {
 					'Review not found or you are not authorized to delete this review'
 			});
 		}
+		console.log(review);
 
 		const product = await Product.findOneAndUpdate(
 			{ reviews: review._id },
 			{ $pull: { reviews: review._id } }
 		);
 		if (product) {
-			await review.remove();
+			await Review.deleteOne({ _id: review._id });
 			res
 				.status(204)
 				.json({ message: 'Deleted review and removed from product' });
