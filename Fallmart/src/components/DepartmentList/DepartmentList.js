@@ -37,3 +37,5 @@ export default function DepartmentList({ departments }) {
       </ul>
   );
 }
+
+/// subcats not showing
