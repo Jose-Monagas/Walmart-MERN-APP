@@ -20,7 +20,7 @@ cartItemSchema.virtual('extPrice').get(function () {
 
 const orderSchema = new Schema(
 	{
-		user: { type: Schema.Types.ObjectId, ref: 'User' },
+		user: Schema.Types.Mixed,
 		cartItems: [cartItemSchema],
 		isPaid: { type: Boolean, default: false },
 		hasCoupon: { type: Boolean, default: false },
@@ -50,6 +50,7 @@ orderSchema.virtual('orderId').get(function () {
 
 orderSchema.statics.getCart = function (userId) {
 	// 'this' is the Order model
+	console.log('Welcome', userId);
 	return this.findOneAndUpdate(
 		// query
 		{ user: userId, isPaid: false },

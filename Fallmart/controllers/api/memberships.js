@@ -17,6 +17,7 @@ async function signUp(req, res, next) {
 		user.membershipCode = user.phone;
 		await user.save();
 		coupons.push({ name: user.membershipCode, discount: discount });
+		console.log(coupons);
 		res.json(user);
 		next();
 	} catch (error) {
