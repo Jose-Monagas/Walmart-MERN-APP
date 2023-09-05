@@ -1,15 +1,15 @@
-.primary_list {
+.DepartmentList {
     list-style-type: none;
     background-color: #222;
     display: flex;
     margin: 0;
-    padding: 15px 20px; 
+    padding: 15px 20px;
     flex-direction: row;
     border: 0;
     width: auto;
     white-space: normal;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     justify-content: space-around;
@@ -18,12 +18,28 @@
     padding-right: 120px;
   }
 
-  .unactive {
-    margin: 0 10px;
-  }
-  
-  .active {
-    margin: 0 10px;
+  .listItem:hover {
     color: red;
+    cursor: pointer;
   }
   
+  .modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    margin-top: 0.6%;
+    width: 100%;
+  }
+
+  .modal.active {
+    visibility: visible;
+  }
+
+  .modal.inactive {
+    visibility: none;
+  }
+
+
