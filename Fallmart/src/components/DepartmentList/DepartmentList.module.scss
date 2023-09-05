@@ -30,8 +30,9 @@
     z-index: 1000; 
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-    margin-top: 0.6%;
+    margin-top: 1%;
     width: 100%;
+    color: black;
   }
 
   .modal.active {
@@ -42,4 +43,7 @@
     visibility: none;
   }
 
+.SubcategoryList {
+  margin-top: 1%;
+}
 

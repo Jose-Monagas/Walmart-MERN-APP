@@ -7,7 +7,7 @@ module.exports = {
 //shows list of all depts
 async function index(req, res) {
 	try {
-		const departments = await Dept.find({}).sort('name').exec();
+		const departments = await Dept.find({}).populate('subcategories').sort('name').exec();
 		const departmentData = departments.map((department) => ({
 			_id: department._id,
 			name: department.name,
