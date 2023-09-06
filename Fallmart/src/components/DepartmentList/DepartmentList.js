@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './DepartmentList.module.scss';
+import { Link } from 'react-router-dom'
 
 export default function DepartmentList({ departments }) {
   const [hoveredDept, setHoveredDept] = useState(null);
@@ -27,7 +28,9 @@ export default function DepartmentList({ departments }) {
         <div className={`${styles.modal} ${styles.active}`} onMouseLeave={handleMouseLeave}>
           <ul className={styles.SubcategoryList}>
             {hoveredDept.subcategories.map((subcategory) => (
-              <li key={subcategory._id}>{subcategory.name}</li>
+              <li key={subcategory._id}>
+                <Link to={``}>{subcategory.name}</Link>
+              </li>
             ))}
           </ul>
         </div>
