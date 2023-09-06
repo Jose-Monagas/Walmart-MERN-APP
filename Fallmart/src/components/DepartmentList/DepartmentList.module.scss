@@ -30,8 +30,10 @@
     z-index: 1000; 
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-    margin-top: 0.6%;
+    margin-top: 0.8%;
     width: 100%;
+    color: black;
+    background-color: rgb(247, 246, 246);
   }
 
   .modal.active {
@@ -42,4 +44,20 @@
     visibility: none;
   }
 
+.SubcategoryList {
+  margin-top: 0.6%;
+  margin-bottom: 0.6%;
+  list-style-type: none;
+  text-align: center;
+}
 
+.SubcategoryList a { 
+  font-weight: bold;
+  color: black;
+  text-decoration: none; 
+  margin-bottom: 0.6%;
+}
+
+.SubcategoryList a:hover { 
+  color: red; 
+}
