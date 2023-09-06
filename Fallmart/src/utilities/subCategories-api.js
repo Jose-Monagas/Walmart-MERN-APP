@@ -8,6 +8,5 @@ export function listAllSubcategoriesByDeptId(departmentId) {
 }
 
 export function listAllSubcategories() {
-	console.log('list all subcategories');
 	return sendRequest(BASE_URL, 'GET');
 }
