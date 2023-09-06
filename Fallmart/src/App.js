@@ -8,7 +8,7 @@ import PrimaryNav from './components/PrimaryNav/PrimaryNav';
 import SecondNav from './components/SecondNav/SecondNav';
 import './styles.scss';
 import HomeImage from './components/HomeImage/HomeImage';
-import SubcategoryPage from './pages/Furniture/Furniture';
+import SubcategoryPage from './pages/SubcategoryPage/SubcategoryPage';
 import * as deptApi from './utilities/dept-api';
 
 export default function App() {

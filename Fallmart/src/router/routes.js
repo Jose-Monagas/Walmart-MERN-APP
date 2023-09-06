@@ -1,5 +1,5 @@
 import Fallmart from '../pages/Fallmart/Fallmart';
-import SubcategoryPage from '../pages/Furniture/Furniture';
+import SubcategoryPage from '../pages/SubcategoryPage/SubcategoryPage';
 
 const routes = [
 	{
