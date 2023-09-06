@@ -1,5 +1,6 @@
 import * as usersAPI from './users-api';
 
+
 export async function signUp(userData) {
 	// Delete the network request code to the
 	// users-api.js module which will ultimately
@@ -10,8 +11,8 @@ export async function signUp(userData) {
 	return getUser();
 }
 
-export async function login(credentials) {
-	const token = await usersAPI.login(credentials);
+export async function signIn(credentials) {
+	const token = await usersAPI.signIn(credentials);
 	// Persist the token to localStorage
 	localStorage.setItem('token', token);
 	return getUser();

@@ -1,37 +1,71 @@
 import React, { Component } from 'react';
 import styles from './SignUpForm.module.scss';
-import { signUp } from '../../utilities/users-service';
+import { signUp, signIn } from '../../utilities/users-service';
 
 export default class SignUpForm extends Component {
     state = {
         name: '',
         email: '',
         password: '',
+        confirmPassword: '',
+        signInEmail: '', // Added for sign-in
+        signInPassword: '', // Added for sign-in
         error: '',
     };
 
     handleChange = (evt) => {
+        const { name, value } = evt.target;
         this.setState({
-            [evt.target.name]: evt.target.value,
+            [name]: value,
             error: '',
         });
     };
 
-    handleSubmit = async (evt) => {
+    handleSignUp = async (evt) => {
         evt.preventDefault();
+        const { name, email, password, confirmPassword } = this.state;
         try {
-            const formData = { ...this.state };
-            delete formData.confirm;
-            delete formData.error;
-
+            const formData = { name, email, password };
             const user = await signUp(formData);
 
             this.props.setUser(user);
             this.props.closeModal();
-        } catch {
-            this.setState({ error: 'Sign Up Failed - Try Again ' });
+        } catch (error) {
+            console.error(error); // Log the error for debugging
+            this.setState({ error: 'Sign Up Failed - Try Again' });
         }
     };
+
+    handleSignIn = async (evt) => {
+        evt.preventDefault();
+        const { signInEmail, signInPassword } = this.state;
+        try {
+            const formData = { email: signInEmail, password: signInPassword };
+            const user = await signIn(formData);
+
+            this.props.setUser(user);
+            this.props.closeModal();
+
+        } catch (error) {
+            console.error(error); // Log the error for debugging
+            this.setState({ error: 'Sign In Failed - Try Again' });
+        }
+    };
+
+    // switching windows when clicking signin
+    handleSignInClick = () => {
+        this.setState({ confirmPassword: '' }); // Clear confirmPassword when switching panels
+        const container = document.getElementById('container');
+        container.classList.remove(styles['right-panel-active']);
+    };
+    // switching windows when clicking signup
+    handleSignUpClick = () => {
+        this.setState({ confirmPassword: '' }); // Clear confirmPassword when switching panels
+        const container = document.getElementById('container');
+        container.classList.add(styles['right-panel-active']);
+    };
+
+
 
     componentDidMount() {
         const signUpButton = document.getElementById('signUp');
@@ -46,18 +80,10 @@ export default class SignUpForm extends Component {
             container.classList.remove("right-panel-active");
         });
     }
-    handleSignUpClick = () => {
-        const container = document.getElementById('container');
-        container.classList.add(styles['right-panel-active']); // Use the class name from the module
-    };
-
-    handleSignInClick = () => {
-        const container = document.getElementById('container');
-        container.classList.remove(styles['right-panel-active']); // Use the class name from the module
-    };
 
 
     render() {
+        const disable = this.state.password !== this.state.confirmPassword;
         return (
             <div className={styles.main}>
                 <span className={styles.close} onClick={this.props.closeModal}>
@@ -65,7 +91,7 @@ export default class SignUpForm extends Component {
                 </span>
                 <div className={styles.container} id="container">
                     <div className={`${styles['form-container']} ${styles['sign-up-container']}`}>
-                        <form action="#" onSubmit={this.handleSubmit}>
+                        <form action="#" onSubmit={this.handleSignUp}>
                             <h1>Create Account</h1>
                             <div className={styles['social-container']}>
                                 <a href="#" className="social"><i className="fa-brands fa-facebook-f fa-fw"></i></a>
@@ -73,15 +99,15 @@ export default class SignUpForm extends Component {
                                 <a href="#" className="social"><i className="fa-brands fa-linkedin-in fa-fw"></i></a>
                             </div>
                             <span>or use your email for registration</span>
-                            <input type="text" placeholder="Name" name="name" onChange={this.handleChange} />
-                            <input type="email" placeholder="Email" name="email" onChange={this.handleChange} />
-                            <input type="password" placeholder="Password" name="password" onChange={this.handleChange} />
-                            <input type="phone" placeholder="Phone" name="phone" onChange={this.handleChange} />
-                            <button onClick={this.handleSignUpClick}>Sign Up</button>
+                            <input type="text" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} required />
+                            <input type="email" placeholder="Email" value={this.state.email} name="email" onChange={this.handleChange} required />
+                            <input type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange} required />
+                            <input type="password" placeholder="Confirm Password" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} required />
+                            <button type="submit" disabled={disable} onClick={this.handleSignUp}>Create Account</button>
                         </form>
                     </div>
                     <div className={`${styles['form-container']} ${styles['sign-in-container']}`}>
-                        <form action="#">
+                        <form action="#" onSubmit={this.handleSignIn}>
                             <h1>Sign in</h1>
                             <div className={styles['social-container']}>
                                 <a href="#" className="social"><i className="fa-brands fa-facebook-f fa-fw"></i></a>
@@ -89,10 +115,24 @@ export default class SignUpForm extends Component {
                                 <a href="#" className="social"><i className="fa-brands fa-linkedin-in fa-fw"></i></a>
                             </div>
                             <span>or use your account</span>
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={this.state.signInEmail}
+                                name="signInEmail"
+                                onChange={this.handleChange}
+                                required
+                            />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={this.state.signInPassword}
+                                name="signInPassword"
+                                onChange={this.handleChange}
+                                required
+                            />
                             <a onClick={""}>Forgot your password?</a>
-                            <button onClick={this.handleSignInClick}>Sign In</button>
+                            <button onClick={this.handleSignIn}>Sign In</button>
                         </form>
                     </div>
                     <div className={styles['overlay-container']}>
