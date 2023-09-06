@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-
 // import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import HeaderBanner from './components/HeaderBanner/HeaderBanner';
@@ -9,9 +8,8 @@ import PrimaryNav from './components/PrimaryNav/PrimaryNav';
 import SecondNav from './components/SecondNav/SecondNav';
 import './styles.scss';
 import HomeImage from './components/HomeImage/HomeImage';
-import Furniture from './pages/Furniture/Furniture';
+import SubcategoryPage from './pages/Furniture/Furniture';
 import * as deptApi from './utilities/dept-api';
-import DepartmentList from './components/DepartmentList/DepartmentList'
 
 export default function App() {
 	const [departments, setDepartments] = useState([]);
@@ -21,7 +19,6 @@ export default function App() {
 			try {
 				const response = await deptApi.listDept();
 				setDepartments(response);
-				console.log(response)
 			} catch (error) {
 				console.log(error);
 			}
@@ -34,10 +31,18 @@ export default function App() {
 			<HeaderBanner />
 			<NavBar />
 			<SecondNav />
-			<DepartmentList departments={departments} />
+			<PrimaryNav />
 			<Routes>
 				<Route path="/" element={<HomeImage />} />
-				<Route path="/furniture" element={<Furniture />} />
+				<Route
+					path="/furniture"
+					element={<SubcategoryPage name="Living Room Furniture" />}
+				/>
+				<Route path="/fruits" element={<SubcategoryPage name="Fruits" />} />
+				<Route
+					path="/hair-care"
+					element={<SubcategoryPage name="Hair Care" />}
+				/>
 			</Routes>
 		</div>
 	);

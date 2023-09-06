@@ -1,5 +1,5 @@
 import Fallmart from '../pages/Fallmart/Fallmart';
-import Furniture from '../pages/Furniture/Furniture';
+import SubcategoryPage from '../pages/Furniture/Furniture';
 
 const routes = [
 	{
@@ -8,7 +8,7 @@ const routes = [
 		path: '/'
 	},
 	{
-		Component: Furniture,
+		Component: SubcategoryPage,
 		key: 'Furniture',
 		path: '/furniture'
 	}
