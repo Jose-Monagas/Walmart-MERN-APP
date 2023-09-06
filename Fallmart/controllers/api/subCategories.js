@@ -2,7 +2,8 @@ const SubCategory = require('../../models/subCategory');
 const Product = require('../../models/product');
 const Department = require('../../models/department');
 module.exports = {
-	getSubCategoriesByDepartment
+	getSubCategoriesByDepartment,
+	index
 	//getProductsInSubCategory
 };
 //find department and send back array of subcatergories that
@@ -21,6 +22,18 @@ async function getSubCategoriesByDepartment(req, res) {
 			name: subcategory.name
 		}));
 		res.status(200).json(subCategoriesData);
+	} catch (error) {
+		res.status(400).json({ message: error.message });
+	}
+}
+
+async function index(req, res) {
+	try {
+		const subcategories = await SubCategory.find({}).exec();
+		if (!subcategories) {
+			return res.status(404).json({ message: 'Subcategories not found' });
+		}
+		res.status(200).json(subcategories);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
 	}
