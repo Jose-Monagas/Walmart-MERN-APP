@@ -10,8 +10,8 @@ export async function signUp(userData) {
 	return getUser();
 }
 
-export async function login(credentials) {
-	const token = await usersAPI.login(credentials);
+export async function signIn(credentials) {
+	const token = await usersAPI.signIn(credentials);
 	// Persist the token to localStorage
 	localStorage.setItem('token', token);
 	return getUser();

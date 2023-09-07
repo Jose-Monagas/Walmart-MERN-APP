@@ -17,12 +17,10 @@ const userSchema = new Schema(
 		password: {
 			type: String,
 			required: true,
-			match: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()-_=+[\]{};:'",.<>/?]+$/,
 			trim: true,
-			minlength: 6,
 			required: true
 		},
-		phone: { type: String, required: true, match: /^\d{10}$/ },
+		phone: { type: String, match: /^\d{10}$/ },
 		membershipType: { type: String, default: 'regular' },
 		membershipCode: { type: String }
 	},
