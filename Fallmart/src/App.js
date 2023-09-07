@@ -11,7 +11,7 @@ import * as deptApi from './utilities/dept-api';
 
 export default function App() {
 	const [departments, setDepartments] = useState([]);
-
+	const [favoriteCount, setFavoriteCount] = useState(0);
 	useEffect(() => {
 		const fetchDepartments = async () => {
 			try {
@@ -26,11 +26,19 @@ export default function App() {
 
 	return (
 		<div className="App">
-			<NavBar />
+			<NavBar favoriteCount={favoriteCount} />
 			<DepartmentList departments={departments} />
 			<Routes>
 				<Route path="/" element={<HomeImage />} />
-				<Route path="/:name" element={<SubcategoryPage />} />
+				<Route
+					path="/:name"
+					element={
+						<SubcategoryPage
+							setFavoriteCount={setFavoriteCount}
+							favoriteCount={favoriteCount}
+						/>
+					}
+				/>
 			</Routes>
 		</div>
 	);
