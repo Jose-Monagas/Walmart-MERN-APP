@@ -10,7 +10,7 @@ export default class SignUpForm extends Component {
 		confirmPassword: '',
 		signInEmail: '', // Added for sign-in
 		signInPassword: '', // Added for sign-in
-		error: ''
+		error: '',
 	};
 
 	handleChange = (evt) => {
@@ -42,10 +42,15 @@ export default class SignUpForm extends Component {
 		try {
 			const formData = { email: signInEmail, password: signInPassword };
 			const user = await signIn(formData);
-
-			console.log(user);
-			//this.props.setUser(user);
+	
+			// Assuming signIn sets the authentication token in localStorage
+			localStorage.setItem('authToken', user.authToken);
+	
+			console.log(user); // Verify that user data is correctly logged
 			this.props.closeModal();
+			
+			// Update isLoggedIn state here
+			this.setState({ isLoggedIn: true });
 		} catch (error) {
 			console.error(error); // Log the error for debugging
 			this.setState({ error: 'Sign In Failed - Try Again' });
@@ -140,6 +145,7 @@ export default class SignUpForm extends Component {
 								type="submit"
 								disabled={disable}
 								onClick={this.handleSignUp}
+								className={styles.modalButton}
 							>
 								Create Account
 							</button>
@@ -179,7 +185,7 @@ export default class SignUpForm extends Component {
 								required
 							/>
 							<a onClick={''}>Forgot your password?</a>
-							<button onClick={this.handleSignIn}>Sign In</button>
+							<button onClick={this.handleSignIn} className={styles.modalButton} >Sign In</button>
 						</form>
 					</div>
 					<div className={styles['overlay-container']}>
@@ -192,7 +198,7 @@ export default class SignUpForm extends Component {
 									To keep connected with us please login with your personal info
 								</p>
 								<button
-									className={styles.ghost}
+									className={`${styles.modalButton} ${styles.ghost}`}
 									id="signIn"
 									onClick={this.handleSignInClick}
 								>
@@ -205,7 +211,7 @@ export default class SignUpForm extends Component {
 								<h1>Hello, Friend!</h1>
 								<p>Enter your personal details and start the journey with us</p>
 								<button
-									className={styles.ghost}
+									className={`${styles.modalButton} ${styles.ghost}`}
 									id="signUp"
 									onClick={this.handleSignUpClick}
 								>

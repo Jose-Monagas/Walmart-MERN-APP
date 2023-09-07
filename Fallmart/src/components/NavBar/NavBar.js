@@ -1,13 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.scss';
 import { FaSearch } from 'react-icons/fa';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import { Link } from 'react-router-dom';
+
 function NavBar() {
     const [searchValue, setSearchValue] = useState('');
     const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
     const handleSearch = () => {
         console.log('Performing search:', searchValue);
+    };
+
+    useEffect(() => {
+        const userIsLoggedIn = localStorage.getItem('authToken') !== null;
+        setIsLoggedIn(userIsLoggedIn);
+        console.log('isLoggedIn:', userIsLoggedIn);
+    }, []);
+
+    const handleLogOut = () => {
+
+        localStorage.removeItem('authToken');
+        setIsLoggedIn(false);
+        console.log('Logged out');
     };
 
     const handleSignInClick = () => {
@@ -22,9 +38,9 @@ function NavBar() {
         <nav className={styles.header_core}>
             {/* main logo */}
             <div className={styles.logo_core}>
-            <Link to="/" className={styles.logo_core}>
-                <img src="https://i.imgur.com/xgA0d20.png" alt="" />
-            </Link>
+                <Link to="/" className={styles.logo_core}>
+                    <img src="https://i.imgur.com/xgA0d20.png" alt="" />
+                </Link>
             </div>
             {/* Search box */}
             <div className={styles.search_container}>
@@ -43,8 +59,18 @@ function NavBar() {
             <div className={styles.right_core}>
                 <div className={styles.account}>
                     <a href="/account/order-tracking"> Orders </a>
-                    <span> & </span>
-                    <button className={styles.signbutton} onClick={handleSignInClick}> Sign In</button>
+                    <span> &nbsp; </span>
+                </div>
+                <div className={styles.account}>
+                    {isLoggedIn ? (
+                        <button className={styles.signbutton} onClick={handleLogOut}>
+                            Log Out
+                        </button>
+                    ) : (
+                        <button className={styles.signbutton} onClick={handleSignInClick}>
+                            Sign In
+                        </button>
+                    )}
                 </div>
                 <div className={styles.humanicon}>
                     <img
