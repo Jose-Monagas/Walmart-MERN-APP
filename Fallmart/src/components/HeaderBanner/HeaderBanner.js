@@ -5,10 +5,10 @@ function HeaderBanner() {
 	return (
 		<div>
 			<ul className={styles.header_banner_container}>
-				<li >fallmart</li>
-				<li >fallmart&kids</li>
+				<li>fallmart</li>
+				<li>fallmart&kids</li>
 				<li className={styles.cb}>CB2</li>
-				<div> 
+				<div>
 					<img
 						src="https://i.imgur.com/M207hlJ.jpg"
 						alt="Ship To: United States"
