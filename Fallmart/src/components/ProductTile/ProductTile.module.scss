@@ -1,13 +1,56 @@
-.ProductList {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3vmin;
-  padding: 2vmin;
-  color: var(--text-light);
-  background-color: var(--white);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
-  font-size: 4vmin;
+.product_tile {
+  position: relative; /* Enable positioning for child elements */
+  display: inline-block;
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
 }
+.productSold {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.favorite_button {
+  position: absolute;
+  top: 10px; /* Adjust as needed to position the button */
+  right: 10px; /* Adjust as needed to position the button */
+  background: none;
+  border: none;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+  outline: none;
+}
+
+.cart_button {
+  width: 180px;
+  height: 42px;
+  background-color: hsl(130, 36%, 43%);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center; /* Center the text horizontally */
+  display: inline-flex; /* Use inline-flex to center text vertically */
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+  vertical-align: middle; /* Vertically center the inline-flex container */
+  white-space: nowrap;
+}
+
+.cart_button:hover {
+  background-color: hsl(130, 36%, 38%);
+}
+
+.cart_button:active {
+  transform: scale(.9);
+}
+
+
+
+
+
+
+
