@@ -17,7 +17,7 @@ function convertPathToSubcatgeoryName(s) {
 		.join(' ');
 }
 
-export default function SubcategoryPage() {
+export default function SubcategoryPage({ setFavoriteCount, favoriteCount }) {
 	const { name } = useParams();
 	const [products, setProducts] = useState([]);
 
@@ -38,7 +38,14 @@ export default function SubcategoryPage() {
 		<div className={styles.FurniturePage}>
 			<center>
 				{products.map((product) => {
-					return <ProductTile key={product._id} product={product} />;
+					return (
+						<ProductTile
+							key={product._id}
+							product={product}
+							setFavoriteCount={setFavoriteCount}
+							favoriteCount={favoriteCount}
+						/>
+					);
 				})}
 			</center>
 		</div>

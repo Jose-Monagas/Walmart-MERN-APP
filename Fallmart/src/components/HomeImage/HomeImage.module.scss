@@ -1,9 +1,12 @@
-.allimage {
-  width: 100%;
-  display: block; /* Change 'flex' to 'block' to stack images vertically */
+.grid {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  margin-top: 15px;
 }
 
-.allimage img {
-  width: 100%; /* Make the images span the full width of their container */
-  height: auto; /* Maintain the aspect ratio of the images */
+.galleryImage {
+  max-width: 100%; 
 }
