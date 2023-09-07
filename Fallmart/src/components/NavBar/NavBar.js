@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 import styles from './NavBar.module.scss';
 import { FaSearch } from 'react-icons/fa';
+import SignUpForm from '../SignUpForm/SignUpForm';
+
 function NavBar() {
     const [searchValue, setSearchValue] = useState('');
+    const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
     const handleSearch = () => {
         console.log('Performing search:', searchValue);
     };
+
+    const handleSignInClick = () => {
+        setIsSignInModalOpen(true); // Open the modal when the button is clicked
+    };
+
+    const handleCloseModal = () => {
+        setIsSignInModalOpen(false); // Close the modal
+    };
+
     return (
         <nav className={styles.header_core}>
             {/* main logo */}
@@ -30,7 +42,7 @@ function NavBar() {
                 <div className={styles.account}>
                     <a href="/account/order-tracking"> Orders </a>
                     <span> & </span>
-                    <button className={styles.signbutton}> Sign In</button>
+                    <button className={styles.signbutton} onClick={handleSignInClick}> Sign In</button>
                 </div>
                 <div className={styles.humanicon}>
                     <img
@@ -65,6 +77,17 @@ function NavBar() {
                     />
                 </div>
             </div>
+            {/* Modal */}
+            {isSignInModalOpen && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.modalContent}>
+                        <span className={styles.close} onClick={handleCloseModal}>
+                            &times;
+                        </span>
+                        <SignUpForm closeModal={handleCloseModal} />
+                    </div>
+                </div>
+            )}
         </nav>
     );
 }

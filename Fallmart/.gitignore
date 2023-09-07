@@ -1,0 +1,11 @@
+node_modules/
+.env
+<<<<<<< HEAD
+Fallmart/public
+=======
+
+# bundled code
+>>>>>>> dev
+Fallmart/public/js/dist/
+Fallmart/public/css/styles.css
+Fallmart/public/index.html
