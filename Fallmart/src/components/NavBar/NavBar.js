@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './NavBar.module.scss';
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 function NavBar() {
     const [searchValue, setSearchValue] = useState('');
     const handleSearch = () => {
@@ -10,7 +11,9 @@ function NavBar() {
         <nav className={styles.header_core}>
             {/* main logo */}
             <div className={styles.logo_core}>
+            <Link to="/" className={styles.logo_core}>
                 <img src="https://i.imgur.com/xgA0d20.png" alt="" />
+            </Link>
             </div>
             {/* Search box */}
             <div className={styles.search_container}>
