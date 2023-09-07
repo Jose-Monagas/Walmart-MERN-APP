@@ -1,109 +1,77 @@
 .header_core {
-    display: flex;
-    justify-content: space-between; /* Adjusted this property */
-    align-items: center;
-    box-sizing: border-box;
-    min-height: auto;
-    border-bottom: none;
-    font-family: 'Arimo', sans-serif;
-  }
-  
-  .header_logo {
-    width: 270px;
-    margin-top: 4px;
-    margin-left: 20px;
-    margin-right: 18px;
-  }
-  
-  .header_searchInput {
-    background: #fff;
-    color: #222;
-    font-style: normal;
-    font-weight: 400;
-    height: 48px;
-    padding: 5px 40px 5px 16px; /* Adjust the right padding for the icon */
-    font-size: 14px;
-    border: 1px solid #666;
-    border-radius: 0;
-    min-width: 24.0625em;
-  }
-  
-  .header_searchInput:focus {
-    box-shadow: none;
-    outline: solid 1px;
-    outline-offset: -3px;
-  }
-
-  .search_container {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .left_core {
-    display: flex;
-    align-items: center;
-    margin-right: 20px; /* Adjust as needed */
-    padding-left: 100px;
-  }
-
-  .search_button {
-    position: absolute;
-    right: 10px; /* Adjust as needed */
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #666;
-    font-size: 23px;
-  }
-  
-  .logomiddle_core {
-    display: flex;
-    align-items: center; /* Center vertically within the container */
-  }
-
-  .logomiddle_core img {
-    max-width: 100%; /* Ensure the image fits within the container */
-    height: 15vmin; /* Maintain the aspect ratio */
-  }
-  
-  .right_core {
-    display: flex;
-    align-items: center;
-    padding-right: 100px;
-  }
-
-  .account a {
-    text-decoration: none; /* Remove default underline */
-    color: black; /* Initial text color */
-    font-size: 14px;
-  }
-  
-  .signbutton {
-    background: 0 0;
-    border: 0;
-    padding: 0;
-    color: #222;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  .humanicon {
-    margin-left: 20px;
-  }
-  
-  .location {
-    margin-left: 20px;
-  }
-  
-  .favorites {
-    margin-left: 20px;
-  }
-  
-  .cart {
-    margin-left: 20px;
-  }
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: none;
+  font-family: 'Arimo', sans-serif;
+}
+.logo_core {
+  display: flex;
+  align-items: center; /* Center vertically within the container */
+}
+.logo_core img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  height: 11vmin; /* Maintain the aspect ratio */
+  margin-left: 10px;
+}
+.search_container {
+  display: flex;
+  flex: 1;
+  position: relative; /* Add this line to create a positioning context */
+}
+.header_searchInput {
+  background: #fff;
+  color: #222;
+  font-style: normal;
+  font-weight: 400;
+  height: 35px;
+  padding: 5px 40px 5px 16px; /* Adjust the right padding for the icon */
+  font-size: 14px;
+  border: 1px solid #666;
+  border-radius: 9999px;
+  width: 100%;
+}
+.search_button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  padding-right: 6px;
+  cursor: pointer;
+  color: #666;
+  font-size: 23px;
+}
+.right_core {
+  display: flex;
+  align-items: center;
+  padding-right: 70px;
+  padding-left: 30px;
+  font-size: 14px;
+}
+.account a {
+  text-decoration: none;
+  color: black;
+}
+.signbutton {
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  color: #222;
+  cursor: pointer;
+  text-decoration: none;
+}
+.humanicon {
+  margin-left: 23px;
+}
+.location {
+  margin-left: 20px;
+}
+.favorites {
+  margin-left: 20px;
+}
+.cart {
+  margin-left: 20px;
+}
