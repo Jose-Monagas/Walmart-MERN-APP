@@ -100,3 +100,15 @@
   font-size: 28px;
   cursor: pointer;
 }
+.favorite_icon_container{
+  position: relative;
+}
+.favorite_count{
+  position:absolute;
+  top: -15px;
+  left: 10px;
+  color: #ffffff;
+  padding: 2px 4px;
+  border-radius: 50%;
+  background-color: red;
+}
