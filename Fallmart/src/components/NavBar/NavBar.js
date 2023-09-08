@@ -3,6 +3,7 @@ import styles from './NavBar.module.scss';
 import { FaSearch, FaStar } from 'react-icons/fa';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import { Link } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function NavBar({ favoriteCount, setShowWishList, showWishList }) {
 	const [searchValue, setSearchValue] = useState('');
@@ -28,10 +29,8 @@ function NavBar({ favoriteCount, setShowWishList, showWishList }) {
 	const handleSignInClick = () => {
 		setIsSignInModalOpen(true); // Open the modal when the button is clicked
 	};
-
-	const handleCloseModal = () => {
+	const handleCloseModal = (evt) => {
 		setIsSignInModalOpen(false); // Close the modal
-		setIsLoggedIn(true);
 	};
 
 	return (
@@ -57,10 +56,12 @@ function NavBar({ favoriteCount, setShowWishList, showWishList }) {
 			</div>
 			{/* 4 links to the right */}
 			<div className={styles.right_core}>
-				<div className={styles.account}>
-					<a href="/account/order-tracking"> Orders </a>
-					<span> &nbsp; </span>
-				</div>
+				{isLoggedIn && (
+					<div className={styles.account}>
+						<a href="/account/order-tracking"> Orders </a>
+						<span> &nbsp; </span>
+					</div>
+				)}
 				<div className={styles.account}>
 					{isLoggedIn ? (
 						<button className={styles.signbutton} onClick={handleLogOut}>
