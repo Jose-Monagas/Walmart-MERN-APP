@@ -1,63 +1,68 @@
 .DepartmentList {
-    list-style-type: none;
-    background-color: #222;
-    display: flex;
-    margin: 0;
-    padding: 15px 20px;
-    flex-direction: row;
-    border: 0;
-    width: auto;
-    white-space: normal;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    justify-content: space-around;
-    font-family: 'Arimo', sans-serif;
-    padding-left: 120px;
-    padding-right: 120px;
-  }
+  list-style-type: none;
+  background-color: #222;
+  display: flex;
+  margin: 0;
+  padding: 15px 20px;
+  flex-direction: row;
+  border: 0;
+  width: auto;
+  white-space: normal;
+  color: #fff;
+  font-size: 2vmin;
+  font-weight: 600;
+  text-decoration: none;
+  justify-content: space-around;
+  font-family: 'Arimo', sans-serif;
+  padding-left: 120px;
+  padding-right: 120px;
+}
 
-  .listItem:hover {
-    color: red;
-    cursor: pointer;
-  }
-  
-  .modal {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1000; 
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-    margin-top: 0.8%;
-    width: 100%;
-    color: black;
-    background-color: rgb(247, 246, 246);
-  }
+.listItem:hover {
+  cursor: pointer;
+  border-bottom: 4px solid #f1f1f2;
+}
 
-  .modal.active {
-    visibility: visible;
-  }
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 0.8%;
+  width: 100%;
+  background-color: #f1f1f2;
+}
 
-  .modal.inactive {
-    visibility: none;
-  }
+.modal.active {
+  visibility: visible;
+  padding: 20px 0;
+  background-color: #f1f1f2;
+}
+
+.modal.inactive {
+  visibility: none;
+}
 
 .SubcategoryList {
-  margin-top: 0.6%;
-  margin-bottom: 0.6%;
-  list-style-type: none;
-  text-align: center;
+border: 15px;
+margin-top: 2%;
+margin-bottom: 10%;
+list-style-type: none;
+text-align: center;
+background-color: #f1f1f2;
 }
 
 .SubcategoryList a { 
-  font-weight: bold;
-  color: black;
-  text-decoration: none; 
-  margin-bottom: 0.6%;
+font-weight: bold;
+color: black;
+text-decoration: none; 
+margin: 0.6%;
+font-size: 2vmin;
+background-color: #f1f1f2;
 }
 
 .SubcategoryList a:hover { 
-  color: red; 
+border-bottom: 3px solid #222;
+padding: 2.5px;
+font-size: 2.1vmin;
+background-color: #f1f1f2;
 }
