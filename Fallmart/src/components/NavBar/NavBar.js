@@ -88,19 +88,21 @@ function NavBar({ favoriteCount }) {
 						height="30"
 					/>
 				</div>
-				<div className={styles.favorites}>
-					<div className={styles.favorite_icon_container}>
-						{favoriteCount > 0 && (
-							<span className={styles.favorite_count}>{favoriteCount}</span>
-						)}
-						<img
-							src="https://i.imgur.com/UpoCDeP.png"
-							alt=""
-							width="20"
-							height="20"
-						/>
+				{isLoggedIn && (
+					<div className={styles.favorites}>
+						<div className={styles.favorite_icon_container}>
+							{favoriteCount > 0 && (
+								<span className={styles.favorite_count}>{favoriteCount}</span>
+							)}
+							<img
+								src="https://i.imgur.com/UpoCDeP.png"
+								alt=""
+								width="20"
+								height="20"
+							/>
+						</div>
 					</div>
-				</div>
+				)}
 				<div className={styles.cart}>
 					<img
 						src="https://i.imgur.com/TWI8Zuk.png"
