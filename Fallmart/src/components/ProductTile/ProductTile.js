@@ -7,6 +7,7 @@ function ProductTile({
 	favoriteCount,
 	showWishList
 }) {
+function ProductTile({ product, setFavoriteCount, favoriteCount }) {
 	const [isFavorite, setIsFavorite] = useState(false);
 	const [wishlistId, setWishlistId] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
