@@ -33,9 +33,6 @@ function NavBar({ favoriteCount, setShowWishList, showWishList }) {
 		setIsSignInModalOpen(false); // Close the modal
 		setIsLoggedIn(true);
 	};
-	const handleshowWishList = () => {
-		setShowWishList(!showWishList);
-	};
 
 	return (
 		<nav className={styles.header_core}>
@@ -92,7 +89,12 @@ function NavBar({ favoriteCount, setShowWishList, showWishList }) {
 					/>
 				</div>
 				{isLoggedIn && (
-					<div className={styles.favorites} onClick={handleshowWishList}>
+					<div
+						className={styles.favorites}
+						onClick={() => {
+							setShowWishList();
+						}}
+					>
 						<div className={styles.favorite_icon_container}>
 							{favoriteCount > 0 && (
 								<span className={styles.favorite_count}>{favoriteCount}</span>

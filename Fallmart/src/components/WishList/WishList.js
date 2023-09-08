@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as wishlistApi from '../../utilities/wishlists-api';
 import ProductTile from '../ProductTile/ProductTile';
 
-export default function Wishlist() {
+export default function WishList({ setShowWishList }) {
 	const [favoriteProducts, setFavoriteProducts] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -22,6 +22,13 @@ export default function Wishlist() {
 	return (
 		<div>
 			<h2>My Wishlist</h2>
+			<button
+				onClick={() => {
+					setShowWishList();
+				}}
+			>
+				Exit
+			</button>
 			{isLoading ? (
 				<p>Loading...</p>
 			) : favoriteProducts.length === 0 ? (

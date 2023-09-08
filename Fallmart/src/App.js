@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 
 // import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
@@ -8,6 +8,8 @@ import './styles.scss';
 import HomeImage from './components/HomeImage/HomeImage';
 import SubcategoryPage from './pages/SubcategoryPage/SubcategoryPage';
 import * as deptApi from './utilities/dept-api';
+import WishList from './components/WishList/WishList';
+import wishlist from '../models/wishlist';
 
 export default function App() {
 	const [departments, setDepartments] = useState([]);
@@ -26,23 +28,34 @@ export default function App() {
 		fetchDepartments();
 	}, []);
 
+	const handleChangeWishlist = () => {
+		setShowWishList(!showWishList);
+	};
 	return (
 		<div className="App">
-			<NavBar favoriteCount={favoriteCount} setShowWishList={setShowWishList} />
+			<NavBar
+				favoriteCount={favoriteCount}
+				setShowWishList={handleChangeWishlist}
+			/>
 			<DepartmentList departments={departments} />
-			<Routes>
-				<Route path="/" element={<HomeImage />} />
-				<Route
-					path="/:name"
-					element={
-						<SubcategoryPage
-							setFavoriteCount={setFavoriteCount}
-							favoriteCount={favoriteCount}
-							showWishList={showWishList}
-						/>
-					}
-				/>
-			</Routes>
+			{!showWishList ? (
+				<Routes>
+					<Route path="/" element={<HomeImage />} />
+					<Route
+						path="/:name"
+						element={
+							<SubcategoryPage
+								setFavoriteCount={setFavoriteCount}
+								favoriteCount={favoriteCount}
+								showWishList={showWishList}
+								setShowWishList={handleChangeWishlist}
+							/>
+						}
+					/>
+				</Routes>
+			) : (
+				<WishList setShowWishList={handleChangeWishlist} />
+			)}
 		</div>
 	);
 }

@@ -21,7 +21,6 @@ function convertPathToSubcatgeoryName(s) {
 export default function SubcategoryPage({
 	setFavoriteCount,
 	favoriteCount,
-	showWishList,
 	setShowWishList
 }) {
 	const { name } = useParams();
@@ -33,9 +32,11 @@ export default function SubcategoryPage({
 		async function getProducts() {
 			const subcategoryName = convertPathToSubcatgeoryName(name);
 			const subcategories = await subCategoriesAPI.listAllSubcategories();
+			console.log('Subcategories:', subcategories);
 			const subcategoryId =
 				subcategories.find((e) => e.name === subcategoryName)._id || 'unknown';
 			const data = await productsAPI.getProductsBySubCategoryId(subcategoryId);
+			console.log('Products', data);
 			setProducts(data);
 		}
 		getProducts();
@@ -43,19 +44,14 @@ export default function SubcategoryPage({
 	return (
 		<div className={styles.FurniturePage}>
 			<center>
-				{!showWishList ? (
-					products.map((product) => (
-						<ProductTile
-							key={product._id}
-							product={product}
-							setFavoriteCount={setFavoriteCount}
-							favoriteCount={favoriteCount}
-							showWishList={showWishList}
-						/>
-					))
-				) : (
-					<WishList />
-				)}
+				{products.map((product) => (
+					<ProductTile
+						key={product._id}
+						product={product}
+						setFavoriteCount={setFavoriteCount}
+						favoriteCount={favoriteCount}
+					/>
+				))}
 			</center>
 		</div>
 	);
