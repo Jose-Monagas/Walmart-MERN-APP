@@ -2,21 +2,28 @@
   list-style-type: none;
   background-color: #222;
   display: flex;
+  margin: 0;
+  padding: 15px 20px; /* Adjusted padding values */
   flex-direction: row;
+  border: 0;
+  width: auto;
   white-space: normal;
   color: #fff;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
   text-decoration: none;
+  justify-content: space-around;
   font-family: 'Arimo', sans-serif;
+  padding-left: 120px;
+  padding-right: 120px;
 }
-
-.primary_list li {
-  margin: 10px;
-}
-
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.primary_list li {
+  margin: 0 10px;
 }
 
 .sale {

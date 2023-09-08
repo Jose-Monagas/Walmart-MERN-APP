@@ -35,6 +35,7 @@
   .modal.active {
     visibility: visible;
     padding: 20px 0;
+    background-color: #f1f1f2;
   }
 
   .modal.inactive {
@@ -47,6 +48,7 @@
   margin-bottom: 10%;
   list-style-type: none;
   text-align: center;
+  background-color: #f1f1f2;
 }
 
 .SubcategoryList a { 
@@ -55,12 +57,14 @@
   text-decoration: none; 
   margin: 0.6%;
   font-size: 2vmin;
+  background-color: #f1f1f2;
 }
 
 .SubcategoryList a:hover { 
   border-bottom: 3px solid #222;
   padding: 2.5px;
   font-size: 2.1vmin;
+  background-color: #f1f1f2;
 }
 
 
