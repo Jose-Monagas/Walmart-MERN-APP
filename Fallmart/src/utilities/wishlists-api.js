@@ -13,3 +13,7 @@ export function removeProductFromWishlist(wishlistId, productId) {
 export function viewFavoriteProducts() {
 	return sendRequest(`${BASE_URL}/favorites`);
 }
+
+export function createWishlist() {
+	return sendRequest(`${BASE_URL}/create`, 'POST');
+}
