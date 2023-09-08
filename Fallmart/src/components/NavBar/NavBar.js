@@ -4,7 +4,7 @@ import { FaSearch, FaStar } from 'react-icons/fa';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import { Link } from 'react-router-dom';
 
-function NavBar({ favoriteCount }) {
+function NavBar({ favoriteCount, setShowWishList, showWishList }) {
 	const [searchValue, setSearchValue] = useState('');
 	const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -32,6 +32,9 @@ function NavBar({ favoriteCount }) {
 	const handleCloseModal = () => {
 		setIsSignInModalOpen(false); // Close the modal
 		setIsLoggedIn(true);
+	};
+	const handleshowWishList = () => {
+		setShowWishList(!showWishList);
 	};
 
 	return (
@@ -89,7 +92,7 @@ function NavBar({ favoriteCount }) {
 					/>
 				</div>
 				{isLoggedIn && (
-					<div className={styles.favorites}>
+					<div className={styles.favorites} onClick={handleshowWishList}>
 						<div className={styles.favorite_icon_container}>
 							{favoriteCount > 0 && (
 								<span className={styles.favorite_count}>{favoriteCount}</span>

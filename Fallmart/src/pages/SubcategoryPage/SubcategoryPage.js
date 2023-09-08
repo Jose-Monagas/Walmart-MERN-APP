@@ -4,6 +4,7 @@ import * as productsAPI from '../../utilities/products-api';
 import * as subCategoriesAPI from '../../utilities/subCategories-api';
 import ProductTile from '../../components/ProductTile/ProductTile';
 import { useParams } from 'react-router-dom';
+import WishList from '../../components/WishList/WishList';
 
 /**
  * Converts a string from a format like "living-room-furniture"
@@ -17,7 +18,12 @@ function convertPathToSubcatgeoryName(s) {
 		.join(' ');
 }
 
-export default function SubcategoryPage({ setFavoriteCount, favoriteCount }) {
+export default function SubcategoryPage({
+	setFavoriteCount,
+	favoriteCount,
+	showWishList,
+	setShowWishList
+}) {
 	const { name } = useParams();
 	const [products, setProducts] = useState([]);
 
@@ -37,16 +43,19 @@ export default function SubcategoryPage({ setFavoriteCount, favoriteCount }) {
 	return (
 		<div className={styles.FurniturePage}>
 			<center>
-				{products.map((product) => {
-					return (
+				{!showWishList ? (
+					products.map((product) => (
 						<ProductTile
 							key={product._id}
 							product={product}
 							setFavoriteCount={setFavoriteCount}
 							favoriteCount={favoriteCount}
+							showWishList={showWishList}
 						/>
-					);
-				})}
+					))
+				) : (
+					<WishList />
+				)}
 			</center>
 		</div>
 	);

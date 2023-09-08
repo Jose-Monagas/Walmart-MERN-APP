@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ProductTile.module.scss';
 import * as wishlistApi from '../../utilities/wishlists-api';
+function ProductTile({
+	product,
+	setFavoriteCount,
+	favoriteCount,
+	showWishList
+}) {
 function ProductTile({ product, setFavoriteCount, favoriteCount }) {
 	const [isFavorite, setIsFavorite] = useState(false);
 	const [wishlistId, setWishlistId] = useState(null);
