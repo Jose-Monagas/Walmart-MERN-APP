@@ -19,6 +19,7 @@ export default function LoginForm({ setUser }) {
 		try {
 			const user = await usersService.login(credentials);
 			console.log(user);
+			//close modal
 			setUser(user);
 		} catch {
 			setError('Log In Failed - Try Again');

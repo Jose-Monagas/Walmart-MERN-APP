@@ -1,0 +1,113 @@
+.OrderDetail {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vmin;
+    font-size: 2vmin;
+    color: var(--text-light);
+    
+  }
+  
+  .OrderDetail .sectionHeading {
+    width: 100%;
+  
+  }
+  
+  .OrderDetail .cartItemContainer {
+    margin-top: 3vmin;
+    justify-content: flex-start;
+    height: calc(100vh - 18vmin);
+    width: 100%;
+  }
+  
+  .OrderDetail .total {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 18.35vw 5.75vw 5.25vw;
+    padding: 1vmin 0;
+    color: var(--text-light);
+    border-top: 0.1vmin solid var(--tan-3);
+  
+  }
+  
+  .OrderDetail .total span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    color: var(--text-dark);
+  
+  }
+  
+  .OrderDetail .total span.right {
+    display: flex;
+    justify-content: flex-end;
+  
+    color: rgb(94, 239, 71);
+    margin-left: 7.0vw;
+  }
+  
+  .OrderDetail .total span.totalQ {
+    color: orangered;
+  }
+  
+  .OrderDetail .ready {
+    position: absolute;
+    top: 50vh;
+    font-size: 2vmin;
+  
+  }
+  
+  .OrderDetail .studentQuestion {
+    margin-top: 2vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: goldenrod;
+  
+    .checkButton {
+      font-size: 1.5vmin;
+      padding: 0.6vmin 0.8vmin;
+      margin-top: 1vmin;
+      color: black;
+      background-color: maroon;
+      border-radius: 1.0vmin;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: goldenrod;
+        font-size: 1.55vmin; 
+      }
+    }
+  }
+  
+  .OrderDetail .studentQuestion form {
+    margin-top: 0vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input {
+    margin-top: 1vmin;
+  }
+  
+  .submit {
+    color: black;
+    background-color: maroon;
+    border-radius: 1.0vmin;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); 
+    border: none;
+  }
+  
+  .submit:hover {
+    background-color: goldenrod;
+    transform: scale(0.95);;
+    color: black;
+  }
+  
+  .form {
+    margin-bottom: 5vmin;
+  }
+  

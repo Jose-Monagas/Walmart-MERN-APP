@@ -34,7 +34,7 @@ export default function DepartmentList({ departments }) {
         onClick={handleButtonClick}
         className={`${styles.listButton} ${showDropDown ? styles.active : ''}`}
         >
-        <img class= {styles.image} src='img/menu.png' alt=""/>
+        <img className= {styles.image} src='img/menu.png' alt=""/>
         </button> }
 		{showDropDown && <ul className={styles.DepartmentList} onMouseLeave={handleMouseLeave}>
 			{departments.map((dept) => (
