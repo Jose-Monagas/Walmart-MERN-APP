@@ -201,38 +201,222 @@ const Product = require('../models/product');
     manufacturer: 'SonicSound',
     description: 'Compact Bluetooth speaker for wireless audio.',
     reviews: 'The Bluetooth speaker is compact and has excellent sound quality. I love it!'
-  } // 23 - Speakers
+  }, // 23 - Speakers
+  {
+    name: 'Cereal',
+    price: 3.99,
+    image: 'https://i.imgur.com/AIBZyBS.jpg',
+    manufacturer: 'BreakfastDelight',
+    description: 'Healthy breakfast cereal to kickstart your day.',
+    reviews: 'This cereal is my go-to breakfast choice. It\'s healthy and delicious!'
+}, // 24 - Breakfast
+{
+      name: 'Running Shoes',
+      price: 79.95,
+      image: 'https://i.imgur.com/A1opWpA.jpg',
+      manufacturer: 'SportyFit',
+      description: 'Comfortable running shoes for your active lifestyle.',
+      reviews: 'These running shoes are so comfortable, and they provide excellent support for my workouts.'
+  }, // 25 - Footwear
+  {
+    name: 'Digital Camera',
+    price: 299.0,
+    image: 'https://i.imgur.com/JQCP7ZG.jpg',
+    manufacturer: 'PhotoPro',
+    description: 'High-quality digital camera for capturing memories.',
+    reviews: 'This digital camera takes stunning photos and is perfect for photography enthusiasts!'
+  }, // 26 - Electronics
+  {
+    name: 'Desk Chair',
+    price: 149.99,
+    image: '',
+    manufacturer: 'ErgoComfort',
+    description: 'Ergonomic desk chair for comfortable work hours.',
+    reviews: 'This desk chair is so comfortable, and it supports my back during long work hours.'
+  }, // 27 - Office Furniture
+  {
+    name: 'Fish Food',
+    price: 5.99,
+    image: 'https://i.imgur.com/xY4mDKh.jpg',
+    manufacturer: 'AquaticLife',
+    description: 'Nutritious fish food for your aquatic pets.',
+    reviews: 'My fish love this food. It keeps them healthy and their colors vibrant!'
+  }, // 28 - Pet Food
+  {
+    name: 'Sunscreen',
+    price: 7.49,
+    image: 'https://i.imgur.com/4dUSgvS.jpg',
+    manufacturer: 'SunGuard',
+    description: 'Effective sunscreen to protect your skin from UV rays.',
+    reviews: 'I use this sunscreen whenever I go outdoors, and it provides great sun protection.'
+  }, // 29 - Skin Care
+  {
+    name: 'Backpack',
+    price: 39.95,
+    image: 'https://i.imgur.com/keTBGIR.jpg',
+    manufacturer: 'AdventureGear',
+    description: 'Durable backpack for all your outdoor adventures.',
+    reviews: 'This backpack is rugged and spacious, making it perfect for hiking and camping trips.'
+  }, // 30 - Outdoor Gear
+  {
+    name: 'Wristwatch',
+    price: 89.99,
+    image: 'https://i.imgur.com/6HEtC86.jpg',
+    manufacturer: 'TimeMaster',
+    description: 'Stylish wristwatch to keep track of time in style.',
+    reviews: 'I love this wristwatch. It\'s not only functional but also adds a touch of elegance to my outfits.'
+  }, // 31 - Accessories
+  {
+    name: 'Yoga Mat',
+    price: 19.99,
+    image: 'https://i.imgur.com/QRZHKA7.jpg',
+    manufacturer: 'ZenYoga',
+    description: 'High-quality yoga mat for your daily practice.',
+    reviews: 'This yoga mat is non-slip and comfortable, making my yoga sessions enjoyable.'
+  }, // 32 - Fitness
+  {
+    name: 'Headphones',
+    price: 49.99,
+    image: 'https://i.imgur.com/wLoGYeS.jpg',
+    manufacturer: 'SoundBliss',
+    description: 'High-quality headphones for immersive audio experiences.',
+    rev,iews: 'These headphones provide excellent sound quality, and I use them for both music and gaming.'
+  },
+  { // 33 - Audio
+  name: 'Watermelon',
+  price: 3.99,
+  image: 'https://i.imgur.com/060S5uS.jpg', 
+  manufacturer: 'FreshHarvest',
+  description: 'Juicy and refreshing watermelon.',
+  reviews: 'This watermelon is so refreshing on a hot day. Love it!'
+}, // 34
+{
+  name: 'Canned Soda',
+  price: 0.99,
+  image: 'https://i.imgur.com/CiKIHQu.jpg', 
+  manufacturer: 'SodaCo',
+  description: 'Assorted canned sodas for a fizzy treat.',
+  reviews: 'I always keep a variety of canned sodas in my fridge. Great for any occasion!'
+}, // 35
+{
+  name: 'Body Wash',
+  price: 4.49,
+  image: 'https://i.imgur.com/Kmnvhm2.jpg', 
+  manufacturer: 'CleanSplash',
+  description: 'Invigorating body wash for a refreshing shower.',
+  reviews: 'This body wash has a great scent and leaves my skin feeling fresh.'
+}, // 36
+{
+  name: 'Toothbrush',
+  price: 1.99,
+  image: '', 
+  manufacturer: 'DentalCare',
+  description: 'Soft-bristle toothbrush for effective cleaning.',
+  reviews: 'My teeth feel so clean after using this toothbrush. Highly recommended!'
+}, // 37
+{
+  name: 'Granola Bars',
+  price: 2.49,
+  image: 'https://i.imgur.com/9hPy4ql.jpg', 
+  manufacturer: 'HealthyBites',
+  description: 'Healthy and tasty granola bars for snacking.',
+  reviews: 'These granola bars are my go-to snack. They\'re delicious and nutritious!'
+}, // 38
+{
+  name: 'Conditioner MAX',
+  price: 4.99,
+  image: 'https://i.imgur.com/D3JmUMg.jpg', 
+  manufacturer: 'SilkyStrands',
+  description: 'Smooth and hydrating hair conditioner.',
+  reviews: 'This conditioner leaves my hair silky and smooth. I can\'t live without it!'
+}, // 39
+{
+  name: 'Canned Soup',
+  price: 1.79,
+  image: 'https://i.imgur.com/eMgk3Xc.jpg', 
+  manufacturer: 'SoupDelight',
+  description: 'Variety of canned soups for quick and easy meals.',
+  reviews: 'These canned soups are a lifesaver on busy days. They taste homemade!'
+}, // 40
+{
+  name: 'Face Wash',
+  price: 3.29,
+  image: 'https://i.imgur.com/CBzXhFv.jpg', 
+  manufacturer: 'GlowSkin',
+  description: 'Gentle face wash for a clean and radiant complexion.',
+  reviews: 'My skin feels so fresh and clean after using this face wash. Highly recommended!'
+}, // 41
+{
+  name: 'Desk Lamp',
+  price: 19.99,
+  image: '', 
+  manufacturer: 'BrightLite',
+  description: 'Adjustable desk lamp for focused work or study.',
+  reviews: 'This desk lamp provides great lighting for my workspace. I love it!'
+}, // 42
+{
+name: 'Android',
+            price: 429.99,
+            image: 'https://i.imgur.com/ip4C6Tb.jpg', // Empty string for the image
+            manufacturer: 'Techtronics',
+            description: 'High-end smartphone with advanced features.',
+            reviews: 'This smartphone is amazing! It has all the advanced features I need.'
+        }, // 44
+        {
+            name: 'Total',
+            price: 499.99,
+            image: 'https://i.imgur.com/7TcHmhl.jpg', // Empty string for the image
+            manufacturer: 'Techtronics',
+            description: 'Premium smartphone with top-notch specifications.',
+            reviews: 'I upgraded to this smartphone, and it\'s a powerhouse. Superb performance!'
+        }, // 45
+        {
+            name: 'Galaxy',
+            price: 549.99,
+            image: 'https://i.imgur.com/Va0mrOO.jpg', // Empty string for the image
+            manufacturer: 'Techtronics',
+            description: 'Flagship smartphone with the latest technology.',
+            reviews: 'The best smartphone I\'ve ever owned. It\'s a technological marvel!'
+        }, // 46
+        {
+            name: 'FlipPhone',
+            price: 599.99,
+            image: 'https://i.imgur.com/dkscZ5m.jpg', // Empty string for the image
+            manufacturer: 'Techtronics',
+            description: 'Ultra-premium smartphone for tech enthusiasts.',
+            reviews: 'This smartphone is a beast! It surpasses all my expectations.'
+        } // 47
 	]);
 
 	const subcategories = await SubCategory.create([
 		{
 			name: 'Fruits',
-			products: [products[0]._id, products[14]._id, products[21]._id]
+			products: [products[0]._id, products[14]._id, products[21]._id,products[39]._id,products[34]._id, products[34]._id]
 		}, // Groceries - 0
-		{ name: 'Hair Care', products: [products[1]._id, products[15]._id] }, // Personal Care - 1
-		{ name: 'Mobile Phones', products: [products[2]._id] }, // Electronics - 2
+		{ name: 'Hair Care', products: [products[1]._id,products[39]._id, products[15]._id] }, // Personal Care - 1
+		{ name: 'Mobile Phones', products: [products[2]._id,products[44]._id,products[45]._id, products[46]._id, products[47]._id] }, // Electronics - 2
 		{
 			name: 'Living Room Furniture',
 			products: [products[3]._id]
 		}, // Home Furniture - 3
 		{
 			name: 'Pet Food',
-			products: [products[4]._id, products[11]._id]
+			products: [products[4]._id, products[11]._id, products[28]._id]
 		}, // Pets - 4
 		{ name: 'Diapers', products: [products[5]._id, products[19]._id] }, // Baby - 5
-		{ name: 'Casual Wear', products: [products[6]._id, products[20]._id] }, // Clothing - 6
-		{ name: 'Beverages', products: [products[7]._id] }, // Groceries - 7
-		{ name: 'Oral Care', products: [products[8]._id] }, // Personal Care - 8
-		{ name: 'Computers', products: [products[9]._id] }, // Electronics - 9
+		{ name: 'Casual Wear', products: [products[6]._id,products[30]._id, products[20]._id, products[25]._id ]}, // Clothing - 6
+		{ name: 'Breakfast, Food & Beverages', products: [products[35]._id,products[40]._id,products[38]._id ,products[7]._id,products[40]._id, products[38]._id, products[35]._id, products[19]._idproducts[24]._id] }, // Groceries - 7
+		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[37]._id, products[36]._id,products[26]._id, products[29]._id, products[41]._id] }, // Personal Care - 8
+		{ name: 'Computers & Cameras', products: [products[9]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
 		{ name: 'Wipes', products: [products[12]._id] }, // Baby - 11
-		{ name: 'Formal Wear', products: [products[13]._id] }, // Clothing - 12
+		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id] }, // Clothing - 12
 		{
 			name: 'Office Furniture',
-			products: [products[10]._id, products[17]._id]
+			products: [products[10]._id, products[17]._id, products[27]._id, products[42]._id]
 		}, // Home Furniture - 13
-		{ name: 'Antiperspirants', products: [products[22]._id] }, // Personal Care - 14
-		{ name: 'Speakers', products: [products[23]._id] } // Electronics - 15
+		{ name: 'Antiperspirants & Fitness', products: [products[22]._id, products[32]._id] }, // Personal Care - 14
+		{ name: 'Speakers', products: [products[23]._id, products[33]._id ]} // Electronics - 15
 	]);
 
 	const departments = await Department.create([
