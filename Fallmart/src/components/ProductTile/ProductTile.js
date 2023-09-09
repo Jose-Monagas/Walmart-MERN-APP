@@ -62,24 +62,24 @@ function ProductTile({
 	// /product/64fc999642d12da971512a7d
 	return (
 		<div className={styles.product_tile}>
-			<Link to={`/product/${product._id}`}>
-				<div className={styles.favorite_button} onClick={toggleFavorite}>
-					{isFavorite ? '❤️' : '🤍'}
-				</div>
+			<div className={styles.favorite_button} onClick={toggleFavorite}>
+				{isFavorite ? '❤️' : '🤍'}
+			</div>
 
-				<h3 className={styles.product_name}>{product.name}</h3>
+			<h3 className={styles.product_name}>{product.name}</h3>
+			<Link to={`/product/${product._id}`}>
 				<img
 					src={product.image}
 					height={'110px'}
 					width={'100px'}
 					alt={product.name}
 				/>
-				<h4 className={styles.product_price}>${product.price}</h4>
-				<h4 className={styles.product_sold}>Sold by: {product.manufacturer}</h4>
-				<button className={styles.cart_button} onClick={handleAddToCart}>
-					ADD TO CART
-				</button>
 			</Link>
+			<h4 className={styles.product_price}>${product.price}</h4>
+			<h4 className={styles.product_sold}>Sold by: {product.manufacturer}</h4>
+			<button className={styles.cart_button} onClick={handleAddToCart}>
+				ADD TO CART
+			</button>
 		</div>
 	);
 }
