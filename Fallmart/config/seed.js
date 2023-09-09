@@ -280,7 +280,7 @@ const Product = require('../models/product');
     image: 'https://i.imgur.com/wLoGYeS.jpg',
     manufacturer: 'SoundBliss',
     description: 'High-quality headphones for immersive audio experiences.',
-    rev,iews: ['These headphones provide excellent sound quality, and I use them for both music and gaming.']
+    reviews: ['These headphones provide excellent sound quality, and I use them for both music and gaming.']
   },
   { // 33 - Audio
   name: 'Watermelon',
@@ -361,7 +361,7 @@ name: 'Android',
             manufacturer: 'Techtronics',
             description: 'High-end smartphone with advanced features.',
             reviews: ['This smartphone is amazing! It has all the advanced features I need.']
-        }, // 44
+        }, // 43
         {
             name: 'Total',
             price: 499.99,
@@ -369,7 +369,7 @@ name: 'Android',
             manufacturer: 'Techtronics',
             description: 'Premium smartphone with top-notch specifications.',
             reviews: ['I upgraded to this smartphone, and it\'s a powerhouse. Superb performance!']
-        }, // 45
+        }, // 44
         {
             name: 'Galaxy',
             price: 549.99,
@@ -377,7 +377,7 @@ name: 'Android',
             manufacturer: 'Techtronics',
             description: 'Flagship smartphone with the latest technology.',
             reviews: ['The best smartphone I\'ve ever owned. It\'s a technological marvel!']
-        }, // 46
+        }, // 45
         {
             name: 'FlipPhone',
             price: 599.99,
@@ -385,16 +385,16 @@ name: 'Android',
             manufacturer: 'Techtronics',
             description: 'Ultra-premium smartphone for tech enthusiasts.',
             reviews: ['This smartphone is a beast! It surpasses all my expectations.']
-        } // 47
+        } // 46
 	]);
-
+  
 	const subcategories = await SubCategory.create([
 		{
 			name: 'Fruits',
 			products: [products[0]._id, products[14]._id, products[21]._id,products[39]._id,products[34]._id, products[34]._id]
 		}, // Groceries - 0
 		{ name: 'Hair Care', products: [products[1]._id,products[39]._id, products[15]._id] }, // Personal Care - 1
-		{ name: 'Mobile Phones', products: [products[2]._id,products[44]._id,products[45]._id, products[46]._id, products[47]._id] }, // Electronics - 2
+		{ name: 'Mobile Phones', products: [products[2]._id,products[44]._id, products[45]._id, products[46]._id] }, // Electronics - 2
 		{
 			name: 'Living Room Furniture',
 			products: [products[3]._id]
@@ -405,7 +405,7 @@ name: 'Android',
 		}, // Pets - 4
 		{ name: 'Diapers', products: [products[5]._id, products[19]._id] }, // Baby - 5
 		{ name: 'Casual Wear', products: [products[6]._id,products[30]._id, products[20]._id, products[25]._id ]}, // Clothing - 6
-		{ name: 'Breakfast, Food & Beverages', products: [products[35]._id,products[40]._id,products[38]._id ,products[7]._id,products[40]._id, products[38]._id, products[35]._id, products[19]._idproducts[24]._id] }, // Groceries - 7
+		{ name: 'Breakfast, Food & Beverages', products: [products[35]._id,products[40]._id,products[38]._id,products[7]._id,products[40]._id, products[38]._id, products[35]._id, products[19]._id, products[24]._id] }, // Groceries - 7
 		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[37]._id, products[36]._id,products[26]._id, products[29]._id, products[41]._id] }, // Personal Care - 8
 		{ name: 'Computers & Cameras', products: [products[9]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
