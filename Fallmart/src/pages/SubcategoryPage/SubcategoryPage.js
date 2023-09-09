@@ -21,7 +21,9 @@ function convertPathToSubcatgeoryName(s) {
 export default function SubcategoryPage({
 	setFavoriteCount,
 	favoriteCount,
-	setShowWishList
+	setShowWishList,
+	setItemCount,
+	itemCount
 }) {
 	const { name } = useParams();
 	const [products, setProducts] = useState([]);
@@ -50,6 +52,8 @@ export default function SubcategoryPage({
 						product={product}
 						setFavoriteCount={setFavoriteCount}
 						favoriteCount={favoriteCount}
+						setItemCount={setItemCount}
+						itemCount={itemCount}
 					/>
 				))}
 			</center>
