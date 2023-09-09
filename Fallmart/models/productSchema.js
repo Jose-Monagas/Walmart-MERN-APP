@@ -7,7 +7,7 @@ const productSchema = new Schema({
 	image: { type: String, required: true },
 	manufacturer: { type: String, required: true },
 	description: { type: String, required: true },
-	reviews: { type: String, required: true },
+	reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }],
 });
 
 module.exports = productSchema;
