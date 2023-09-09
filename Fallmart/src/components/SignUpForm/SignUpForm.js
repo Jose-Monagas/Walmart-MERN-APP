@@ -50,7 +50,8 @@ export default class SignUpForm extends Component {
 			this.props.closeModal();
 
 			// Update isLoggedIn state here
-			this.setState({ isLoggedIn: true });
+			console.log(this.props);
+			this.props.setIsLoggedIn(true);
 		} catch (error) {
 			console.error(error); // Log the error for debugging
 			this.setState({ error: 'Sign In Failed - Try Again' });
