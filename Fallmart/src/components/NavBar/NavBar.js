@@ -5,7 +5,13 @@ import SignUpForm from '../SignUpForm/SignUpForm';
 import { Link } from 'react-router-dom';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-function NavBar({ favoriteCount, setShowWishList, showWishList }) {
+function NavBar({
+	favoriteCount,
+	setShowWishList,
+	showWishList,
+	itemCount,
+	setShowCart
+}) {
 	const [searchValue, setSearchValue] = useState('');
 	const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -109,7 +115,15 @@ function NavBar({ favoriteCount, setShowWishList, showWishList }) {
 						</div>
 					</div>
 				)}
-				<div className={styles.cart}>
+				<div
+					className={styles.cart}
+					onClick={() => {
+						setShowCart();
+					}}
+				>
+					{itemCount > 0 && (
+						<span className={styles.item_count}>{itemCount}</span>
+					)}
 					<img
 						src="https://i.imgur.com/TWI8Zuk.png"
 						alt=""

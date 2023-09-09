@@ -10,11 +10,13 @@ import SubcategoryPage from './pages/SubcategoryPage/SubcategoryPage';
 import * as deptApi from './utilities/dept-api';
 import WishList from './components/WishList/WishList';
 import wishlist from '../models/wishlist';
-
+import Cart from '/Users/jefreyz/software_classroom/unit_4/Walmart-MERN-APP/Fallmart/src/pages/Cart/Cart.js';
 export default function App() {
 	const [departments, setDepartments] = useState([]);
 	const [favoriteCount, setFavoriteCount] = useState(0);
+	const [itemCount, setItemCount] = useState(0);
 	const [showWishList, setShowWishList] = useState(false);
+	const [showCart, setShowCart] = useState(false);
 
 	useEffect(() => {
 		const fetchDepartments = async () => {
@@ -31,11 +33,16 @@ export default function App() {
 	const handleChangeWishlist = () => {
 		setShowWishList(!showWishList);
 	};
+	const handleChangeCart = () => {
+		setShowCart(!showCart);
+	};
 	return (
 		<div className="App">
 			<NavBar
 				favoriteCount={favoriteCount}
 				setShowWishList={handleChangeWishlist}
+				itemCount={itemCount}
+				setShowCart={handleChangeCart}
 			/>
 			<DepartmentList departments={departments} />
 			{!showWishList ? (
@@ -49,6 +56,8 @@ export default function App() {
 								favoriteCount={favoriteCount}
 								showWishList={showWishList}
 								setShowWishList={handleChangeWishlist}
+								setItemCount={setItemCount}
+								itemCount={itemCount}
 							/>
 						}
 					/>
@@ -56,6 +65,7 @@ export default function App() {
 			) : (
 				<WishList setShowWishList={handleChangeWishlist} />
 			)}
+			{showCart && <Cart />}
 		</div>
 	);
 }
