@@ -9,8 +9,7 @@ import HomeImage from './components/HomeImage/HomeImage';
 import SubcategoryPage from './pages/SubcategoryPage/SubcategoryPage';
 import * as deptApi from './utilities/dept-api';
 import WishList from './components/WishList/WishList';
-import wishlist from '../models/wishlist';
-import Cart from '/Users/jefreyz/software_classroom/unit_4/Walmart-MERN-APP/Fallmart/src/pages/Cart/Cart.js';
+import Cart from '../src/pages/Cart/Cart';
 export default function App() {
 	const [departments, setDepartments] = useState([]);
 	const [favoriteCount, setFavoriteCount] = useState(0);
