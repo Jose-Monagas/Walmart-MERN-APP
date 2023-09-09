@@ -8,16 +8,16 @@
   width: auto;
   white-space: normal;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.7vmin;
   font-weight: 600;
   text-decoration: none;
   justify-content: space-around;
   font-family: 'Arimo', sans-serif;
-  padding-left: 120px;
-  padding-right: 120px;
   position: -webkit-sticky;
   position: sticky;
-  top: 115px;
+  top: 13vmin;
+  bottom: 87vmin;
+  z-index: 2000;
 }
 
 .listItem:hover {

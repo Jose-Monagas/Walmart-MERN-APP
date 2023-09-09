@@ -3,10 +3,12 @@
   align-items: center;
   box-sizing: border-box;
   border-bottom: none;
+  background-color: #fff;
   font-family: 'Arimo', sans-serif;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  z-index: 2000;
 }
 .logo_core {
   display: flex;
