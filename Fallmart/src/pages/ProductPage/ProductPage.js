@@ -1,47 +1,45 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './ProductPage.module.scss';
 import * as productsAPI from '../../utilities/products-api';
 import { useParams } from 'react-router-dom';
 
 function ProductPage() {
 	const { id } = useParams();
-	const [product, setProduct] = useState(null); // Change from [] to null
+	const [product, setProduct] = useState(null);
 
 	useEffect(() => {
 		async function getProduct() {
 			try {
 				const data = await productsAPI.getProductById(id);
-				console.log('Product:', data);
 				setProduct(data);
 			} catch (error) {
 				console.error('Error fetching product:', error);
-				setProduct(null); // Handle error
+				setProduct(null);
 			}
 		}
 		getProduct();
 	}, [id]);
 
 	return (
-		<div>
-			<h3>Product Details</h3>
+		<div className={styles.productPage}>
 			{product ? (
-				<div className={styles.productContainer}>
-					<h2>{product.name}</h2>
-					<img
-						src={product.image}
-						alt={product.name}
-						style={{
-							maxWidth: '100%', // Ensures the image scales within its container
-							height: 'auto', // Maintains the aspect ratio
-							display: 'block' // Removes any extra space below the image
-						}}
-					/>
-
-					<p>Price: ${product.price}</p>
-					<p>Description: {product.description}</p>
-
-					{/* Add more product information here */}
+				<div className={styles.productTile}>
+					<div className={styles.productImage}>
+						<img
+							src={product.image}
+							alt={product.name}
+							className={styles.productImage}
+						/>
+					</div>
+					<div className={styles.productInfo}>
+						<h1 className={styles.productTitle}>{product.name}</h1>
+						<p className={styles.productPrice}>${product.price}</p>
+						<p className={styles.productDescription}>{product.description}</p>
+						<p className={styles.productManufacturer}>
+							By: {product.manufacturer}
+						</p>
+						<p className={styles.productReviews}>Reviews: {product.reviews}</p>
+					</div>
 				</div>
 			) : (
 				<p>Loading...</p>
