@@ -4,7 +4,6 @@ import * as productsAPI from '../../utilities/products-api';
 import * as subCategoriesAPI from '../../utilities/subCategories-api';
 import ProductTile from '../../components/ProductTile/ProductTile';
 import { useParams } from 'react-router-dom';
-import WishList from '../../components/WishList/WishList';
 
 /**
  * Converts a string from a format like "living-room-furniture"
