@@ -59,7 +59,7 @@ function ProductTile({
 			console.log('Error adding item to cart:', error);
 		}
 	};
-	// /product/64fc999642d12da971512a7d
+
 	return (
 		<div className={styles.product_tile}>
 			<div className={styles.favorite_button} onClick={toggleFavorite}>

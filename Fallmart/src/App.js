@@ -48,7 +48,15 @@ export default function App() {
 			{!showWishList ? (
 				<Routes>
 					<Route path="/" element={<HomeImage />} />
-					<Route path="/product/:id" element={<ProductPage />} />
+					<Route
+						path="/product/:id"
+						element={
+							<ProductPage
+								setFavoriteCount={setFavoriteCount}
+								setItemCount={setItemCount}
+							/>
+						}
+					/>
 					<Route
 						path="/:name"
 						element={
