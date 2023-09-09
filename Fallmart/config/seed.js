@@ -205,7 +205,7 @@ const Product = require('../models/product');
   {
     name: 'Cereal',
     price: 3.99,
-    image: '',
+    image: 'https://i.imgur.com/AIBZyBS.jpg',
     manufacturer: 'BreakfastDelight',
     description: 'Healthy breakfast cereal to kickstart your day.',
     reviews: 'This cereal is my go-to breakfast choice. It\'s healthy and delicious!'
@@ -213,7 +213,7 @@ const Product = require('../models/product');
 {
       name: 'Running Shoes',
       price: 79.95,
-      image: '',
+      image: 'https://i.imgur.com/A1opWpA.jpg',
       manufacturer: 'SportyFit',
       description: 'Comfortable running shoes for your active lifestyle.',
       reviews: 'These running shoes are so comfortable, and they provide excellent support for my workouts.'
@@ -221,7 +221,7 @@ const Product = require('../models/product');
   {
     name: 'Digital Camera',
     price: 299.0,
-    image: '',
+    image: 'https://i.imgur.com/JQCP7ZG.jpg',
     manufacturer: 'PhotoPro',
     description: 'High-quality digital camera for capturing memories.',
     reviews: 'This digital camera takes stunning photos and is perfect for photography enthusiasts!'
@@ -237,7 +237,7 @@ const Product = require('../models/product');
   {
     name: 'Fish Food',
     price: 5.99,
-    image: '',
+    image: 'https://i.imgur.com/xY4mDKh.jpg',
     manufacturer: 'AquaticLife',
     description: 'Nutritious fish food for your aquatic pets.',
     reviews: 'My fish love this food. It keeps them healthy and their colors vibrant!'
@@ -245,7 +245,7 @@ const Product = require('../models/product');
   {
     name: 'Sunscreen',
     price: 7.49,
-    image: '',
+    image: 'https://i.imgur.com/4dUSgvS.jpg',
     manufacturer: 'SunGuard',
     description: 'Effective sunscreen to protect your skin from UV rays.',
     reviews: 'I use this sunscreen whenever I go outdoors, and it provides great sun protection.'
@@ -253,7 +253,7 @@ const Product = require('../models/product');
   {
     name: 'Backpack',
     price: 39.95,
-    image: '',
+    image: 'https://i.imgur.com/keTBGIR.jpg',
     manufacturer: 'AdventureGear',
     description: 'Durable backpack for all your outdoor adventures.',
     reviews: 'This backpack is rugged and spacious, making it perfect for hiking and camping trips.'
@@ -261,7 +261,7 @@ const Product = require('../models/product');
   {
     name: 'Wristwatch',
     price: 89.99,
-    image: '',
+    image: 'https://i.imgur.com/6HEtC86.jpg',
     manufacturer: 'TimeMaster',
     description: 'Stylish wristwatch to keep track of time in style.',
     reviews: 'I love this wristwatch. It\'s not only functional but also adds a touch of elegance to my outfits.'
@@ -269,7 +269,7 @@ const Product = require('../models/product');
   {
     name: 'Yoga Mat',
     price: 19.99,
-    image: '',
+    image: 'https://i.imgur.com/QRZHKA7.jpg',
     manufacturer: 'ZenYoga',
     description: 'High-quality yoga mat for your daily practice.',
     reviews: 'This yoga mat is non-slip and comfortable, making my yoga sessions enjoyable.'
@@ -277,7 +277,7 @@ const Product = require('../models/product');
   {
     name: 'Headphones',
     price: 49.99,
-    image: '',
+    image: 'https://i.imgur.com/wLoGYeS.jpg',
     manufacturer: 'SoundBliss',
     description: 'High-quality headphones for immersive audio experiences.',
     reviews: 'These headphones provide excellent sound quality, and I use them for both music and gaming.'
