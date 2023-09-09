@@ -10,7 +10,7 @@ export default class SignUpForm extends Component {
 		confirmPassword: '',
 		signInEmail: '', // Added for sign-in
 		signInPassword: '', // Added for sign-in
-		error: '',
+		error: ''
 	};
 
 	handleChange = (evt) => {
@@ -42,15 +42,16 @@ export default class SignUpForm extends Component {
 		try {
 			const formData = { email: signInEmail, password: signInPassword };
 			const user = await signIn(formData);
-	
+
 			// Assuming signIn sets the authentication token in localStorage
 			localStorage.setItem('authToken', user.authToken);
-	
+
 			console.log(user); // Verify that user data is correctly logged
 			this.props.closeModal();
-			
+
 			// Update isLoggedIn state here
-			this.setState({ isLoggedIn: true });
+			console.log(this.props);
+			this.props.setIsLoggedIn(true);
 		} catch (error) {
 			console.error(error); // Log the error for debugging
 			this.setState({ error: 'Sign In Failed - Try Again' });
@@ -185,7 +186,12 @@ export default class SignUpForm extends Component {
 								required
 							/>
 							<a onClick={''}>Forgot your password?</a>
-							<button onClick={this.handleSignIn} className={styles.modalButton} >Sign In</button>
+							<button
+								onClick={this.handleSignIn}
+								className={styles.modalButton}
+							>
+								Sign In
+							</button>
 						</form>
 					</div>
 					<div className={styles['overlay-container']}>
