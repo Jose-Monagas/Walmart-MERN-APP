@@ -10,7 +10,6 @@ import SubcategoryPage from './pages/SubcategoryPage/SubcategoryPage';
 import * as deptApi from './utilities/dept-api';
 import WishList from './components/WishList/WishList';
 import Cart from '../src/pages/Cart/Cart';
-import ProductPage from './pages/ProductPage/ProductPage';
 export default function App() {
 	const [departments, setDepartments] = useState([]);
 	const [favoriteCount, setFavoriteCount] = useState(0);
@@ -48,15 +47,6 @@ export default function App() {
 			{!showWishList ? (
 				<Routes>
 					<Route path="/" element={<HomeImage />} />
-					<Route
-						path="/product/:id"
-						element={
-							<ProductPage
-								setFavoriteCount={setFavoriteCount}
-								setItemCount={setItemCount}
-							/>
-						}
-					/>
 					<Route
 						path="/:name"
 						element={

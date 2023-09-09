@@ -27,13 +27,11 @@ async function cart(req, res) {
 // Add an item to the cart
 async function addToCart(req, res) {
 	try {
-		console.log('in addToCart');
 		let userId = req.user ? req.user._id : guestUserId(req);
 		const cart = await Order.getCart(userId);
 		await cart.addItemToCart(req.params.id);
 		res.status(200).json(cart);
 	} catch (e) {
-		console.log(e);
 		res.status(400).json({ msg: e.message });
 	}
 }
