@@ -4,6 +4,7 @@ import { FaSearch, FaStar } from 'react-icons/fa';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import { Link } from 'react-router-dom';
 import { Navigate, useNavigate } from 'react-router-dom';
+import product from '../../../models/product';
 
 function NavBar({
 	favoriteCount,
@@ -15,10 +16,23 @@ function NavBar({
 	const [searchValue, setSearchValue] = useState('');
 	const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [searchResults, setSearchResults] = useState([]); // state to store search results
 
-	const handleSearch = () => {
-		console.log('Performing search:', searchValue);
-	};
+	const handleSearch = async () => {
+		try {
+		  // Call your searchProducts function or API request here
+		  const response = await searchProducts(searchValue);
+	  
+		  // Filter the response data based on the search query
+		  const filteredProducts = response.filter(product =>
+			product.name.toLowerCase().includes(searchValue.toLowerCase())
+		  );
+	  
+		  setSearchResults(filteredProducts);
+		} catch (error) {
+		  console.error('Error searching for products:', error);
+		}
+	  };
 
 	useEffect(() => {
 		const userIsLoggedIn = localStorage.getItem('authToken') !== null;
@@ -55,6 +69,7 @@ function NavBar({
 					placeholder="Search everything at Fallmart online and in store"
 					value={searchValue}
 					onChange={(e) => setSearchValue(e.target.value)}
+					onKeyDown={handleSearch} 
 				/>
 				<button className={styles.search_button} onClick={handleSearch}>
 					<FaSearch />
@@ -83,8 +98,8 @@ function NavBar({
 					<img
 						src="https://i.imgur.com/l3cX5Ev.png"
 						alt=""
-						width="20"
-						height="20"
+						width="23"
+						height="23"
 					/>
 				</div>
 				<div className={styles.location}>
