@@ -229,7 +229,7 @@ const Product = require('../models/product');
   {
     name: 'Desk Chair',
     price: 149.99,
-    image: '',
+    image: 'https://i.imgur.com/WLOAzFs.jpg',
     manufacturer: 'ErgoComfort',
     description: 'Ergonomic desk chair for comfortable work hours.',
     reviews: 'This desk chair is so comfortable, and it supports my back during long work hours.'
