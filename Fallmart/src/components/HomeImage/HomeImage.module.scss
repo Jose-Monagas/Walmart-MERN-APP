@@ -6,15 +6,17 @@
   gap: 2vmin;
   margin-top: 3vmax;
   padding-bottom: 1.5vh;
+  
 }
 
 .imageContainer {
   position: relative;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 30%; 
+  max-height: 30%;
   border-radius: 40px;
   transition: transform 0.3s ease-in-out;
 }
+
 
 .galleryImage {
   max-width: 100%;
@@ -34,7 +36,7 @@
   color: white; 
   padding: 5px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   gap: 5px; 
@@ -50,5 +52,19 @@
 .imageBottomText {
   font-size: 40px;
   font-weight: bold;
-  color: goldenrod  
+  color:rgb(245, 227, 64)
 }
+
+
+
+
+@media screen and (max-width: 650px) and (min-width: 100px) {
+  .imageContainer {
+    max-width: 50%; 
+    max-height: 50%;
+  } 
+
+  }
+
+
+

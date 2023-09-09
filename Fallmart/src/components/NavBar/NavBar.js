@@ -3,8 +3,15 @@ import styles from './NavBar.module.scss';
 import { FaSearch, FaStar } from 'react-icons/fa';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import { Link } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-function NavBar({ favoriteCount }) {
+function NavBar({
+	favoriteCount,
+	setShowWishList,
+	showWishList,
+	itemCount,
+	setShowCart
+}) {
 	const [searchValue, setSearchValue] = useState('');
 	const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,10 +35,8 @@ function NavBar({ favoriteCount }) {
 	const handleSignInClick = () => {
 		setIsSignInModalOpen(true); // Open the modal when the button is clicked
 	};
-
-	const handleCloseModal = () => {
+	const handleCloseModal = (evt) => {
 		setIsSignInModalOpen(false); // Close the modal
-		setIsLoggedIn(true);
 	};
 
 	return (
@@ -57,10 +62,12 @@ function NavBar({ favoriteCount }) {
 			</div>
 			{/* 4 links to the right */}
 			<div className={styles.right_core}>
-				<div className={styles.account}>
-					<a href="/account/order-tracking"> Orders </a>
-					<span> &nbsp; </span>
-				</div>
+				{isLoggedIn && (
+					<div className={styles.account}>
+						<a href="/account/order-tracking"> Orders </a>
+						<span> &nbsp; </span>
+					</div>
+				)}
 				<div className={styles.account}>
 					{isLoggedIn ? (
 						<button className={styles.signbutton} onClick={handleLogOut}>
@@ -89,7 +96,12 @@ function NavBar({ favoriteCount }) {
 					/>
 				</div>
 				{isLoggedIn && (
-					<div className={styles.favorites}>
+					<div
+						className={styles.favorites}
+						onClick={() => {
+							setShowWishList();
+						}}
+					>
 						<div className={styles.favorite_icon_container}>
 							{favoriteCount > 0 && (
 								<span className={styles.favorite_count}>{favoriteCount}</span>
@@ -103,7 +115,15 @@ function NavBar({ favoriteCount }) {
 						</div>
 					</div>
 				)}
-				<div className={styles.cart}>
+				<div
+					className={styles.cart}
+					onClick={() => {
+						setShowCart();
+					}}
+				>
+					{itemCount > 0 && (
+						<span className={styles.item_count}>{itemCount}</span>
+					)}
 					<img
 						src="https://i.imgur.com/TWI8Zuk.png"
 						alt=""
@@ -119,7 +139,11 @@ function NavBar({ favoriteCount }) {
 						<span className={styles.close} onClick={handleCloseModal}>
 							&times;
 						</span>
-						<SignUpForm closeModal={handleCloseModal} />
+						<SignUpForm
+							closeModal={handleCloseModal}
+							isLoggedIn={isLoggedIn}
+							setIsLoggedIn={setIsLoggedIn}
+						/>
 					</div>
 				</div>
 			)}

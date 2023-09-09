@@ -4,6 +4,7 @@ import * as productsAPI from '../../utilities/products-api';
 import * as subCategoriesAPI from '../../utilities/subCategories-api';
 import ProductTile from '../../components/ProductTile/ProductTile';
 import { useParams } from 'react-router-dom';
+import WishList from '../../components/WishList/WishList';
 
 /**
  * Converts a string from a format like "living-room-furniture"
@@ -17,7 +18,13 @@ function convertPathToSubcatgeoryName(s) {
 		.join(' ');
 }
 
-export default function SubcategoryPage({ setFavoriteCount, favoriteCount }) {
+export default function SubcategoryPage({
+	setFavoriteCount,
+	favoriteCount,
+	setShowWishList,
+	setItemCount,
+	itemCount
+}) {
 	const { name } = useParams();
 	const [products, setProducts] = useState([]);
 
@@ -27,9 +34,11 @@ export default function SubcategoryPage({ setFavoriteCount, favoriteCount }) {
 		async function getProducts() {
 			const subcategoryName = convertPathToSubcatgeoryName(name);
 			const subcategories = await subCategoriesAPI.listAllSubcategories();
+			console.log('Subcategories:', subcategories);
 			const subcategoryId =
 				subcategories.find((e) => e.name === subcategoryName)._id || 'unknown';
 			const data = await productsAPI.getProductsBySubCategoryId(subcategoryId);
+			console.log('Products', data);
 			setProducts(data);
 		}
 		getProducts();
@@ -37,16 +46,16 @@ export default function SubcategoryPage({ setFavoriteCount, favoriteCount }) {
 	return (
 		<div className={styles.FurniturePage}>
 			<center>
-				{products.map((product) => {
-					return (
-						<ProductTile
-							key={product._id}
-							product={product}
-							setFavoriteCount={setFavoriteCount}
-							favoriteCount={favoriteCount}
-						/>
-					);
-				})}
+				{products.map((product) => (
+					<ProductTile
+						key={product._id}
+						product={product}
+						setFavoriteCount={setFavoriteCount}
+						favoriteCount={favoriteCount}
+						setItemCount={setItemCount}
+						itemCount={itemCount}
+					/>
+				))}
 			</center>
 		</div>
 	);

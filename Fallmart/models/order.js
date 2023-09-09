@@ -50,7 +50,7 @@ orderSchema.virtual('orderId').get(function () {
 
 orderSchema.statics.getCart = function (userId) {
 	// 'this' is the Order model
-	console.log('Welcome', userId);
+	//console.log('Welcome', userId);
 	return this.findOneAndUpdate(
 		// query
 		{ user: userId, isPaid: false },

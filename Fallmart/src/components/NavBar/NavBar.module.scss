@@ -36,9 +36,6 @@
   border: 1px solid #666;
   border-radius: 9999px;
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
 }
 .search_button {
   position: absolute;
@@ -81,6 +78,9 @@
 .favorites {
   margin-left: 20px;
 }
+.favorites:hover{
+  cursor: pointer;
+}
 .cart {
   margin-left: 20px;
 }
@@ -118,6 +118,20 @@
   left: 10px;
   color: #ffffff;
   padding: 2px 4px;
+  border-radius: 50%;
+  background-color: red;
+}
+.cart{
+  position: relative;
+  cursor: pointer;
+}
+
+.item_count{
+  position:absolute;
+  top:-15px;
+  padding: 2px 4px;
+  left:15px;
+  color: #ffffff;
   border-radius: 50%;
   background-color: red;
 }
