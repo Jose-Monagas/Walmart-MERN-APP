@@ -17,8 +17,8 @@
 }
 
 .listItem:hover {
-  color: red;
   cursor: pointer;
+  padding-bottom: 8px solid #f1f1f2;
 }
 
 .modal {
@@ -27,7 +27,6 @@
   right: 0;
   z-index: 1000; 
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
   margin-top: 0.8%;
   width: 100%;
   color: black;
