@@ -34,9 +34,9 @@
   border: 1px solid #666;
   border-radius: 9999px;
   width: 100%;
-      position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
 }
 .search_button {
   position: absolute;
@@ -94,9 +94,6 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
 }
 
 .modalContent {
