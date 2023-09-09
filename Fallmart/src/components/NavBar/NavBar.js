@@ -139,7 +139,11 @@ function NavBar({
 						<span className={styles.close} onClick={handleCloseModal}>
 							&times;
 						</span>
-						<SignUpForm closeModal={handleCloseModal} />
+						<SignUpForm
+							closeModal={handleCloseModal}
+							isLoggedIn={isLoggedIn}
+							setIsLoggedIn={setIsLoggedIn}
+						/>
 					</div>
 				</div>
 			)}
