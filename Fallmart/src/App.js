@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 
-// import styles from './App.module.scss';
+import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import DepartmentList from './components/DepartmentList/DepartmentList';
-import './styles.scss';
+// import './styles.scss';
 import HomeImage from './components/HomeImage/HomeImage';
 import SubcategoryPage from './pages/SubcategoryPage/SubcategoryPage';
 import * as deptApi from './utilities/dept-api';
@@ -37,7 +37,9 @@ export default function App() {
 		setShowCart(!showCart);
 	};
 	return (
-		<div className="App">
+		<div className={styles.App}>
+			<div className={styles.sticky}>
+				
 			<NavBar
 				favoriteCount={favoriteCount}
 				setShowWishList={handleChangeWishlist}
@@ -45,6 +47,7 @@ export default function App() {
 				setShowCart={handleChangeCart}
 			/>
 			<DepartmentList departments={departments} />
+			</div>
 			{!showWishList ? (
 				<Routes>
 					<Route path="/" element={<HomeImage />} />

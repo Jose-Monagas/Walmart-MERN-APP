@@ -14,13 +14,11 @@
   text-decoration: none;
   justify-content: space-around;
   font-family: 'Arimo', sans-serif;
-  padding-left: 120px;
-  padding-right: 120px;
 }
 
 .listItem:hover {
-  color: red;
   cursor: pointer;
+  color: red;
 }
 
 .modal {
@@ -29,7 +27,6 @@
   right: 0;
   z-index: 1000; 
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
   margin-top: 0.8%;
   width: 100%;
   color: black;
