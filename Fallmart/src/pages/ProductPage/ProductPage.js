@@ -61,8 +61,10 @@ function ProductPage({ setFavoriteCount }) {
 				item.item._id === product._id;
 			});
 			if (existingItem) {
+				console.log('attempting to add existing item');
 				await ordersApi.setItemQtyInCart(product._id, existingItem.qty + 1);
 			} else {
+				console.log('attempting to add new item ', product._id);
 				await ordersApi.addItemToCart(product._id);
 			}
 			setItemCount(itemCount + 1);
