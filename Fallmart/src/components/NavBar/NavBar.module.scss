@@ -24,7 +24,7 @@
   color: #222;
   font-style: normal;
   font-weight: 400;
-  height: 40px;
+  height: 42px;
   padding: 5px 40px 5px 16px; /* Adjust the right padding for the icon */
   font-size: 14px;
   border: 1px solid #666;
@@ -40,6 +40,7 @@
   border: none;
   padding: 0;
   padding-right: 6px;
+  padding-top: 3px;
   cursor: pointer;
   color: #666;
   font-size: 23px;
@@ -103,29 +104,40 @@
   font-size: 28px;
   cursor: pointer;
 }
+
 .favorite_icon_container{
   position: relative;
 }
-.favorite_count{
-  position:absolute;
+
+.favorite_count {
+  position: absolute;
   top: -15px;
   left: 10px;
+  width: 20px; 
+  height: 20px; 
   color: #ffffff;
-  padding: 2px 4px;
-  border-radius: 50%;
+  border-radius: 50%; 
   background-color: red;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
+
 .cart{
   position: relative;
   cursor: pointer;
 }
 
 .item_count{
-  position:absolute;
-  top:-15px;
-  padding: 2px 4px;
-  left:15px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  width: 20px; 
+  height: 20px; 
   color: #ffffff;
-  border-radius: 50%;
+  border-radius: 50%; 
   background-color: red;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
