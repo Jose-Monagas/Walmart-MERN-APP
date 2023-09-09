@@ -309,7 +309,7 @@ const Product = require('../models/product');
 {
   name: 'Toothbrush',
   price: 1.99,
-  image: '', 
+  image: 'https://i.imgur.com/07QVf4P.jpg', 
   manufacturer: 'DentalCare',
   description: 'Soft-bristle toothbrush for effective cleaning.',
   reviews: 'My teeth feel so clean after using this toothbrush. Highly recommended!'
@@ -349,7 +349,7 @@ const Product = require('../models/product');
 {
   name: 'Desk Lamp',
   price: 19.99,
-  image: '', 
+  image: 'https://i.imgur.com/oKb8wxH.jpg', 
   manufacturer: 'BrightLite',
   description: 'Adjustable desk lamp for focused work or study.',
   reviews: 'This desk lamp provides great lighting for my workspace. I love it!'
@@ -357,7 +357,7 @@ const Product = require('../models/product');
 {
 name: 'Android',
             price: 429.99,
-            image: 'https://i.imgur.com/ip4C6Tb.jpg', // Empty string for the image
+            image: 'https://i.imgur.com/ip4C6Tb.jpg', 
             manufacturer: 'Techtronics',
             description: 'High-end smartphone with advanced features.',
             reviews: 'This smartphone is amazing! It has all the advanced features I need.'
@@ -365,7 +365,7 @@ name: 'Android',
         {
             name: 'Total',
             price: 499.99,
-            image: 'https://i.imgur.com/7TcHmhl.jpg', // Empty string for the image
+            image: 'https://i.imgur.com/7TcHmhl.jpg', 
             manufacturer: 'Techtronics',
             description: 'Premium smartphone with top-notch specifications.',
             reviews: 'I upgraded to this smartphone, and it\'s a powerhouse. Superb performance!'
@@ -373,7 +373,7 @@ name: 'Android',
         {
             name: 'Galaxy',
             price: 549.99,
-            image: 'https://i.imgur.com/Va0mrOO.jpg', // Empty string for the image
+            image: 'https://i.imgur.com/Va0mrOO.jpg', 
             manufacturer: 'Techtronics',
             description: 'Flagship smartphone with the latest technology.',
             reviews: 'The best smartphone I\'ve ever owned. It\'s a technological marvel!'
@@ -381,7 +381,7 @@ name: 'Android',
         {
             name: 'FlipPhone',
             price: 599.99,
-            image: 'https://i.imgur.com/dkscZ5m.jpg', // Empty string for the image
+            image: 'https://i.imgur.com/dkscZ5m.jpg', 
             manufacturer: 'Techtronics',
             description: 'Ultra-premium smartphone for tech enthusiasts.',
             reviews: 'This smartphone is a beast! It surpasses all my expectations.'
