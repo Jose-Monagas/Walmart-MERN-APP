@@ -281,8 +281,8 @@ const Product = require('../models/product');
     manufacturer: 'SoundBliss',
     description: 'High-quality headphones for immersive audio experiences.',
     reviews: 'These headphones provide excellent sound quality, and I use them for both music and gaming.'
-  },
-  { // 33 - Audio
+  }, // 33 - Audio
+  { 
   name: 'Watermelon',
   price: 3.99,
   image: 'https://i.imgur.com/060S5uS.jpg', 
@@ -354,44 +354,51 @@ const Product = require('../models/product');
   description: 'Adjustable desk lamp for focused work or study.',
   reviews: 'This desk lamp provides great lighting for my workspace. I love it!'
 }, // 42
+{name: 'Smartwatch',
+  price: 149.0,
+  image: 'https://i.imgur.com/HEASg3K.jpg',
+  manufacturer: 'TechWear',
+  description: 'Feature-rich smartwatch for tracking your fitness and notifications.',
+  reviews: 'This smartwatch has transformed my fitness routine with its tracking features, and it keeps me connected with notifications.'
+}, // 43 - Electronics
 {
-name: 'Android',
-            price: 429.99,
-            image: 'https://i.imgur.com/ip4C6Tb.jpg', 
-            manufacturer: 'Techtronics',
-            description: 'High-end smartphone with advanced features.',
-            reviews: 'This smartphone is amazing! It has all the advanced features I need.'
-        }, // 44
-        {
-            name: 'Total',
-            price: 499.99,
-            image: 'https://i.imgur.com/7TcHmhl.jpg', 
-            manufacturer: 'Techtronics',
-            description: 'Premium smartphone with top-notch specifications.',
-            reviews: 'I upgraded to this smartphone, and it\'s a powerhouse. Superb performance!'
+  name: 'Android',
+  price: 429.99,
+  image: 'https://i.imgur.com/ip4C6Tb.jpg', 
+  manufacturer: 'Techtronics',
+  description: 'High-end smartphone with advanced features.',
+  reviews: 'This smartphone is amazing! It has all the advanced features I need.'
+  }, // 44
+  {
+  name: 'Total',
+  price: 499.99,
+  image: 'https://i.imgur.com/7TcHmhl.jpg', 
+  manufacturer: 'Techtronics',
+  description: 'Premium smartphone with top-notch specifications.',
+  reviews: 'I upgraded to this smartphone, and it\'s a powerhouse. Superb performance!'
         }, // 45
         {
-            name: 'Galaxy',
-            price: 549.99,
-            image: 'https://i.imgur.com/Va0mrOO.jpg', 
-            manufacturer: 'Techtronics',
-            description: 'Flagship smartphone with the latest technology.',
-            reviews: 'The best smartphone I\'ve ever owned. It\'s a technological marvel!'
-        }, // 46
-        {
-            name: 'FlipPhone',
-            price: 599.99,
-            image: 'https://i.imgur.com/dkscZ5m.jpg', 
-            manufacturer: 'Techtronics',
-            description: 'Ultra-premium smartphone for tech enthusiasts.',
-            reviews: 'This smartphone is a beast! It surpasses all my expectations.'
+  name: 'Galaxy',
+  price: 549.99,
+  image: 'https://i.imgur.com/Va0mrOO.jpg', 
+  manufacturer: 'Techtronics',
+  description: 'Flagship smartphone with the latest technology.',
+  reviews: 'The best smartphone I\'ve ever owned. It\'s a technological marvel!'
+  }, // 46
+  {
+  name: 'FlipPhone',
+  price: 599.99,
+  image: 'https://i.imgur.com/dkscZ5m.jpg', 
+  manufacturer: 'Techtronics',
+  description: 'Ultra-premium smartphone for tech enthusiasts.',
+  reviews: 'This smartphone is a beast! It surpasses all my expectations.'
         } // 47
 	]);
 
 	const subcategories = await SubCategory.create([
 		{
-			name: 'Fruits',
-			products: [products[0]._id, products[14]._id, products[21]._id,products[39]._id,products[34]._id, products[34]._id]
+			name: 'Fruits & Vegetables',
+			products: [products[0]._id, products[14]._id, products[21]._id,products[34]._id]
 		}, // Groceries - 0
 		{ name: 'Hair Care', products: [products[1]._id,products[39]._id, products[15]._id] }, // Personal Care - 1
 		{ name: 'Mobile Phones', products: [products[2]._id,products[44]._id,products[45]._id, products[46]._id, products[47]._id] }, // Electronics - 2
@@ -405,17 +412,17 @@ name: 'Android',
 		}, // Pets - 4
 		{ name: 'Diapers', products: [products[5]._id, products[19]._id] }, // Baby - 5
 		{ name: 'Casual Wear', products: [products[6]._id,products[30]._id, products[20]._id, products[25]._id ]}, // Clothing - 6
-		{ name: 'Breakfast, Food & Beverages', products: [products[35]._id,products[40]._id,products[38]._id ,products[7]._id,products[40]._id, products[38]._id, products[35]._id, products[19]._idproducts[24]._id] }, // Groceries - 7
-		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[37]._id, products[36]._id,products[26]._id, products[29]._id, products[41]._id] }, // Personal Care - 8
-		{ name: 'Computers & Cameras', products: [products[9]._id] }, // Electronics - 9
+		{ name: 'Breakfast, Snacks & Beverages', products: [products[35]._id,products[40]._id,products[38]._id ,products[7]._id, products[24]._id] }, // Groceries - 7
+		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[26]._id, products[29]._id, products[41]._id] }, // Personal Care - 8
+		{ name: 'Computers & Cameras', products: [products[9]._id, products[26]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
-		{ name: 'Wipes', products: [products[12]._id] }, // Baby - 11
+		{ name: 'Wipes & Formula', products: [products[12]._id, products[19]._id] }, // Baby - 11
 		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id] }, // Clothing - 12
 		{
 			name: 'Office Furniture',
 			products: [products[10]._id, products[17]._id, products[27]._id, products[42]._id]
 		}, // Home Furniture - 13
-		{ name: 'Antiperspirants & Fitness', products: [products[22]._id, products[32]._id] }, // Personal Care - 14
+		{ name: 'Antiperspirants & Fitness', products: [products[22]._id, products[32]._id, products[43]._id ] }, // Personal Care - 14
 		{ name: 'Speakers', products: [products[23]._id, products[33]._id ]} // Electronics - 15
 	]);
 
