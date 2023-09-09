@@ -31,13 +31,13 @@ function ProductTile({
 		if (!wishlistId || isLoading) {
 			return;
 		}
-		setIsFavorite(!isFavorite);
+		setIsFavorite((previousFavorite) => !previousFavorite);
 		if (!isFavorite) {
+			setFavoriteCount((prevFavoriteCount) => prevFavoriteCount + 1);
 			await wishlistApi.addProductToWishlist(wishlistId, product._id);
-			setFavoriteCount(favoriteCount + 1);
 		} else {
+			setFavoriteCount((prevFavoriteCount) => prevFavoriteCount - 1);
 			await wishlistApi.removeProductFromWishlist(wishlistId, product._id);
-			setFavoriteCount(favoriteCount - 1);
 		}
 	};
 
