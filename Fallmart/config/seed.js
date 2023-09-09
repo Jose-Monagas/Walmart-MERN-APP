@@ -297,22 +297,22 @@ const Product = require('../models/product');
 		}, // Home Furniture - 3
 		{
 			name: 'Pet Food',
-			products: [products[4]._id, products[11]._id]
+			products: [products[4]._id, products[11]._id, products[28]._id]
 		}, // Pets - 4
 		{ name: 'Diapers', products: [products[5]._id, products[19]._id] }, // Baby - 5
-		{ name: 'Casual Wear', products: [products[6]._id, products[20]._id] }, // Clothing - 6
-		{ name: 'Beverages', products: [products[7]._id] }, // Groceries - 7
-		{ name: 'Oral Care', products: [products[8]._id] }, // Personal Care - 8
-		{ name: 'Computers', products: [products[9]._id] }, // Electronics - 9
+		{ name: 'Casual Wear', products: [products[6]._id,products[30]._id, products[20]._id, products[25]._id ]}, // Clothing - 6
+		{ name: 'Breakfast & Beverages', products: [products[7]._id, products[19]._idproducts[24]._id] }, // Groceries - 7
+		{ name: 'Skin & Oral Care', products: [products[8]._id,products[26]._id, products[29]._id] }, // Personal Care - 8
+		{ name: 'Computers & Cameras', products: [products[9]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
 		{ name: 'Wipes', products: [products[12]._id] }, // Baby - 11
-		{ name: 'Formal Wear', products: [products[13]._id] }, // Clothing - 12
+		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id] }, // Clothing - 12
 		{
 			name: 'Office Furniture',
-			products: [products[10]._id, products[17]._id]
+			products: [products[10]._id, products[17]._id, products[27]._id]
 		}, // Home Furniture - 13
-		{ name: 'Antiperspirants', products: [products[22]._id] }, // Personal Care - 14
-		{ name: 'Speakers', products: [products[23]._id] } // Electronics - 15
+		{ name: 'Antiperspirants & Fitness', products: [products[22]._id, products[32]._id] }, // Personal Care - 14
+		{ name: 'Speakers', products: [products[23]._id, products[33]._id ]} // Electronics - 15
 	]);
 
 	const departments = await Department.create([
