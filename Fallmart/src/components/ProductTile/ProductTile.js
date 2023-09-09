@@ -13,6 +13,7 @@ function ProductTile({
 	const [wishlistId, setWishlistId] = useState(null);
 	const [itemId, setItemId] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
+
 	useEffect(() => {
 		async function fetchWishlistId() {
 			try {
@@ -26,6 +27,10 @@ function ProductTile({
 		}
 		fetchWishlistId();
 	}, []);
+
+	const expandItem = async () => {
+		console.log(itemId);
+	};
 
 	const toggleFavorite = async (evt) => {
 		if (!wishlistId || isLoading) {
