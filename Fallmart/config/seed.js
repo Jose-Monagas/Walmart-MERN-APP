@@ -280,7 +280,7 @@ const Product = require('../models/product');
     image: 'https://i.imgur.com/wLoGYeS.jpg',
     manufacturer: 'SoundBliss',
     description: 'High-quality headphones for immersive audio experiences.',
-    rev,iews: 'These headphones provide excellent sound quality, and I use them for both music and gaming.'
+    reviews: 'These headphones provide excellent sound quality, and I use them for both music and gaming.'
   },
   { // 33 - Audio
   name: 'Watermelon',
