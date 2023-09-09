@@ -202,85 +202,86 @@ const Product = require('../models/product');
     description: 'Compact Bluetooth speaker for wireless audio.',
     reviews: 'The Bluetooth speaker is compact and has excellent sound quality. I love it!'
   }, // 23 - Speakers
-  {name: 'Cereal',
-  price: 3.99,
-  image: '',
-  manufacturer: 'BreakfastDelight',
-  description: 'Healthy breakfast cereal to kickstart your day.',
-  reviews: 'This cereal is my go-to breakfast choice. It\'s healthy and delicious!'
+  {
+    name: 'Cereal',
+    price: 3.99,
+    image: '',
+    manufacturer: 'BreakfastDelight',
+    description: 'Healthy breakfast cereal to kickstart your day.',
+    reviews: 'This cereal is my go-to breakfast choice. It\'s healthy and delicious!'
 }, // 24 - Breakfast
 {
-  name: 'Running Shoes',
-  price: 79.95,
-  image: '',
-  manufacturer: 'SportyFit',
-  description: 'Comfortable running shoes for your active lifestyle.',
-  reviews: 'These running shoes are so comfortable, and they provide excellent support for my workouts.'
-}, // 25 - Footwear
-{
-  name: 'Digital Camera',
-  price: 299.0,
-  image: '',
-  manufacturer: 'PhotoPro',
-  description: 'High-quality digital camera for capturing memories.',
-  reviews: 'This digital camera takes stunning photos and is perfect for photography enthusiasts!'
-}, // 26 - Electronics
-{
-  name: 'Desk Chair',
-  price: 149.99,
-  image: '',
-  manufacturer: 'ErgoComfort',
-  description: 'Ergonomic desk chair for comfortable work hours.',
-  reviews: 'This desk chair is so comfortable, and it supports my back during long work hours.'
-}, // 27 - Office Furniture
-{
-  name: 'Fish Food',
-  price: 5.99,
-  image: '',
-  manufacturer: 'AquaticLife',
-  description: 'Nutritious fish food for your aquatic pets.',
-  reviews: 'My fish love this food. It keeps them healthy and their colors vibrant!'
-}, // 28 - Pet Food
-{
-  name: 'Sunscreen',
-  price: 7.49,
-  image: '',
-  manufacturer: 'SunGuard',
-  description: 'Effective sunscreen to protect your skin from UV rays.',
-  reviews: 'I use this sunscreen whenever I go outdoors, and it provides great sun protection.'
-}, // 29 - Skin Care
-{
-  name: 'Backpack',
-  price: 39.95,
-  image: '',
-  manufacturer: 'AdventureGear',
-  description: 'Durable backpack for all your outdoor adventures.',
-  reviews: 'This backpack is rugged and spacious, making it perfect for hiking and camping trips.'
-}, // 30 - Outdoor Gear
-{
-  name: 'Wristwatch',
-  price: 89.99,
-  image: '',
-  manufacturer: 'TimeMaster',
-  description: 'Stylish wristwatch to keep track of time in style.',
-  reviews: 'I love this wristwatch. It\'s not only functional but also adds a touch of elegance to my outfits.'
-}, // 31 - Accessories
-{
-  name: 'Yoga Mat',
-  price: 19.99,
-  image: '',
-  manufacturer: 'ZenYoga',
-  description: 'High-quality yoga mat for your daily practice.',
-  reviews: 'This yoga mat is non-slip and comfortable, making my yoga sessions enjoyable.'
-}, // 32 - Fitness
-{
-  name: 'Headphones',
-  price: 49.99,
-  image: '',
-  manufacturer: 'SoundBliss',
-  description: 'High-quality headphones for immersive audio experiences.',
-  reviews: 'These headphones provide excellent sound quality, and I use them for both music and gaming.'
-} // 33 - Audio
+      name: 'Running Shoes',
+      price: 79.95,
+      image: '',
+      manufacturer: 'SportyFit',
+      description: 'Comfortable running shoes for your active lifestyle.',
+      reviews: 'These running shoes are so comfortable, and they provide excellent support for my workouts.'
+  }, // 25 - Footwear
+  {
+    name: 'Digital Camera',
+    price: 299.0,
+    image: '',
+    manufacturer: 'PhotoPro',
+    description: 'High-quality digital camera for capturing memories.',
+    reviews: 'This digital camera takes stunning photos and is perfect for photography enthusiasts!'
+  }, // 26 - Electronics
+  {
+    name: 'Desk Chair',
+    price: 149.99,
+    image: '',
+    manufacturer: 'ErgoComfort',
+    description: 'Ergonomic desk chair for comfortable work hours.',
+    reviews: 'This desk chair is so comfortable, and it supports my back during long work hours.'
+  }, // 27 - Office Furniture
+  {
+    name: 'Fish Food',
+    price: 5.99,
+    image: '',
+    manufacturer: 'AquaticLife',
+    description: 'Nutritious fish food for your aquatic pets.',
+    reviews: 'My fish love this food. It keeps them healthy and their colors vibrant!'
+  }, // 28 - Pet Food
+  {
+    name: 'Sunscreen',
+    price: 7.49,
+    image: '',
+    manufacturer: 'SunGuard',
+    description: 'Effective sunscreen to protect your skin from UV rays.',
+    reviews: 'I use this sunscreen whenever I go outdoors, and it provides great sun protection.'
+  }, // 29 - Skin Care
+  {
+    name: 'Backpack',
+    price: 39.95,
+    image: '',
+    manufacturer: 'AdventureGear',
+    description: 'Durable backpack for all your outdoor adventures.',
+    reviews: 'This backpack is rugged and spacious, making it perfect for hiking and camping trips.'
+  }, // 30 - Outdoor Gear
+  {
+    name: 'Wristwatch',
+    price: 89.99,
+    image: '',
+    manufacturer: 'TimeMaster',
+    description: 'Stylish wristwatch to keep track of time in style.',
+    reviews: 'I love this wristwatch. It\'s not only functional but also adds a touch of elegance to my outfits.'
+  }, // 31 - Accessories
+  {
+    name: 'Yoga Mat',
+    price: 19.99,
+    image: '',
+    manufacturer: 'ZenYoga',
+    description: 'High-quality yoga mat for your daily practice.',
+    reviews: 'This yoga mat is non-slip and comfortable, making my yoga sessions enjoyable.'
+  }, // 32 - Fitness
+  {
+    name: 'Headphones',
+    price: 49.99,
+    image: '',
+    manufacturer: 'SoundBliss',
+    description: 'High-quality headphones for immersive audio experiences.',
+    reviews: 'These headphones provide excellent sound quality, and I use them for both music and gaming.'
+  } // 33 - Audio
 	]);
 
 	const subcategories = await SubCategory.create([
