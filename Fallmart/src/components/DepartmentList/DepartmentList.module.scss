@@ -1,72 +1,111 @@
-.DepartmentList, .listButton {
+@import url(https://db.onlinewebfonts.com/c/67415ab41a7350f81536b69763e6d031?family=Recoleta+Light);
+
+.DepartmentList {
   list-style-type: none;
   background-color: #222;
   display: flex;
   margin: 0;
-  padding: 15px 20px;
+  padding: 0;
   flex-direction: row;
   border: 0;
-  width: 100%;
+  width: auto;
   white-space: normal;
   color: #fff;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 1.3rem;
   text-decoration: none;
   justify-content: space-around;
-  font-family: 'Arimo', sans-serif;
+  position: relative;
+  font-family: "Recoleta Light";
+}
+
+.listItem {
+  padding: 0.5rem 2rem;
+  transition: color 0.3s;
 }
 
 .listItem:hover {
+  color: #8ff78d;
   cursor: pointer;
-  color: red;
 }
 
 .modal {
   position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1000; 
-  background-color: white;
-  margin-top: 0.8%;
-  width: 100%;
-  color: black;
-  background-color: rgb(247, 246, 246);
+  top: 2.3rem;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+  transform-origin: top;
 }
 
-.modal.active {
-  visibility: visible;
+
+.DepartmentList .listItem:hover .modal,
+.modal:hover {
+  opacity: 80%;
+  height: auto;
+  pointer-events: auto;
+  animation: rollOut 0.5s ease;
 }
 
-.modal.inactive {
-  visibility: none;
+@keyframes rollOut {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
 }
 
 .SubcategoryList {
-margin-top: 0.6%;
-margin-bottom: 0.6%;
-list-style-type: none;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0 2rem;
 }
 
-.SubcategoryList a { 
-font-weight: bold;
-color: black;
-text-decoration: none; 
-margin-bottom: 0.6%;
+.SubcategoryList a {
+  color: #fff;
+  font-family: "Recoleta Light";
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 0.4;
 }
 
-.SubcategoryList a:hover { 
-color: red; 
+.SubcategoryList a:hover {
+  color: #8ff78d;
+}
+
+
+.modalText {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+
+.line {
+  transform: translateX(-100%);
+}
+
+.line.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media (max-width: 810px) {
   .DepartmentList {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
   .listItem {
-    text-align: center; 
+    text-align: center;
   }
 
 }
