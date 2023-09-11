@@ -391,7 +391,7 @@ name: 'Android',
 	const subcategories = await SubCategory.create([
 		{
 			name: 'Fruits',
-			products: [products[0]._id, products[14]._id, products[21]._id,products[39]._id,products[34]._id, products[34]._id]
+			products: [products[0]._id, products[14]._id, products[21]._id,products[39]._id,products[34]._id]
 		}, // Groceries - 0
 		{ name: 'Hair Care', products: [products[1]._id,products[39]._id, products[15]._id] }, // Personal Care - 1
 		{ name: 'Mobile Phones', products: [products[2]._id,products[44]._id, products[45]._id, products[46]._id] }, // Electronics - 2
@@ -406,8 +406,8 @@ name: 'Android',
 		{ name: 'Diapers', products: [products[5]._id, products[19]._id] }, // Baby - 5
 		{ name: 'Casual Wear', products: [products[6]._id,products[30]._id, products[20]._id, products[25]._id ]}, // Clothing - 6
 		{ name: 'Breakfast, Food & Beverages', products: [products[35]._id,products[40]._id,products[38]._id,products[7]._id,products[40]._id, products[38]._id, products[35]._id, products[19]._id, products[24]._id] }, // Groceries - 7
-		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[37]._id, products[36]._id,products[26]._id, products[29]._id, products[41]._id] }, // Personal Care - 8
-		{ name: 'Computers & Cameras', products: [products[9]._id] }, // Electronics - 9
+		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[29]._id] }, // Personal Care - 8
+		{ name: 'Computers & Cameras', products: [products[9]._id, products[26]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
 		{ name: 'Wipes', products: [products[12]._id] }, // Baby - 11
 		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id] }, // Clothing - 12
