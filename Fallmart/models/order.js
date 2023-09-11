@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const productSchema = require('./productSchema');
-
+const User = require('./user');
 const cartItemSchema = new Schema(
 	{
 		qty: { type: Number, default: 1 },
@@ -108,5 +108,4 @@ orderSchema.methods.removeEntireItem = function (itemId, newQty) {
 
 	return cart.save();
 };
-
 module.exports = mongoose.model('Order', orderSchema);

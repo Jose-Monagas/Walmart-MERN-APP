@@ -9,7 +9,7 @@ import HomeImage from './components/HomeImage/HomeImage';
 import SubcategoryPage from './pages/SubcategoryPage/SubcategoryPage';
 import * as deptApi from './utilities/dept-api';
 import WishList from './components/WishList/WishList';
-import Cart from '../src/pages/Cart/Cart';
+import CheckOutPage from './pages/CheckOutPage/CheckoutOutPage';
 import ProductPage from './pages/ProductPage/ProductPage';
 export default function App() {
 	const [departments, setDepartments] = useState([]);
@@ -17,6 +17,7 @@ export default function App() {
 	const [itemCount, setItemCount] = useState(0);
 	const [showWishList, setShowWishList] = useState(false);
 	const [showCart, setShowCart] = useState(false);
+	const [showFallMart, setShowFallmart] = useState(false);
 
 	useEffect(() => {
 		const fetchDepartments = async () => {
@@ -43,6 +44,8 @@ export default function App() {
 				setShowWishList={handleChangeWishlist}
 				itemCount={itemCount}
 				setShowCart={handleChangeCart}
+				showFallMart={showFallMart}
+				setShowFallMart={setShowFallmart}
 			/>
 			<DepartmentList departments={departments} />
 			{!showWishList ? (
@@ -70,11 +73,12 @@ export default function App() {
 							/>
 						}
 					/>
+					<Route path="/checkout" element={<CheckOutPage />} />
 				</Routes>
 			) : (
 				<WishList setShowWishList={handleChangeWishlist} />
 			)}
-			{showCart && <Cart />}
+			{/* {showCart && <Cart />} */}
 		</div>
 	);
 }
