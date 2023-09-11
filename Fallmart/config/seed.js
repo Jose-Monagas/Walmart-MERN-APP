@@ -385,7 +385,77 @@ name: 'Android',
             manufacturer: 'Techtronics',
             description: 'Ultra-premium smartphone for tech enthusiasts.',
             reviews: ['This smartphone is a beast! It surpasses all my expectations.']
-        } // 46
+        }, // 46
+        {
+          name: 'Gentle Touch',
+          price: 16.49,
+          image: 'https://i.imgur.com/CD93YCc.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Soft and absorbent diapers for babies.',
+          reviews: ['These diapers are so soft and absorbent. Perfect for my little one.']
+        }, // 47 - Diapers
+        
+        {
+          name: 'Special Delivery',
+          price: 18.95,
+          image: 'https://i.imgur.com/vDmUVtC.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Premium baby diapers for ultimate comfort.',
+          reviews: ['I love these premium diapers. They keep my baby comfortable all day.']
+        }, // 48 - Diapers
+        
+        {
+          name: 'Little Snuggers',
+          price: 14.99,
+          image: 'https://i.imgur.com/G2sCT3i.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Eco-friendly diapers for a greener planet.',
+          reviews: ['I appreciate using eco-friendly diapers. They work well and are better for the environment.']
+        }, // 49 - Diapers
+        
+        {
+          name: 'Swaddlers',
+          price: 19.49,
+          image: 'https://i.imgur.com/VjFpKdS.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Hypoallergenic diapers for sensitive skin.',
+          reviews: ['These hypoallergenic diapers are a lifesaver for my baby with sensitive skin. No irritations!']
+        }, // 50 - Diapers
+        
+        {
+          name: 'Cruisers',
+          price: 15.99,
+          image: 'https://i.imgur.com/5RqfWTw.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Overnight diapers for a good night’s sleep.',
+          reviews: ['The overnight diapers keep my baby dry all night. We both sleep soundly!']
+        } // 51 - Diapers
+        {
+          name: 'WaterWipes',
+          price: 7.49,
+          image: 'https://i.imgur.com/uXU2LZc.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Gentle baby wipes for easy cleaning.',
+          reviews: ['These baby wipes are so gentle on my baby’s skin. They make diaper changes a breeze!']
+        }, // 52 - Wipes
+        
+        {
+          name: 'Pamper Wipes',
+          price: 6.99,
+          image: 'https://i.imgur.com/ChsGDsA.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Fragrance-free baby wipes for sensitive skin.',
+          reviews: ['Fragrance-free baby wipes are perfect for my baby with sensitive skin. No irritation at all.']
+        }, // 53 - Wipes
+        
+        {
+          name: 'Mom Cozy',
+          price: 8.25,
+          image: 'https://i.imgur.com/cAlOyNS.jpg',
+          manufacturer: 'TinyTots',
+          description: 'Hypoallergenic baby wipes for extra care.',
+          reviews: ['These hypoallergenic baby wipes are a must-have for my baby. They are super gentle.']
+        } // 54 - Wipes
 	]);
   
 	const subcategories = await SubCategory.create([
@@ -403,7 +473,7 @@ name: 'Android',
 			name: 'Pet Food',
 			products: [products[4]._id, products[11]._id, products[28]._id]
 		}, // Pets - 4
-		{ name: 'Diapers', products: [products[5]._id, products[19]._id] }, // Baby - 5
+		{ name: 'Diapers', products: [products[5]._id, products[19]._id, products[47]._id, products[48]._id, products[49]._id, products[50]._id, products[51]._id ]}, // Baby - 5
 		{ name: 'Casual Wear', products: [products[6]._id,products[30]._id, products[20]._id, products[25]._id ]}, // Clothing - 6
 		{ name: 'Breakfast, Food & Beverages', products: [products[35]._id,products[40]._id,products[38]._id,products[7]._id,products[40]._id, products[38]._id, products[35]._id, products[19]._id, products[24]._id] }, // Groceries - 7
 		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[29]._id] }, // Personal Care - 8
