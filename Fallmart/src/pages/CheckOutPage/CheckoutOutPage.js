@@ -3,6 +3,7 @@ import styles from './CheckoutPage.module.scss';
 import * as ordersApi from '../../utilities/orders-api';
 import { useNavigate } from 'react-router-dom';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
+
 export default function CheckoutOutPage(props) {
 	const [cart, setCart] = useState({});
 	const navigate = useNavigate();

@@ -524,8 +524,8 @@ name: 'Android',
           image: 'https://i.imgur.com/wRlyoUU.jpg',
           manufacturer: 'ComfyLiving',
           description: 'Complete sofa set for ultimate comfort in your living room.',
-          reviews: ['This sofa set is luxurious and comfortable. It's perfect for entertaining guests.']
-        } // 62 - Living Room Furniture
+          reviews: ['This sofa set is luxurious and comfortable. It is perfect for entertaining guests.']
+        }, // 62 - Living Room Furniture
 
 			price: 2.99,
 			image: 'https://i.imgur.com/jaWvFz4.jpg',
@@ -996,7 +996,7 @@ name: 'Android',
 	const subcategories = await SubCategory.create([
 		{
 			name: 'Fruits',
-			products: [products[0]._id, products[14]._id, products[21]._id,products[39]._id,products[34]._id]
+			products: [products[0]._id, products[14]._id, products[21]._id,products[39]._id,products[34]._id],
 			products: [
 				products[0]._id,
 				products[14]._id,
