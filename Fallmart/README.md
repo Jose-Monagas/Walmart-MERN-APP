@@ -12,7 +12,8 @@ A GA DonnaFrances cohort creation.
 ___
 # Trello & Project Overview
 + [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
-**No one has 20/20 foresight**
+
+<p align="center">**No one has 20/20 foresight**</p>
 
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
 
