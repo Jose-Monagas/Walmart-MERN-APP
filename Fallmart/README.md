@@ -1,6 +1,6 @@
 ![logo](https://i.imgur.com/sy3aUK6.png)
 
-When shop therapy is it, there's fallmart - Providing users a completely free and online shopping experience since 2023 
+<h1 align="center">When shop therapy is it, there's fallmart - Providing users a completely free and online shopping experience since 2023</h1>
 ___
 # Table of Contents
 ___
@@ -12,6 +12,7 @@ ___
 # Trello & Project Overview
 + [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
 **No one has 20/20 foresight**
+
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
 
 ![Original ERD](https://i.imgur.com/Rzzsms6.jpg)
