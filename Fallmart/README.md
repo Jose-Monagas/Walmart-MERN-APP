@@ -21,7 +21,8 @@ As with all projects, our final product deviated slightly from its origin struct
 
 ![Final working ERD](https://i.imgur.com/s4IvamP.png)
 
-The wireframes to the app's pages mirror each other well. Working off the Walmart modal, we were able to plan and structure our app with minor deviations. 
+<p align="center">The wireframes to the app's pages mirror each other well. Working off the Walmart modal, we were able to plan and structure our app with minor deviations.</p>
+
 
 ![Landing Page](https://i.imgur.com/0oyudGJ.png)
 
