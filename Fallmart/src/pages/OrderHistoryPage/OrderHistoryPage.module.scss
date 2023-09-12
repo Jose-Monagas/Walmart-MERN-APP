@@ -1,0 +1,17 @@
+///css
+.OrderHistoryPage {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  border-radius: 2vmin;
+}
+
+
+
+
+  .activeOrder {
+    flex-direction: column;
+  }
+
+ 
+  
