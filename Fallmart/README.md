@@ -30,7 +30,7 @@ As with all projects, our final product deviated slightly from its origin struct
 
 ![Final working ERD](https://i.imgur.com/s4IvamP.png)
 
-<p align="center">The wireframes to the app's pages mirror each other well. Working off the Walmart modal, we were able to plan and structure our app with minor deviations.</p>
+<p align="center">We went two directions with the style and feel of our app. We created both a true to form versio of Walmart and an artistic depiction of the name, fallmart. Our end product shares inspiration from both versions.</p>
 
 
 ![Landing Page](https://i.imgur.com/0oyudGJ.png)
