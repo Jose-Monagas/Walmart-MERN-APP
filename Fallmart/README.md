@@ -16,6 +16,9 @@ As with all projects, our final product deviated slightly from its origin struct
 
 
 [Original ERD](https://i.imgur.com/Rzzsms6.jpg)
+
+
+
 [Final working ERD](https://i.imgur.com/s4IvamP.png)
 ___
 # Features
