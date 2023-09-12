@@ -1,8 +1,7 @@
-<p align="center">
-    # fallmart
-</p>
----
+# fallmart
+___
 <!-- Banner -->
+![logo](https://imgur.com/y9opSIN)
 <!-- Single sentence descriptions -->
 <!-- Table of contents-datatree?  -->
 <!-- Short Project Description  -->
