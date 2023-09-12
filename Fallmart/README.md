@@ -3,6 +3,11 @@
 <p align="center">When shop therapy is it, there's fallmart - Providing users a completely free and online shopping experience since 2023</p>
 
 ___
+## Project Description
+Discover a world of personal and household goods in one seamless e-commerce experience! This application is built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to use the app as a guest or sign up as a registered user. Users can navigate the homepage and narrow a search via departments and then by subcategory or with the search bar. Signed up users can favorite items that are added to a favorites list. All users can add items to cart, delete items, and check out an order. 
+
+A GA DonnaFrances cohort creation.
+___
 ## Table of Contents
 - [Project Description](#project-description)
 - [Trello Board](#trello-board)
@@ -14,15 +19,10 @@ ___
 - [Acknowledgements](#acknowledgements)
 - [Notes](#notes)
 ___
-## Project Description
-Discover a world of personal and household goods in one seamless e-commerce experience! This application is built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to use the app as a guest or sign up as a registered user. Users can navigate the homepage and narrow a search via departments and then by subcategory or with the search bar. Signed up users can favorite items that are added to a favorites list. All users can add items to cart, delete items, and check out an order. 
-
-A GA DonnaFrances cohort creation.
-___
 ## Trello & Project Overview
-<p align="center">[Trello Board](https://trello.com/b/UEHNvPzS/walmart)</p>
-
 <h5 align="center">No one has 20/20 foresight</h5>
+
+[Trello Board](https://trello.com/b/UEHNvPzS/walmart)
 
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
 
