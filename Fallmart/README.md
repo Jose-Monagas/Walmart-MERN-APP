@@ -13,13 +13,19 @@ ___
 # Trello & Project Overview
 + [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
 
-<p align="center">**No one has 20/20 foresight**</p>
+<h5 align="center">No one has 20/20 foresight</h5>
 
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
 
 ![Original ERD](https://i.imgur.com/Rzzsms6.jpg)
 
 ![Final working ERD](https://i.imgur.com/s4IvamP.png)
+
+The wireframes to the app's pages mirror each other well. Working off the Walmart modal, we were able to plan and structure our app with minor deviations. 
+
+![Landing Page](https://i.imgur.com/0oyudGJ.png)
+
+![Land Page 2](https://i.imgur.com/FYvydkW.png)
 ___
 # Features
 1. User Authentication 
