@@ -5,124 +5,116 @@ import coupons from '../../utilities/coupons';
 import * as ordersApi from '../../utilities/orders-api';
 
 export default function OrderDetail({
-	order,
-	updateOrder,
-	handleChangeQty,
-	handleCheckout
+  order,
+  updateOrder,
+  handleChangeQty,
+  handleCheckout
 }) {
-	if (!order || !order.cartItems) return null;
+  if (!order || !order.cartItems) return null;
 
-	const cartItems = order.cartItems.map((item) => {
-		return (
-			<CartItem
-				cartItem={item}
-				isPaid={order.isPaid}
-				key={item._id}
-				handleChangeQty={handleChangeQty}
-			/>
-		);
-	});
-	const [isMemberQuestionVisible, setIsQuestionVisible] = useState(false);
-	const [isInputFormVisible, setIsInputFormVisible] = useState(false);
-	const [text, setText] = useState('');
+  const cartItems = order.cartItems.map((item) => (
+    <div key={item._id} className={styles.cartItem}>
+      <CartItem cartItem={item} isPaid={order.isPaid} handleChangeQty={handleChangeQty} />
+    </div>
+  ));
 
-	const showForm = () => {
-		setIsInputFormVisible(true);
-	};
+  const [isMemberQuestionVisible, setIsQuestionVisible] = useState(false);
+  const [isInputFormVisible, setIsInputFormVisible] = useState(false);
+  const [text, setText] = useState('');
 
-	const showMemberQuestion = () => {
-		setIsQuestionVisible(true);
-	};
+  const showForm = () => {
+    setIsInputFormVisible(true);
+  };
 
-	const hideMemberQuestion = () => {
-		setIsQuestionVisible(false);
-		setIsInputFormVisible(false);
-	};
+  const showMemberQuestion = () => {
+    setIsQuestionVisible(true);
+  };
 
-	const handleChange = (e) => {
-		setText(e.target.value);
-	};
+  const hideMemberQuestion = () => {
+    setIsQuestionVisible(false);
+    setIsInputFormVisible(false);
+  };
 
-	const changeTotal = async (e) => {
-		e.preventDefault();
-		ordersApi.applyCoupon();
-	};
+  const handleChange = (e) => {
+    setText(e.target.value);
+  };
 
-	return (
-		<div className={styles.detail}>
-			<div>
-				{order.isPaid ? (
-					<span>
-						ORDER <span className="smaller">{order.orderId}</span>
-					</span>
-				) : (
-					<span>NEW ORDER</span>
-				)}
-				<span> {new Date(order.updatedAt).toLocaleDateString()}</span>
-			</div>
-			<div>
-				{order.cartItems.length ? (
-					<>
-						{cartItems}
-						<section>
-							{order.isPaid ? (
-								<span>TOTAL&nbsp;&nbsp;</span>
-							) : (
-								<button
-									onClick={handleCheckout}
-									disabled={!order.cartItems.length}
-								>
-									CHECKOUT
-								</button>
-							)}
-							<span>{order.totalQty}</span>
-							<span>${order.orderTotal.toFixed(2)}</span>
-						</section>
-						{order.isPaid ? null : (
-							<div>
-								{isMemberQuestionVisible ? (
-									<div className={styles.mainBox}>
-										Are you a fallmart plus member?
-										<label>
-											<input
-												type="checkbox"
-												className={styles.checkbox}
-												onClick={showForm}
-											/>{' '}
-											Yes
-										</label>
-										<label>
-											<input
-												type="checkbox"
-												className={styles.checkbox}
-												onClick={hideMemberQuestion}
-											/>{' '}
-											No
-										</label>
-										{isInputFormVisible && (
-											<form onSubmit={changeTotal}>
-												<br />
-												<input
-													type="text"
-													name="text"
-													placeholder="input your phone number"
-													value={text}
-													onChange={handleChange}
-												/>
-												<button type="submit">Submit</button>
-											</form>
-										)}
-									</div>
-								) : (
-									<button onClick={showMemberQuestion}>
-										Are You a member?
-									</button>
-								)}
-							</div>
-						)}
-					</>
-				) : null}
-			</div>
-		</div>
-	);
+  const changeTotal = async (e) => {
+    e.preventDefault();
+    ordersApi.applyCoupon();
+  };
+
+  return (
+    <div>
+      <div>
+        {order.isPaid ? (
+          <span>
+            ORDER <span className="smaller">{order.orderId}</span>
+          </span>
+        ) : (
+          <span>NEW ORDER</span>
+        )}
+        <span> {new Date(order.updatedAt).toLocaleDateString()}</span>
+      </div>
+      <div>
+        {order.cartItems.length ? (
+          <div>
+            {cartItems}
+            <section className={styles.wholeCheckout}>
+              {order.isPaid ? (
+                <span>TOTAL&nbsp;&nbsp;</span>
+              ) : (
+                <button className={styles.checkoutButton}onClick={handleCheckout} disabled={!order.cartItems.length}>
+                  CHECKOUT 
+                </button>
+              )}
+              <span><span className={styles.subtotal}>Subtotal</span><span className={styles.totalQuantity}> ({order.totalQty} items) </span></span>
+              <br/>
+              <span> <span className={styles.estimatedTotal}> Estimated Total </span><span className={styles.totalCost}> ${order.orderTotal.toFixed(2)}</span></span>
+            </section>
+            {order.isPaid ? null : (
+              <div>
+                {isMemberQuestionVisible ? (
+                  <div className={styles.mainBox}>
+                    Are you a Walmart Plus member?
+                    <label>
+                      <input
+                        type="checkbox"
+                        className={styles.checkbox}
+                        onClick={showForm}
+                      />{' '}
+                      Yes
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        className={styles.checkbox}
+                        onClick={hideMemberQuestion}
+                      />{' '}
+                      No
+                    </label>
+                    {isInputFormVisible && (
+                      <form onSubmit={changeTotal}>
+                        <br />
+                        <input
+                          type="text"
+                          name="text"
+                          placeholder="Enter your phone number"
+                          value={text}
+                          onChange={handleChange}
+                        />
+                        <button type="submit">Submit</button>
+                      </form>
+                    )}
+                  </div>
+                ) : (
+                  <button className={styles.memberButton} onClick={showMemberQuestion}>Are you a member?</button>
+                )}
+              </div>
+            )}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
 }
