@@ -229,7 +229,7 @@ const Product = require('../models/product');
   {
     name: 'Desk Chair',
     price: 149.99,
-    image: '',
+    image: 'https://i.imgur.com/WLOAzFs.jpg',
     manufacturer: 'ErgoComfort',
     description: 'Ergonomic desk chair for comfortable work hours.',
     reviews: ['This desk chair is so comfortable, and it supports my back during long work hours.']
@@ -309,7 +309,7 @@ const Product = require('../models/product');
 {
   name: 'Toothbrush',
   price: 1.99,
-  image: '', 
+  image: 'https://i.imgur.com/07QVf4P.jpg', 
   manufacturer: 'DentalCare',
   description: 'Soft-bristle toothbrush for effective cleaning.',
   reviews: ['My teeth feel so clean after using this toothbrush. Highly recommended!']
@@ -349,7 +349,7 @@ const Product = require('../models/product');
 {
   name: 'Desk Lamp',
   price: 19.99,
-  image: '', 
+  image: 'https://i.imgur.com/oKb8wxH.jpg', 
   manufacturer: 'BrightLite',
   description: 'Adjustable desk lamp for focused work or study.',
   reviews: ['This desk lamp provides great lighting for my workspace. I love it!']
