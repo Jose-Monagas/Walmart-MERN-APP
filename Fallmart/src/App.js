@@ -11,6 +11,7 @@ import * as deptApi from './utilities/dept-api';
 import WishList from './components/WishList/WishList';
 import CheckOutPage from './pages/CheckOutPage/CheckoutOutPage';
 import ProductPage from './pages/ProductPage/ProductPage';
+import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
 export default function App() {
 	const [departments, setDepartments] = useState([]);
 	const [favoriteCount, setFavoriteCount] = useState(0);
@@ -77,6 +78,7 @@ export default function App() {
 						}
 					/>
 					<Route path="/checkout" element={<CheckOutPage />} />
+					<Route path="/history" element={<OrderHistoryPage />} />
 				</Routes>
 			) : (
 				<WishList setShowWishList={handleChangeWishlist} />

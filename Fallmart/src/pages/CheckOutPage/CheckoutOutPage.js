@@ -3,6 +3,7 @@ import styles from './CheckoutPage.module.scss';
 import * as ordersApi from '../../utilities/orders-api';
 import { useNavigate } from 'react-router-dom';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
+
 export default function CheckoutOutPage(props) {
 	const [cart, setCart] = useState({});
 	const navigate = useNavigate();
@@ -36,7 +37,7 @@ export default function CheckoutOutPage(props) {
 	}
 	return (
 		<main>
-			<h2>Order No. {cart.orderId}</h2>
+			<h2>CHECKOUT</h2>
 			<OrderDetail
 				order={cart}
 				updateOrder={setCart}
