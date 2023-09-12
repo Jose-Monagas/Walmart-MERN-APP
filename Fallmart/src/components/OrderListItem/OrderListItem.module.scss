@@ -1,0 +1,29 @@
+.OrderListItem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 3vmin;
+    color: var(--text-light);
+    border: .2vmin solid var(--tan-3);
+    border-radius: 1vmin;
+    font-size: 2vmin;
+    cursor: pointer;
+    border-width: .9vmin;
+  }
+  
+  .OrderListItem > div > div:first-child {
+    margin-bottom: .5vmin;
+    border-width: .2vmin;
+  }
+  
+  .OrderListItem.selected {
+    border-width: .2vmin;
+    cursor: default;
+    background-color: rgb(209, 205, 205);
+  }
+  
+  .OrderListItem:not(.selected):hover {
+    border-width: .2vmin;
+  }
+ 

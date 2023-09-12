@@ -91,7 +91,7 @@ function NavBar({
 				<div className={styles.right_core}>
 					{isLoggedIn && (
 						<div className={styles.account}>
-							<a href="/account/order-tracking"> Orders </a>
+							<a href="/history"> Orders </a>
 							<span> &nbsp; </span>
 						</div>
 					)}
