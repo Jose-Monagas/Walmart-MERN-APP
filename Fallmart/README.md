@@ -9,8 +9,8 @@ Discover a world of personal and household goods in one seamless e-commerce expe
 A GA DonnaFrances cohort creation.
 ___
 ## Table of Contents
-- [Project Description](#project-description)
-- [Trello Board](#trello-board)
+- [Overview](#trello-board)
+- [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
 - [Features](#features)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
