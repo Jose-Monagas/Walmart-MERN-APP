@@ -525,7 +525,33 @@ name: 'Android',
           manufacturer: 'ComfyLiving',
           description: 'Complete sofa set for ultimate comfort in your living room.',
           reviews: ['This sofa set is luxurious and comfortable. Its perfect for entertaining guests.']
-        } // 62 - Living Room Furniture
+        }, // 62 - Living Room Furniture
+        {
+          name: 'Android Tablet',
+          price: 299.99,
+          image: 'https://i.imgur.com/IKdMhJC.jpg',
+          manufacturer: 'TechGenius',
+          description: 'High-quality Android tablet for work and entertainment.',
+          reviews: ['This Android tablet is versatile and user-friendly. Its great for both work and entertainment.']
+        }, // 63 - Tablets
+        
+        {
+          name: 'iPad Pro',
+          price: 799.0,
+          image: 'https://i.imgur.com/kvH0ouo.jpg',
+          manufacturer: 'TechWonder',
+          description: 'Powerful iPad Pro for professional tasks and creativity.',
+          reviews: ['The iPad Pro is a powerhouse. It handles professional tasks and creative projects with ease.']
+        }, // 64 - Tablets
+        
+        {
+          name: 'Windows Tablet',
+          price: 399.0,
+          image: 'https://i.imgur.com/T2Axleg.jpg',
+          manufacturer: 'TechGenius',
+          description: 'Windows-powered tablet for productivity on the go.',
+          reviews: ['This Windows tablet is perfect for productivity on the go. It runs all my essential apps seamlessly.']
+        } // 65 - Tablets
 	]);
   
 	const subcategories = await SubCategory.create([
@@ -542,10 +568,7 @@ name: 'Android',
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
 		{ name: 'Wipes', products: [products[12]._id, products[52]._id, products[53]._id, products[54]._id   ] }, // Baby - 11
 		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id] }, // Clothing - 12
-		{
-			name: 'Office Furniture',
-			products: [products[10]._id, products[17]._id, products[27]._id, products[42]._id]
-		}, // Home Furniture - 13
+		{ name: 'Office Furniture', products: [products[10]._id, products[17]._id, products[27]._id, products[42]._id] }, // Home Furniture - 13
 		{ name: 'Antiperspirants & Fitness', products: [products[22]._id, products[32]._id] }, // Personal Care - 14
 		{ name: 'Speakers', products: [products[23]._id, products[33]._id ]} // Electronics - 15
 	]);
