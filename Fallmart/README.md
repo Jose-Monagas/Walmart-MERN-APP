@@ -1,6 +1,6 @@
 ![logo](https://i.imgur.com/y9opSIN.png)
 
-For When There's Shop Therapy, Theres always fallmart - Providing users a completely free and online shopping experience since 2023 
+When shop therapy is it, there's fallmart - Providing users a completely free and online shopping experience since 2023 
 ___
 # Table of Contents
 ___
@@ -72,12 +72,12 @@ ___
 # How To Contribute
 We welcome contributions to make fallmart even better! If you would like to contribute please fork the repository, create a new feature branch and make the improvements! When youre done, please create a pull request with a detailed description of your changes and why you think it will improve the app. 
 # Acknowledgements
-Jun Min Baek
-Joe Cruz
-Graehm Fazio 
-Jose Monagas 
-Jefrey Zavala
-Andre Ransom 
-Max Ohnenyi
+Jun Min Baek,
+Joe Cruz,
+Jose Monagas, 
+Jefrey Zavala,
+Andre Ransom, 
+Graehm Fazio, 
+Max Ohnenyi,
 Sri Rao 
 # Notes
