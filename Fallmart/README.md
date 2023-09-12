@@ -9,12 +9,14 @@ Discover a world of personal and household goods in one seamless e-commerce expe
 
 A GA DonnaFrances cohort creation.
 ___
-# Trello link / ERD link / Wireframes link
+# Trello & Project Overview
 + [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
-### No one has 20/20 foresight
+**No one has 20/20 foresight**
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
-[Original ERD](https://i.imgur.com/ZINrPZ6.jpg)
-[Final working ERD](https://i.imgur.com/Uo6ciUa.png)
+
+
+[Original ERD](https://i.imgur.com/Rzzsms6.jpg)
+[Final working ERD](https://i.imgur.com/s4IvamP.png)
 ___
 # Features
 1. User Authentication 
