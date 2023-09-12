@@ -13,11 +13,9 @@ async function signUp(req, res, next) {
 			return res.status(404).json({ message: 'User not found' });
 		}
 
-		user.membershipType = 'Plus';
-		user.membershipCode = user.phone;
+		user.membershipType = 'plus';
+		user.membershipCode = req.body.phone;
 		await user.save();
-		coupons.push({ name: user.membershipCode, discount: discount });
-		console.log(coupons);
 		res.json(user);
 		next();
 	} catch (error) {
