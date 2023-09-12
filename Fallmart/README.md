@@ -7,9 +7,9 @@ ___
 Discover a world of personal and household goods in one seamless e-commerce experience! This application is built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to use the app as a guest or sign up as a registered user. Users can navigate the homepage and narrow a search via departments and then by subcategory or with the search bar. Signed up users can favorite items that are added to a favorites list. All users can add items to cart, delete items, and check out an order. 
 
 A GA DonnaFrances cohort creation.
-___
+
 ## Table of Contents
-- [Overview](#trello-board)
+- [Overview](#overview)
 - [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
 - [Features](#features)
 - [Usage](#usage)
@@ -19,7 +19,7 @@ ___
 - [Acknowledgements](#acknowledgements)
 - [Notes](#notes)
 ___
-## Trello & Project Overview
+## Overview
 <h5 align="center">No one has 20/20 foresight</h5>
 
 [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
