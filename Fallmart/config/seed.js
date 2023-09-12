@@ -12,6 +12,7 @@ const Product = require('../models/product');
 	const products = await Product.create([
 		{
 			name: 'Apples',
+
 			price: 2.99,
 			image: 'https://i.imgur.com/jaWvFz4.jpg',
 			manufacturer: 'Farm Fresh',
@@ -475,8 +476,9 @@ const Product = require('../models/product');
 			description: 'Ultra-premium smartphone for tech enthusiasts.',
 			reviews: ['This smartphone is a beast! It surpasses all my expectations.']
 		} // 46
-	]);
 
+	]);
+  
 	const subcategories = await SubCategory.create([
 		{
 			name: 'Fruits',
@@ -502,6 +504,8 @@ const Product = require('../models/product');
 				products[46]._id
 			]
 		}, // Electronics - 2
+		{ name: 'Hair Care', products: [products[1]._id,products[39]._id, products[15]._id] }, // Personal Care - 1
+		{ name: 'Mobile Phones', products: [products[2]._id,products[44]._id, products[45]._id, products[46]._id] }, // Electronics - 2
 		{
 			name: 'Living Room Furniture',
 			products: [products[3]._id]
@@ -548,6 +552,11 @@ const Product = require('../models/product');
 				products[41]._id
 			]
 		}, // Personal Care - 8
+
+		{ name: 'Casual Wear', products: [products[6]._id,products[30]._id, products[20]._id, products[25]._id ]}, // Clothing - 6
+		{ name: 'Breakfast, Food & Beverages', products: [products[35]._id,products[40]._id,products[38]._id,products[7]._id,products[40]._id, products[38]._id, products[35]._id, products[19]._id, products[24]._id] }, // Groceries - 7
+		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[37]._id, products[36]._id,products[26]._id, products[29]._id, products[41]._id] }, // Personal Care - 8
+ 
 		{ name: 'Computers & Cameras', products: [products[9]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
 		{ name: 'Wipes', products: [products[12]._id] }, // Baby - 11

@@ -7,4 +7,9 @@ body {
     margin: 0;
     height: 100vh;
 }
-  
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
