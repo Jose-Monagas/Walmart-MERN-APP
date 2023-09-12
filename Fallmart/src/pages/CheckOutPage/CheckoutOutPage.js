@@ -37,7 +37,7 @@ export default function CheckoutOutPage(props) {
 	}
 	return (
 		<main>
-			<h2>Order No. {cart.orderId}</h2>
+			<h2>CHECKOUT</h2>
 			<OrderDetail
 				order={cart}
 				updateOrder={setCart}

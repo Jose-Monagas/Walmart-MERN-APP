@@ -2,7 +2,7 @@ import styles from './OrderHistoryPage.module.scss';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
-// import OrderList from '../../../components/OrderList/OrderList';
+import OrderList from '../../components/OrderList/OrderList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import CheckoutOutPage from '../CheckOutPage/CheckoutOutPage';
 
@@ -30,12 +30,9 @@ export default function OrderHistoryPage({ user, setUser }) {
 
   /*--- Rendered UI --- */
   return (
+    <>
+    <h2>ORDER HISTORY PAGE</h2>
     <main className={styles.OrderHistoryPage}>
-      <aside className={styles.aside}>
-      <img className={styles.logo} src="/img/gorillaNoBackground.png" alt="logo" />
-        <Link to="/orders/new" className={styles.btnsm}>NEW ORDER</Link>
-        <UserLogOut user={user} setUser={setUser} />
-      </aside>
       <OrderList
         className= {styles.orderList}
         orders={orders}
@@ -44,7 +41,9 @@ export default function OrderHistoryPage({ user, setUser }) {
       />
       <OrderDetail
         order={activeOrder}
+        className={styles.activeOrder}
       />
     </main>
+    </>
   );
 }
