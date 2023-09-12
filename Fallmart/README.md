@@ -15,7 +15,7 @@ A GA DonnaFrances cohort creation.
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Prerequisites](#prerequisites)
-- [Installation](#installation-of-the-app)
+- [Installation](#installation)
 - [Acknowledgements](#acknowledgements)
 - [Notes](#notes)
 ___
