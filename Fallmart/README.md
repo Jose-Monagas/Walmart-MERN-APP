@@ -1,6 +1,6 @@
 ![logo](https://i.imgur.com/sy3aUK6.png)
 
-<p align="center">When shop therapy is it, there's fallmart - Providing users a completely free and online shopping experience since 2023</p>
+<p align="center">Fallmart is an online shopping platform built with the MERN (MongoDB, Express.js, React, Node.js) stack, providing a convenient and user-friendly shopping experience thats much better than Walmart and completely free.</p>
 
 ___
 ## Project Description
@@ -50,7 +50,7 @@ ___
 10. Order History
 11. Sign out
 12. Responsive design
-___
+
 ## Usage
 + A user can use the app as signed in user or guest
 + To find items, search eith either
@@ -63,7 +63,7 @@ ___
     - Enter into the benefit program 
     - View previous orders
     - Leave product reviews
-___
+
 ## Technologies Used 
 + In the frontend
     - React 
@@ -82,7 +82,7 @@ ___
 *Only necessary if app is NOT deployed* Otherwise, you should have these packages downloaded locally on your machine: 
 + Node
 + nodemon
-___
+
 ## Installation
 To set up fallmart locally, follow the steps below. 
 1. Clone this repository and then copy the SSH key.
