@@ -429,7 +429,7 @@ name: 'Android',
           manufacturer: 'TinyTots',
           description: 'Overnight diapers for a good night’s sleep.',
           reviews: ['The overnight diapers keep my baby dry all night. We both sleep soundly!']
-        } // 51 - Diapers
+        }, // 51 - Diapers
         {
           name: 'WaterWipes',
           price: 7.49,
@@ -455,7 +455,77 @@ name: 'Android',
           manufacturer: 'TinyTots',
           description: 'Hypoallergenic baby wipes for extra care.',
           reviews: ['These hypoallergenic baby wipes are a must-have for my baby. They are super gentle.']
-        } // 54 - Wipes
+        }, // 54 - Wipes
+        {
+          name: 'Desktop Computer',
+          price: 699.0,
+          image: 'https://i.imgur.com/6y40qFA.jpg',
+          manufacturer: 'TechGenius',
+          description: 'Powerful desktop computer for home or office use.',
+          reviews: ['This desktop computer is a workhorse. It handles all my tasks with ease.']
+        }, // 55 - Computers
+        
+        {
+          name: 'Gaming Laptop',
+          price: 1299.0,
+          image: 'https://i.imgur.com/OoYGuVF.jpg',
+          manufacturer: 'GamerTech',
+          description: 'High-performance gaming laptop for hardcore gamers.',
+          reviews: ['This gaming laptop is a beast! It runs all my favorite games smoothly.']
+        }, // 56 - Computers
+        
+        {
+          name: 'Chromebook',
+          price: 299.0,
+          image: 'https://i.imgur.com/FKJ0JMz.jpg',
+          manufacturer: 'TechGenius',
+          description: 'Lightweight Chromebook for on-the-go productivity.',
+          reviews: ['The Chromebook is perfect for my on-the-go lifestyle. It\'s fast and portable.']
+        }, // 57 - Computers
+        {
+          name: 'Coffee Table Set',
+          price: 499.99,
+          image: 'https://i.imgur.com/vKoR236.jpg',
+          manufacturer: 'FurnishHome',
+          description: 'A complete coffee table set for your living room.',
+          reviews: ['This coffee table set is a great addition to my living room. It comes with everything I need.']
+        }, // 58 - Living Room Furniture
+        
+        {
+          name: 'Recliner Chair',
+          price: 399.0,
+          image: 'https://i.imgur.com/qPNONt6.jpg',
+          manufacturer: 'ComfyLiving',
+          description: 'Comfortable recliner chair for relaxation.',
+          reviews: ['The recliner chair is incredibly comfortable. Its my favorite spot in the living room.']
+        }, // 59 - Living Room Furniture
+        
+        {
+          name: 'Bookshelf',
+          price: 149.0,
+          image: 'https://i.imgur.com/Fc7J45s.jpg',
+          manufacturer: 'FurnishHome',
+          description: 'Stylish bookshelf for organizing your books and decor.',
+          reviews: ['This bookshelf not only helps me stay organized but also adds a touch of style to my room.']
+        }, // 60 - Living Room Furniture
+        
+        {
+          name: 'TV Stand',
+          price: 249.99,
+          image: 'https://i.imgur.com/QK4Xzfg.jpg',
+          manufacturer: 'ComfyLiving',
+          description: 'Modern TV stand for your entertainment center.',
+          reviews: ['The TV stand is sleek and functional. It perfectly holds my TV and other electronics.']
+        }, // 61 - Living Room Furniture
+        
+        {
+          name: 'Sofa Set',
+          price: 899.0,
+          image: 'https://i.imgur.com/wRlyoUU.jpg',
+          manufacturer: 'ComfyLiving',
+          description: 'Complete sofa set for ultimate comfort in your living room.',
+          reviews: ['This sofa set is luxurious and comfortable. It's perfect for entertaining guests.']
+        } // 62 - Living Room Furniture
 	]);
   
 	const subcategories = await SubCategory.create([
@@ -479,7 +549,7 @@ name: 'Android',
 		{ name: 'Skin & Oral Care', products: [products[8]._id,products[37]._id,products[41]._id, products[36]._id, products[29]._id] }, // Personal Care - 8
 		{ name: 'Computers & Cameras', products: [products[9]._id, products[26]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id] }, // Electronics - 10
-		{ name: 'Wipes', products: [products[12]._id] }, // Baby - 11
+		{ name: 'Wipes', products: [products[12]._id, products[52]._id, products[53]._id, products[54]._id   ] }, // Baby - 11
 		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id] }, // Clothing - 12
 		{
 			name: 'Office Furniture',
@@ -531,3 +601,4 @@ name: 'Android',
 
 	process.exit();
 })();
+
