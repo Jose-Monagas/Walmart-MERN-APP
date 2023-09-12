@@ -2,6 +2,7 @@
 
 <p align="center">When shop therapy is it, there's fallmart - Providing users a completely free and online shopping experience since 2023</p>
 ___
+
 # Table of Contents
 ___
 # Project Description
@@ -15,7 +16,9 @@ ___
 
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
 
+<kbd>
 ![Original ERD](https://i.imgur.com/Rzzsms6.jpg)
+</kbd>
 
 ![Final working ERD](https://i.imgur.com/s4IvamP.png)
 ___
