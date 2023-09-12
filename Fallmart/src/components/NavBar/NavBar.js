@@ -70,7 +70,7 @@ function NavBar({
 				{/* main logo */}
 				<div className={styles.logo_core}>
 					<Link to="/" className={styles.logo_core}>
-						<img src="https://i.imgur.com/xgA0d20.png" alt="" />
+						<img src="https://i.imgur.com/Hbvi85m.png" alt="" />
 					</Link>
 				</div>
 				{/* Search box */}
