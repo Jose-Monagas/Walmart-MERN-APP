@@ -14,12 +14,9 @@ ___
 **No one has 20/20 foresight**
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
 
+![Original ERD](https://i.imgur.com/Rzzsms6.jpg)
 
-[Original ERD](https://i.imgur.com/Rzzsms6.jpg)
-
-
-
-[Final working ERD](https://i.imgur.com/s4IvamP.png)
+![Final working ERD](https://i.imgur.com/s4IvamP.png)
 ___
 # Features
 1. User Authentication 
