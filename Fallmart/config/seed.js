@@ -551,7 +551,33 @@ name: 'Android',
           manufacturer: 'TechGenius',
           description: 'Windows-powered tablet for productivity on the go.',
           reviews: ['This Windows tablet is perfect for productivity on the go. It runs all my essential apps seamlessly.']
-        } // 65 - Tablets
+        }, // 65 - Tablets
+        {
+          name: 'Navy Suit',
+          price: 249.99,
+          image: 'https://i.imgur.com/Y4R6ZMw.jpg',
+          manufacturer: 'ElegantAttire',
+          description: 'Classic black suit for formal occasions.',
+          reviews: ['This black suit is timeless and elegant. Its my go-to choice for formal events.']
+        }, // 66 - Formal Wear
+        
+        {
+          name: 'Evening Gown',
+          price: 299.0,
+          image: 'https://i.imgur.com/XPBXsRM.jpg',
+          manufacturer: 'ElegantAttire',
+          description: 'Elegant evening gown for special occasions.',
+          reviews: ['The evening gown is stunning and fits like a dream. Its perfect for formal parties and events.']
+        }, // 67 - Formal Wear
+        
+        {
+          name: 'Tuxedo Set',
+          price: 349.0,
+          image: 'https://i.imgur.com/Txmpp1a.jpg',
+          manufacturer: 'ElegantAttire',
+          description: 'Complete tuxedo set for a dapper look.',
+          reviews: ['This tuxedo set is the epitome of sophistication. Its ideal for weddings and upscale events.']
+        } // 68 - Formal Wear
 	]);
   
 	const subcategories = await SubCategory.create([
@@ -567,7 +593,7 @@ name: 'Android',
 		{ name: 'Computers & Cameras', products: [products[9]._id, products[26]._id] }, // Electronics - 9
 		{ name: 'Tablets', products: [products[16]._id, products[65]._id, products[64]._id, products[63]._id] }, // Electronics - 10
 		{ name: 'Wipes', products: [products[12]._id, products[52]._id, products[53]._id, products[54]._id   ] }, // Baby - 11
-		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id] }, // Clothing - 12
+		{ name: 'Formal Wear', products: [products[13]._id, products[31]._id, products[68]._id, products[67]._id, products[66]._id ] }, // Clothing - 12
 		{ name: 'Office Furniture', products: [products[10]._id, products[17]._id, products[27]._id, products[42]._id] }, // Home Furniture - 13
 		{ name: 'Antiperspirants & Fitness', products: [products[22]._id, products[32]._id] }, // Personal Care - 14
 		{ name: 'Speakers', products: [products[23]._id, products[33]._id ]} // Electronics - 15
