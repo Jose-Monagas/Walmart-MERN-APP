@@ -3,14 +3,16 @@
 <p align="center">When shop therapy is it, there's fallmart - Providing users a completely free and online shopping experience since 2023</p>
 
 ___
-# Table of Contents
+## Table of Contents
+[Project Description](#Project Description)
+[Notes](Notes)
 ___
-# Project Description
+## Project Description
 Discover a world of personal and household goods in one seamless e-commerce experience! This application is built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to use the app as a guest or sign up as a registered user. Users can navigate the homepage and narrow a search via departments and then by subcategory or with the search bar. Signed up users can favorite items that are added to a favorites list. All users can add items to cart, delete items, and check out an order. 
 
 A GA DonnaFrances cohort creation.
 ___
-# Trello & Project Overview
+## Trello & Project Overview
 + [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
 
 <h5 align="center">No one has 20/20 foresight</h5>
@@ -28,7 +30,7 @@ As with all projects, our final product deviated slightly from its origin struct
 
 ![Land Page 2](https://i.imgur.com/FYvydkW.png)
 ___
-# Features
+## Features
 1. User Authentication 
 2. Create a user
 3. Add items to cart
@@ -42,7 +44,7 @@ ___
 11. Sign out
 12. Responsive design
 ___
-# Usage
+### Usage
 + A user can use the app as signed in user or guest
 + To find items, search eith either
     - Search Bar
@@ -55,7 +57,7 @@ ___
     - View previous orders
     - Leave product reviews
 ___
-# Technologies Used 
+### Technologies Used 
 + In the frontend
     - React 
     - CSS 
@@ -69,12 +71,12 @@ ___
     - JSON Web Token (JWT)
     - Bcrypt
 ___
-# Prerequisites 
+### Prerequisites 
 *Only necessary if app is NOT deployed* Otherwise, you should have these packages downloaded locally on your machine: 
 + Node
 + nodemon
 ___
-# Installation of the App
+#### Installation of the App
 To set up fallmart locally, follow the steps below. 
 1. Clone this repository and then copy the SSH key.
 2. In the terminal, type `git clone` followed by the SSH key
@@ -85,9 +87,9 @@ Install your server dependencies
 6. `npm i` to install all packages
 7. Start the app and run `npm run dev`
 ___
-# How To Contribute
+#### How To Contribute
 We welcome contributions to make fallmart even better! If you would like to contribute please fork the repository, create a new feature branch and make the improvements! When youre done, please create a pull request with a detailed description of your changes and why you think it will improve the app. 
-# Acknowledgements
+##### Acknowledgements
 Jun Min Baek,
 Joe Cruz,
 Jose Monagas, 
@@ -96,4 +98,4 @@ Andre Ransom,
 Graehm Fazio, 
 Max Ohnenyi,
 Sri Rao 
-# Notes
+##### Notes
