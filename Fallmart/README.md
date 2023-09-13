@@ -7,10 +7,15 @@ ___
 Discover a world of personal and household goods in one seamless e-commerce experience! This application is built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to use the app as a guest or sign up as a registered user. Users can navigate the homepage and narrow a search via departments and then by subcategory or with the search bar. Signed up users can favorite items that are added to a favorites list. All users can add items to cart, delete items, and check out an order. 
 
 A GA DonnaFrances cohort creation.
+![homepage](https://i.imgur.com/ryQEcOj.png)
+
+
 ___
 ## Table of Contents
+- [Deployed Link]()
 - [Overview](#overview)
 - [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
+- [Pitch Dec](https://docs.google.com/presentation/d/1zLbUtjdnLn8FDhdMuW9853M0LjZK9JoiMzNT_CNWAtQ/edit#slide=id.p)
 - [Features](#features)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
@@ -22,20 +27,19 @@ ___
 ## Overview
 <h5 align="center">No one has 20/20 foresight</h5>
 
-[Trello Board](https://trello.com/b/UEHNvPzS/walmart)
+ERD Comparison from project beginning to finished product.
 
-As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models. 
+As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models.
 
 ![Original ERD](https://i.imgur.com/Rzzsms6.jpg)
 
 ![Final working ERD](https://i.imgur.com/s4IvamP.png)
 
-<p align="center">We went two directions with the style and feel of our app. We created both a true to form versio of Walmart and an artistic depiction of the name, fallmart. Our end product shares inspiration from both versions.</p>
+<p align="center">We went two directions with the style and feel of our app. We created both a true to form versio of Walmart and an artistic depiction of the name, fallmart. Our end product shares inspiration from both versions. </p>
 
++ [Landing Page](https://i.imgur.com/0oyudGJ.png)
 
-![Landing Page](https://i.imgur.com/0oyudGJ.png)
-
-![Land Page 2](https://i.imgur.com/FYvydkW.png)
++ [Land Page 2](https://i.imgur.com/FYvydkW.png)
 
 ## Features
 1. User Authentication 
@@ -77,6 +81,8 @@ As with all projects, our final product deviated slightly from its origin struct
     - Mongoose
     - JSON Web Token (JWT)
     - Bcrypt
++ Deployed on
+    - DigitalOcean
 
 ## Prerequisites 
 *Only necessary if app is NOT deployed* Otherwise, you should have these packages downloaded locally on your machine: 
@@ -96,6 +102,7 @@ Install your server dependencies
 
 ## How To Contribute
 We welcome contributions to make fallmart even better! If you would like to contribute please fork the repository, create a new feature branch and make the improvements! When youre done, please create a pull request with a detailed description of your changes and why you think it will improve the app. 
+
 ## Acknowledgements
 Jun Min Baek,
 Joe Cruz,
@@ -105,3 +112,11 @@ Andre Ransom,
 Graehm Fazio, 
 Max Ohnenyi,
 Sri Rao 
+
+## Notes
+Some notable future improvement is the relationship between the seed.js and modals. We found a cheat and hardcoded the products imergy together in the seed. A best practice approach would be to loop over the products. 
+
+
+
+
+
