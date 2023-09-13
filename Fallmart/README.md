@@ -7,10 +7,15 @@ ___
 Discover a world of personal and household goods in one seamless e-commerce experience! This application is built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to use the app as a guest or sign up as a registered user. Users can navigate the homepage and narrow a search via departments and then by subcategory or with the search bar. Signed up users can favorite items that are added to a favorites list. All users can add items to cart, delete items, and check out an order. 
 
 A GA DonnaFrances cohort creation.
+![homepage](https://i.imgur.com/ryQEcOj.png)
+
+
 ___
 ## Table of Contents
+- [Deployed Link]()
 - [Overview](#overview)
 - [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
+- [Pitch Dec](https://docs.google.com/presentation/d/1zLbUtjdnLn8FDhdMuW9853M0LjZK9JoiMzNT_CNWAtQ/edit#slide=id.p)
 - [Features](#features)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
@@ -96,6 +101,7 @@ Install your server dependencies
 
 ## How To Contribute
 We welcome contributions to make fallmart even better! If you would like to contribute please fork the repository, create a new feature branch and make the improvements! When youre done, please create a pull request with a detailed description of your changes and why you think it will improve the app. 
+
 ## Acknowledgements
 Jun Min Baek,
 Joe Cruz,
@@ -105,3 +111,6 @@ Andre Ransom,
 Graehm Fazio, 
 Max Ohnenyi,
 Sri Rao 
+
+## Notes
+Some notable future improvement is the relationship between the seed.js and modals. We found a cheat and hardcoded the products imergy together in the seed. A best practice approach would be to loop over the products. 
