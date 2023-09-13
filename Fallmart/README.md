@@ -81,6 +81,8 @@ As with all projects, our final product deviated slightly from its origin struct
     - Mongoose
     - JSON Web Token (JWT)
     - Bcrypt
++ Deployed on
+    - DigitalOcean
 
 ## Prerequisites 
 *Only necessary if app is NOT deployed* Otherwise, you should have these packages downloaded locally on your machine: 
