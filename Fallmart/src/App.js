@@ -12,6 +12,7 @@ import WishList from './components/WishList/WishList';
 import CheckOutPage from './pages/CheckOutPage/CheckoutOutPage';
 import ProductPage from './pages/ProductPage/ProductPage';
 import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
+import SearchResults from './components/SearchResults/SearchResults';
 export default function App() {
 	const [departments, setDepartments] = useState([]);
 	const [favoriteCount, setFavoriteCount] = useState(0);
@@ -19,7 +20,7 @@ export default function App() {
 	const [showWishList, setShowWishList] = useState(false);
 	const [showCart, setShowCart] = useState(false);
 	const [showFallMart, setShowFallmart] = useState(false);
-
+	const [searchResults, setSearchResults] = useState([]);
 	useEffect(() => {
 		const fetchDepartments = async () => {
 			try {
@@ -41,16 +42,17 @@ export default function App() {
 	return (
 		<div className={styles.App}>
 			<div className={styles.sticky}>
-				
-			<NavBar
-				favoriteCount={favoriteCount}
-				setShowWishList={handleChangeWishlist}
-				itemCount={itemCount}
-				setShowCart={handleChangeCart}
-				showFallMart={showFallMart}
-				setShowFallMart={setShowFallmart}
-			/>
-			<DepartmentList departments={departments} />
+				<NavBar
+					favoriteCount={favoriteCount}
+					setShowWishList={handleChangeWishlist}
+					itemCount={itemCount}
+					setShowCart={handleChangeCart}
+					showFallMart={showFallMart}
+					setShowFallMart={setShowFallmart}
+					searchResults={searchResults}
+					setSearchResults={setSearchResults}
+				/>
+				<DepartmentList departments={departments} />
 			</div>
 			{!showWishList ? (
 				<Routes>
@@ -79,6 +81,18 @@ export default function App() {
 					/>
 					<Route path="/checkout" element={<CheckOutPage />} />
 					<Route path="/history" element={<OrderHistoryPage />} />
+					<Route
+						path="/search"
+						element={
+							<SearchResults
+								searchResults={searchResults}
+								setFavoriteCount={setFavoriteCount}
+								favoriteCount={favoriteCount}
+								itemCount={itemCount}
+								setItemCount={setItemCount}
+							/>
+						}
+					/>
 				</Routes>
 			) : (
 				<WishList setShowWishList={handleChangeWishlist} />
