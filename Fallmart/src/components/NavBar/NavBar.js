@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Navigate, useNavigate } from 'react-router-dom';
 import product from '../../../models/product';
 import FallPlus from '../FallPlus/FallPlus';
-
+import * as productsApi from '../../utilities/products-api';
 function NavBar({
 	favoriteCount,
 	setShowWishList,
@@ -14,25 +14,26 @@ function NavBar({
 	itemCount,
 	setShowCart,
 	showFallMart,
-	setShowFallMart
+	setShowFallMart,
+	searchResults,
+	setSearchResults
 }) {
 	const [searchValue, setSearchValue] = useState('');
 	const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
-	const [searchResults, setSearchResults] = useState([]); // state to store search results
+	// state to store search results
 
 	const navigate = useNavigate();
-	const handleSearch = async () => {
+	const handleSearch = async (evt) => {
 		try {
 			// Call your searchProducts function or API request here
-			const response = await searchProducts(searchValue);
-
-			// Filter the response data based on the search query
-			const filteredProducts = response.filter((product) =>
-				product.name.toLowerCase().includes(searchValue.toLowerCase())
+			const response = await productsApi.getAllProducts();
+			const searchProducts = response.filter((product) =>
+				product.name.toLowerCase().includes(searchValue.toLocaleLowerCase())
 			);
-
-			setSearchResults(filteredProducts);
+			setSearchResults(searchProducts);
+			navigate('/search');
+			setSearchValue('');
 		} catch (error) {
 			console.error('Error searching for products:', error);
 		}
@@ -64,6 +65,10 @@ function NavBar({
 	const handlePlusClick = () => {
 		setShowFallMart(!showFallMart);
 	};
+
+	const handleUserInput = (evt) => {
+		setSearchValue(evt.target.value);
+	};
 	return (
 		<>
 			<nav className={styles.header_core}>
@@ -80,8 +85,7 @@ function NavBar({
 						type="text"
 						placeholder="Search everything at Fallmart online and in store"
 						value={searchValue}
-						onChange={(e) => setSearchValue(e.target.value)}
-						onKeyDown={handleSearch}
+						onChange={handleUserInput}
 					/>
 					<button className={styles.search_button} onClick={handleSearch}>
 						<FaSearch />
