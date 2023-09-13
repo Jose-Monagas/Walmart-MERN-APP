@@ -9,3 +9,7 @@ export function getProductsBySubCategoryId(subcategoryId) {
 export function getProductById(productId) {
 	return sendRequest(`${BASE_URL}/product/${productId}`);
 }
+
+export function getAllProducts() {
+	return sendRequest(`${BASE_URL}/`);
+}

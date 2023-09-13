@@ -9,6 +9,7 @@ router.get('/:subcategoryId', productController.index);
 
 router.get('/product/:productId', productController.show);
 
+router.get('/', productController.allProducts);
 //Get
 // router.get('/:id', productController.productRating);
 module.exports = router;
