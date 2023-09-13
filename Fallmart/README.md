@@ -7,7 +7,7 @@ ___
 Discover a world of personal and household goods in one seamless e-commerce experience! This application is built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to use the app as a guest or sign up as a registered user. Users can navigate the homepage and narrow a search via departments and then by subcategory or with the search bar. Signed up users can favorite items that are added to a favorites list. All users can add items to cart, delete items, and check out an order. 
 
 A GA DonnaFrances cohort creation.
-
+___
 ## Table of Contents
 - [Overview](#overview)
 - [Trello Board](https://trello.com/b/UEHNvPzS/walmart)
@@ -36,7 +36,7 @@ As with all projects, our final product deviated slightly from its origin struct
 ![Landing Page](https://i.imgur.com/0oyudGJ.png)
 
 ![Land Page 2](https://i.imgur.com/FYvydkW.png)
-___
+
 ## Features
 1. User Authentication 
 2. Create a user
@@ -77,7 +77,7 @@ ___
     - Mongoose
     - JSON Web Token (JWT)
     - Bcrypt
-___
+
 ## Prerequisites 
 *Only necessary if app is NOT deployed* Otherwise, you should have these packages downloaded locally on your machine: 
 + Node
@@ -93,7 +93,7 @@ Install your server dependencies
 5. Set your .env file and create private mongo URI along with a [hashed](https://emn178.github.io/online-tools/sha256.html) secret
 6. `npm i` to install all packages
 7. Start the app and run `npm run dev`
-___
+
 ## How To Contribute
 We welcome contributions to make fallmart even better! If you would like to contribute please fork the repository, create a new feature branch and make the improvements! When youre done, please create a pull request with a detailed description of your changes and why you think it will improve the app. 
 ## Acknowledgements
@@ -105,4 +105,3 @@ Andre Ransom,
 Graehm Fazio, 
 Max Ohnenyi,
 Sri Rao 
-## Notes
