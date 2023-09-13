@@ -5,7 +5,7 @@ function HomeImage() {
 	return (
 		<div className={styles.grid}>
 			<div className={styles.imageContainer}>
-				<a href="http://localhost:3000/product/64fff315d0863b5b5a521ac9">
+				<a href="http://localhost:3000/living-room-furniture">
 					<img
 						src="img/sofa.jpeg"
 						className={styles.galleryImage}
@@ -18,7 +18,7 @@ function HomeImage() {
 				</div>
 			</div>
 			<div className={styles.imageContainer}>
-				<a href="http://localhost:3000/product/64fff315d0863b5b5a521b0a">
+				<a href="http://localhost:3000/formal-wear">
 					<img
 						src="img/suit.jpeg"
 						className={styles.galleryImage}
@@ -31,7 +31,7 @@ function HomeImage() {
 				</div>
 			</div>
 			<div className={styles.imageContainer}>
-				<a href="http://localhost:3000/product/64fff315d0863b5b5a521ac8">
+				<a href="http://localhost:3000/mobile-phones">
 					<img
 						src="img/cellphones.jpeg"
 						className={styles.galleryImage}
@@ -45,7 +45,7 @@ function HomeImage() {
 				</div>
 			</div>
 			<div className={styles.imageContainer}>
-				<a href="http://localhost:3000/product/64fff315d0863b5b5a521aca">
+				<a href="http://localhost:3000/pet-food">
 					<img
 						src="img/dog.jpeg"
 						className={styles.galleryImage}
@@ -58,7 +58,7 @@ function HomeImage() {
 				</div>
 			</div>
 			<div className={styles.imageContainer}>
-				<a href="http://localhost:3000/product/64fff315d0863b5b5a521acf">
+				<a href="http://localhost:3000/computers-&-cameras">
 					<img
 						src="img/laptop.png"
 						className={styles.galleryImage}
@@ -71,7 +71,7 @@ function HomeImage() {
 				</div>
 			</div>
 			<div className={styles.imageContainer}>
-				<a href="http://localhost:3000/product/64fff315d0863b5b5a521b00">
+				<a href="http://localhost:3000/living-room-furniture">
 					<img
 						src="img/table.jpeg"
 						className={styles.galleryImage}
