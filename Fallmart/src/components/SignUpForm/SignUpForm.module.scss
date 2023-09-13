@@ -52,13 +52,13 @@ a {
 }
 
 a:hover {
-    color: #004b2b; /* Change the color on hover */
+    color: #9a3901; /* Change the color on hover */
 }
 
 .modalButton {
     border-radius: 20px;
-    border: 1px solid #004b2b;
-    background-color: #004b2b;
+    border: 1px solid #9a3901;
+    background-color: #9a3901;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -176,8 +176,8 @@ input {
 
 .overlay {
     background: #FF416C;
-    background: -webkit-linear-gradient(to right, #0a1d1a, #004b2b);
-    background: linear-gradient(to right, #0a1d1a, #004b2b);
+    background: -webkit-linear-gradient(to right, #311e13, #9a3901);
+    background: linear-gradient(to right, #311e13, #9a3901);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
