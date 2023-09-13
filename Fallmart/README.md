@@ -27,9 +27,9 @@ ___
 ## Overview
 <h5 align="center">No one has 20/20 foresight</h5>
 
-<p align="center"ERD Comparison from project beginning to finished product>
+ERD Comparison from project beginning to finished product>
 
-As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models.</p>
+As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models.
 
 ![Original ERD](https://i.imgur.com/Rzzsms6.jpg)
 
