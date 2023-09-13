@@ -31,13 +31,16 @@ export default function OrderHistoryPage({ user, setUser }) {
 		<>
 			<h2>Your Order History</h2>
 			<main className={styles.OrderHistoryPage}>
-				<OrderList
-					className={styles.orderList}
-					orders={orders}
-					activeOrder={activeOrder}
-					handleSelectOrder={handleSelectOrder}
-				/>
-				<OrderDetail order={activeOrder} className={styles.activeOrder} />
+				<div className={styles.orderList}>
+					<OrderList
+						orders={orders}
+						activeOrder={activeOrder}
+						handleSelectOrder={handleSelectOrder}
+					/>
+				</div>
+				<div className={styles.activeOrder}>
+					<OrderDetail order={activeOrder} />
+				</div>
 			</main>
 		</>
 	);
