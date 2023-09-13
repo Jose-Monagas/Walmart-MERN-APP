@@ -7,43 +7,38 @@ import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import CheckoutOutPage from '../CheckOutPage/CheckoutOutPage';
 
 export default function OrderHistoryPage({ user, setUser }) {
+	const [orders, setOrders] = useState([]);
+	const [activeOrder, setActiveOrder] = useState(null);
 
-  const [orders, setOrders] = useState([]);
-  const [activeOrder, setActiveOrder] = useState(null);
+	useEffect(function () {
+		// Load previous orders (paid)
+		async function fetchOrderHistory() {
+			const orders = await ordersAPI.getOrderHistory();
+			setOrders(orders);
+			// If no orders, activeOrder will be set to null below
+			setActiveOrder(orders[0] || null);
+		}
+		fetchOrderHistory();
+	}, []);
 
+	/*--- Event Handlers --- */
+	function handleSelectOrder(order) {
+		setActiveOrder(order);
+	}
 
-  useEffect(function () {
-    // Load previous orders (paid)
-    async function fetchOrderHistory() {
-      const orders = await ordersAPI.getOrderHistory();
-      setOrders(orders);
-      // If no orders, activeOrder will be set to null below
-      setActiveOrder(orders[0] || null);
-    }
-    fetchOrderHistory();
-  }, []);
-
-  /*--- Event Handlers --- */
-  function handleSelectOrder(order) {
-    setActiveOrder(order);
-  }
-
-  /*--- Rendered UI --- */
-  return (
-    <>
-    <h2>ORDER HISTORY PAGE</h2>
-    <main className={styles.OrderHistoryPage}>
-      <OrderList
-        className= {styles.orderList}
-        orders={orders}
-        activeOrder={activeOrder}
-        handleSelectOrder={handleSelectOrder}
-      />
-      <OrderDetail
-        order={activeOrder}
-        className={styles.activeOrder}
-      />
-    </main>
-    </>
-  );
+	/*--- Rendered UI --- */
+	return (
+		<>
+			<h2>Your Order History</h2>
+			<main className={styles.OrderHistoryPage}>
+				<OrderList
+					className={styles.orderList}
+					orders={orders}
+					activeOrder={activeOrder}
+					handleSelectOrder={handleSelectOrder}
+				/>
+				<OrderDetail order={activeOrder} className={styles.activeOrder} />
+			</main>
+		</>
+	);
 }
