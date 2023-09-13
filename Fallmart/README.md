@@ -31,14 +31,15 @@ ___
 
 As with all projects, our final product deviated slightly from its origin structure. Seen below are the first ERD we created as a basis for the project to be built off, and the last ERD is a representation of our final working models.</p>
 
-+ [Original ERD](https://i.imgur.com/Rzzsms6.jpg)
-+ [Final working ERD](https://i.imgur.com/s4IvamP.png)
+![Original ERD](https://i.imgur.com/Rzzsms6.jpg)
+
+![Final working ERD](https://i.imgur.com/s4IvamP.png)
 
 <p align="center">We went two directions with the style and feel of our app. We created both a true to form versio of Walmart and an artistic depiction of the name, fallmart. Our end product shares inspiration from both versions. </p>
 
-![Landing Page](https://i.imgur.com/0oyudGJ.png)
++ [Landing Page](https://i.imgur.com/0oyudGJ.png)
 
-![Land Page 2](https://i.imgur.com/FYvydkW.png)
++ [Land Page 2](https://i.imgur.com/FYvydkW.png)
 
 ## Features
 1. User Authentication 
