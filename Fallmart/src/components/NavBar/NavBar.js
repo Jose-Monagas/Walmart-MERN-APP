@@ -17,7 +17,15 @@ function NavBar({
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 	const handleSearch = () => {
-		console.log('Performing search:', searchValue);
+		// Assuming you have a list of items to search through, replace 'items' with your actual data.
+		const filteredItems = items.filter(item => {
+			const itemText = item.name.toLowerCase(); // Replace 'name' with the property you want to search in.
+			return itemText.includes(searchValue.toLowerCase());
+		});
+	
+		// Handle the filtered items (e.g., display them in the UI).
+		console.log('Search results:', filteredItems);
+		// You can update the UI to display the filteredItems here.
 	};
 
 	useEffect(() => {
