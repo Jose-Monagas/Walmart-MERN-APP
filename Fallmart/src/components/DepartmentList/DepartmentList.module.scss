@@ -8,19 +8,24 @@
   padding: 0;
   flex-direction: row;
   border: 0;
-  width: auto;
-  white-space: normal;
+  width: 100%;
+  height: 3rem;
   color: #fff;
   font-size: 1.3rem;
   text-decoration: none;
   justify-content: space-around;
-  position: relative;
   font-family: "Recoleta Light";
+  position: relative;
+
 }
 
 .listItem {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
   transition: color 0.3s;
+  position: relative;
+  /* Add this line */
+  width: 100%;
 }
 
 .listItem:hover {
@@ -29,8 +34,7 @@
 }
 
 .modal {
-  position: absolute;
-  top: 2.3rem;
+  justify-content: center;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.8);
@@ -38,6 +42,9 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   pointer-events: none;
   transform-origin: top;
+  display: flex;
+  
+  top: 100%;
 }
 
 
@@ -70,7 +77,7 @@
 .SubcategoryList a {
   color: #fff;
   font-family: "Recoleta Light";
-  font-size: 2rem;
+  font-size: 1.3rem;
   display: flex;
   justify-content: center;
   margin: 0.4;
