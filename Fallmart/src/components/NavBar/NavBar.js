@@ -94,22 +94,12 @@ function NavBar({
 				{/* 4 links to the right */}
 				<div className={styles.right_core}>
 					{isLoggedIn && (
-						<div className={styles.account}>
+						<div className={styles.orders}>
 							<a href="/history"> Orders </a>
 							<span> &nbsp; </span>
 						</div>
 					)}
-					<div className={styles.account}>
-						{isLoggedIn ? (
-							<button className={styles.signbutton} onClick={handleLogOut}>
-								Log Out
-							</button>
-						) : (
-							<button className={styles.signbutton} onClick={handleSignInClick}>
-								Sign In
-							</button>
-						)}
-					</div>
+					
 					<div className={styles.humanicon}>
 						<img
 							src="https://i.imgur.com/l3cX5Ev.png"
@@ -162,7 +152,19 @@ function NavBar({
 							<FaPlus />
 						</div>
 					)}
+					<div className={styles.account}>
+						{isLoggedIn ? (
+							<button className={styles.signbutton} onClick={handleLogOut}>
+								Log Out
+							</button>
+						) : (
+							<button className={styles.signbutton} onClick={handleSignInClick}>
+								Sign In
+							</button>
+						)}
+					</div>
 				</div>
+				
 				{/* Modal */}
 				{isSignInModalOpen && (
 					<div className={styles.modalOverlay}>
