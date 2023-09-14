@@ -1,0 +1,129 @@
+.detail {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    span{
+        font-size: 16px;
+      }
+    }
+  
+    section {
+      margin-top: 10px;
+      margin-right: 5%;
+    }
+  
+    button {
+      background-color: #bc4501; /* Walmart's primary color */
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .mainBox {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        margin-top: 10px;
+        font-size: 16px;
+  
+        input[type="checkbox"] {
+          margin-right: 5px;
+        }
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+  
+        input[type="text"] {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+  
+        button[type="submit"] {
+          background-color: #bc4501;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          font-size: 16px;
+          border-radius: 5px;
+        }
+      }
+    }
+  
+    /* Style for individual cart items */
+    .cartItem {
+      margin-bottom: 10px; /* Adjust this value for spacing between cart items */
+    }
+    
+  
+
+  .memberButton {
+    margin-bottom: 10px;
+    background-color: #bc4501;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 9999px;
+    padding: 1rem;
+}
+
+.checkoutButton {
+  margin-bottom: 10px;
+  background-color: #bc4501;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 9999px;
+  padding: 1rem;
+}
+
+.wholeCheckout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.subtotal {
+  font-size: 20px;
+  font-weight: 800;
+  margin-left: 20px;
+}
+
+.estimatedTotal {
+  font-size: 20px;
+  font-weight: 800;
+  margin-left: 13px;
+}
+
+.totalCost {
+  color: #2a8703;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.totalQuantity {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.smaller {
+  font-size: 10px;
+}

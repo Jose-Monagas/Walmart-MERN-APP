@@ -2,7 +2,8 @@ const Product = require('../../models/product');
 const SubCategory = require('../../models/subCategory');
 module.exports = {
 	index,
-	show
+	show,
+	allProducts
 };
 //searching subcategory and then sending back the products array
 async function index(req, res) {
@@ -30,6 +31,15 @@ async function show(req, res) {
 			return res.status(404).json({ message: 'Product not found' });
 		}
 		res.status(200).json(product);
+	} catch (error) {
+		res.status(400).json({ message: error.message });
+	}
+}
+
+async function allProducts(req, res) {
+	try {
+		const products = await Product.find({});
+		res.status(200).json(products);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
 	}

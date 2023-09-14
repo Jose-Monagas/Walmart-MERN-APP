@@ -1,0 +1,17 @@
+.OrderHistoryPage {
+  position: fixed;
+  top: 180px; /* Set the desired top position */
+  width: 100%;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Split 50/50 */
+  align-items: flex-start; /* Align items at the top */
+}
+
+.orderList {
+  top: 190px;
+  width: 48%; /* Adjust the width as needed */
+}
+
+.activeOrder {
+  width: 48%; /* Adjust the width as needed */
+}

@@ -24,7 +24,7 @@
 .cart_button {
   width: 170px;
   height: 40px;
-  background-color: hsl(130, 36%, 43%);
+  background-color: #bc4501;
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
@@ -40,7 +40,7 @@
 }
 
 .cart_button:hover {
-  background-color: hsl(130, 36%, 38%);
+  background-color: #fe5e02;
 }
 
 .cart_button:active {
