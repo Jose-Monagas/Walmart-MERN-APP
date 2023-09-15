@@ -69,6 +69,14 @@ function NavBar({
 	const handleUserInput = (evt) => {
 		setSearchValue(evt.target.value);
 	};
+
+	const handleKeyDown = (e) => {
+		if (e.key === 'Enter') {
+		  handleSearch(); // Trigger search when Enter key is pressed
+		}
+	  };
+
+	  
 	return (
 		<>
 			<nav className={styles.header_core}>
@@ -86,6 +94,7 @@ function NavBar({
 						placeholder="Search everything at Fallmart online and in store"
 						value={searchValue}
 						onChange={handleUserInput}
+						onKeyDown={handleKeyDown}
 					/>
 					<button className={styles.search_button} onClick={handleSearch}>
 						<FaSearch />
