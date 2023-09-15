@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import styles from './CheckoutPage.module.scss';
+import styles from './CheckOutPage.module.scss';
 import * as ordersApi from '../../utilities/orders-api';
 import { useNavigate } from 'react-router-dom';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
