@@ -1,10 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8103;
 const mongoose = require('mongoose');
 const path = require('path');
-const session = require('express-session');
+
 // const favicon = require('serve-favicon')
 
 require('./config/database');
@@ -21,14 +21,6 @@ app.use((req, res, next) => {
 	res.locals.data = {};
 	next();
 });
-
-app.use(
-	session({
-		secret: 'secret',
-		resave: false,
-		saveUninitialized: false
-	})
-);
 
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/departments', require('./routes/api/department'));
